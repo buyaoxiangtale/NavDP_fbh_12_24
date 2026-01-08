@@ -13,7 +13,7 @@ parser.add_argument(
 parser.add_argument(
     "--scene_scale", type=float, default=1.0)
 parser.add_argument(
-    "--stop_threshold", type=float, default=-3.0)
+    "--stop_threshold", type=float, default=-0.3)
 parser.add_argument(
     "--num_envs", type=int, default=1)
 parser.add_argument(
@@ -23,6 +23,56 @@ parser.add_argument(
 parser.add_argument(
     "--port", type=int, default=8888)
 args_cli = parser.parse_args()
+
+import os
+import sys
+
+# ======== 调试信息开始 ========
+# 强制刷新输出，确保立即显示
+sys.stdout.flush()
+
+print("="*80, flush=True)
+print("[DEBUG] Command line arguments:", flush=True)
+print(f"  --scene_dir: {args_cli.scene_dir}", flush=True)
+print(f"  --scene_index: {args_cli.scene_index}", flush=True)
+print(f"  --num_envs: {args_cli.num_envs}", flush=True)
+print(f"  --num_episodes: {args_cli.num_episodes}", flush=True)
+print(f"  --speed: {args_cli.speed}", flush=True)
+print(f"  --port: {args_cli.port}", flush=True)
+print("="*80, flush=True)
+
+# 列出所有可用场景（使用 sorted 确保字母顺序，可预测）
+available_scenes = sorted(os.listdir(args_cli.scene_dir))
+print(f"[DEBUG] Available scenes in directory: {len(available_scenes)} total", flush=True)
+print("[DEBUG] Scene list (SORTED alphabetical order):", flush=True)
+for i, scene in enumerate(available_scenes):
+    marker = " <-- SELECTED" if i == args_cli.scene_index else ""
+    print(f"  [{i}] {scene}{marker}", flush=True)
+
+# 验证索引是否有效
+if args_cli.scene_index >= len(available_scenes):
+    print(f"\n[ERROR] scene_index {args_cli.scene_index} is out of range!", flush=True)
+    print(f"[ERROR] Max index is {len(available_scenes)-1}", flush=True)
+    raise ValueError(f"scene_index {args_cli.scene_index} is out of range!")
+
+selected_scene = available_scenes[args_cli.scene_index]
+print(f"\n[DEBUG] Selected scene: {selected_scene}", flush=True)
+full_scene_path = os.path.join(args_cli.scene_dir, selected_scene)
+print(f"[DEBUG] Full scene path: {full_scene_path}", flush=True)
+
+# 预期保存目录
+scene_dir_name = args_cli.scene_dir.split("/")[-1]
+expected_save_dir = f"./pointgoal_navdp_{scene_dir_name}/{selected_scene}/"
+print(f"[DEBUG] Expected save directory: {expected_save_dir}", flush=True)
+print(f"[DEBUG] Full save path: {os.path.abspath(expected_save_dir)}", flush=True)
+print("="*80, flush=True)
+
+print("\n[INFO] Starting Isaac Sim... (this may take a moment)", flush=True)
+print("="*80, flush=True)
+
+sys.stdout.flush()  # 再次刷新
+
+# ======== Isaac Sim 启动 ========
 app_launcher = AppLauncher(headless=True, enable_cameras=True)
 simulation_app = app_launcher.app
 
@@ -134,8 +184,13 @@ def planning_thread(env, camera_intrinsic):
         # Small sleep to prevent CPU overload
         time.sleep(0.1)
 
-scene_path = os.path.join(args_cli.scene_dir,os.listdir(args_cli.scene_dir)[args_cli.scene_index]) + "/"
+# 使用之前选择的场景构建路径
+scene_path = os.path.join(args_cli.scene_dir, selected_scene) + "/"
+print(f"[DEBUG] Building scene_path = {scene_path}")
+
 usd_path,init_path = find_usd_path(scene_path,task='pointgoal')
+print(f"[DEBUG] usd_path = {usd_path}")
+print(f"[DEBUG] init_path = {init_path}")
 scene_config = PointNavSceneCfg()
 scene_config.num_envs = args_cli.num_envs
 scene_config.env_spacing = 0.0
@@ -171,11 +226,20 @@ controller = DifferentialController(name="simple_control",
                                     wheel_radius=DINGO_WHEEL_RADIUS,
                                     wheel_base=DINGO_WHEEL_BASE)
 algo = navigator_reset(camera_intrinsic.cpu().numpy(),batch_size=scene_config.num_envs,stop_threshold=args_cli.stop_threshold,port=args_cli.port)
+print(f"[DEBUG] algo = {algo}")
 
 episode_num = args_cli.num_envs - 1
 evaluation_metrics = []
 save_dir = "./pointgoal_%s_%s/%s/"%(algo,args_cli.scene_dir.split("/")[-1],scene_path.split("/")[-2])
+
+print('*'*100)
+print(f"[DEBUG] save_dir = {save_dir}")
+print(f"[DEBUG] Scene name from scene_dir.split('/') = {args_cli.scene_dir.split('/')[-1]}")
+print(f"[DEBUG] Scene name from scene_path.split('/')[-2] = {scene_path.split('/')[-2]}")
+print(f"[DEBUG] Full save directory path will be: {os.path.abspath(save_dir)}")
+print('*'*100)
 os.makedirs(save_dir,exist_ok=True)
+print(f"[INFO] 保存目录已创建: {os.path.abspath(save_dir)}")
 
 euclidean = np.sqrt(np.square(infos['observations']['goal_pose'].cpu().numpy()[:,0:2]).sum(axis=-1))
 fps_writer = [imageio.get_writer(save_dir + "fps_%d.mp4"%i, fps=10) for i in range(scene_config.num_envs)]
@@ -262,20 +326,46 @@ while simulation_app.is_running():
             if dones[i] == True:
                 episode_num += 1
                 navigator_reset(env_id=i,port=args_cli.port)
-                success_flag = (np.sqrt(np.square(goals[i]).sum())<1.5).astype(np.float32)
+                # success_flag = (np.sqrt(np.square(goals[i]).sum())<1.5).astype(np.float32)
+                success_flag = (np.sqrt(np.square(goals[i]).sum())<0.5).astype(np.float32)
                 fps_writer[i].close()
                 evaluation_metrics.append({'success':success_flag,
                                            'spl': np.clip(euclidean[i] / trajectory_length[i],0,1) * success_flag,
                                            'distance':euclidean[i]})
                 write_metrics(evaluation_metrics,save_dir+"metric.csv")
+                print(f"[INFO] Episode {episode_num} 完成，结果已保存到: {os.path.abspath(save_dir+'metric.csv')}")
                 euclidean[i] = np.sqrt(np.square(infos['observations']['goal_pose'].cpu().numpy()[:,0:2]).sum(axis=-1))[i]
                 fps_writer[i] = imageio.get_writer(save_dir + "fps_%d.mp4"%episode_num, fps=10)
                 trajectory_length[i] = 0.0
         
         if episode_num > args_cli.num_episodes:
+            print(f"[INFO] 已完成 {episode_num} 个episode，达到目标 {args_cli.num_episodes}，退出循环")
+            # 确保在退出前保存所有结果
+            if len(evaluation_metrics) > 0:
+                write_metrics(evaluation_metrics, save_dir+"metric.csv")
+                print(f"[INFO] 最终结果已保存到: {os.path.abspath(save_dir+'metric.csv')}")
             break
        
                 
    
 
         
+# python eval_pointgoal_wheeled.py \
+#     --scene_dir /home/ubuntu/fengbh/NavDP/scene_1231 \
+#     --scene_index 12 \
+#     --num_episodes 10 \
+#     --port 9111
+
+
+# python eval_pointgoal_wheeled.py \
+#     --scene_dir /home/ubuntu/fengbh/NavDP/scene_1231 \
+#     --scene_index 12 \
+#     --num_episodes 10 \
+#     --port 8888
+
+
+# python eval_pointgoal_wheeled.py \
+#     --scene_dir /home/ubuntu/fengbh/NavDP/scene_1231 \
+#     --scene_index 12 \
+#     --num_episodes 10 \
+#     --port 9222

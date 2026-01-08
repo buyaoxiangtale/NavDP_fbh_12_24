@@ -1,0 +1,29 @@
+{
+  "reasoning": {
+    "safety_analysis": "This layout contains only one instrument (InfraredSpectrophotometer) with no reagents to arrange on the ValidationPlatform. Since there are no chemical reagents present on this surface, no chemical safety constraints (flammable-heat source, incompatible chemicals, acid-base separations) apply. The instrument will be positioned with adequate clearance from all edges (≥0.05m minimum) to ensure stability and safety.",
+    "workflow_strategy": "The InfraredSpectrophotometer is positioned centrally on the ValidationPlatform for optimal accessibility during product analysis. This is the final analytical step in the chlorination procedure. The instrument is placed in the mid-depth region (Y: 0.80-1.20m range) for comfortable operator access while maintaining sufficient clearance from edges. The central X-position allows for easy approach from either side of the platform.",
+    "key_spatial_relationships": "As the only item on this surface, the InfraredSpectrophotometer is positioned to maximize workspace efficiency. Its placement at approximately the center of the platform (X: 0.761m, Y: 1.368m) ensures: (1) minimum 0.05m clearance from all edges, (2) optimal accessibility for the operator, (3) stability on the work surface, and (4) adequate space around the instrument for sample handling and operation. The instrument faces the operator (front_direction toward +Y) in its standard 0° orientation."
+  },
+  "desktop_layout": [
+    {
+      "name": "InfraredSpectrophotometer",
+      "position": {
+        "x": 0.761,
+        "y": 1.368,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Centered on ValidationPlatform for optimal accessibility during product analysis. At 0° rotation: occupies X-range [0.761 ± 0.483/2] = [0.519, 1.003]m and Y-range [1.368 ± 0.355/2] = [1.190, 1.545]m. All edges maintain >0.05m clearance: left edge at 0.519m (>0.05m from X=0), right edge at 1.003m (>0.519m from X=1.522m), front edge at 1.190m (>1.14m from Y=0), back edge at 1.545m (>1.19m from Y=2.735m). Central placement provides ergonomic access for IR spectroscopy analysis of the phenylphosphonic dichloride product."
+    }
+  ],
+  "surface_type": "ValidationPlatform",
+  "surface_dimensions": {
+    "width": 1.5220382895305355,
+    "depth": 2.7348869195972734,
+    "height": 0.7999990173557717
+  }
+}

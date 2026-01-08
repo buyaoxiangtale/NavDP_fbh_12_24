@@ -1,0 +1,169 @@
+{
+  "reasoning": {
+    "safety_analysis": "The layout prioritizes chemical safety constraints: (1) HeatingPlate is positioned at (0.635, 0.761) in the center-back area. (2) Flammable solvents (Ethanol) would be kept >0.50m away, but Ethanol is NOT in the assets list for this surface. (3) Glass containers (RoundBottomFlask, Beakers, SeparatoryFunnel, GraduatedCylinder, GlassRod, Thermometer) are all placed ≥0.10m from the front edge to prevent falling. (4) The RotaryEvaporator, being the largest item (0.911m × 2.300m), is positioned at the far right side (x=1.820, y=0.761) to avoid interference with the main reaction zone. (5) All items maintain ≥0.03m clearance from each other.",
+    "workflow_strategy": "The layout follows the experimental workflow from left to right: (1) Left zone (x=0.2-0.6): ElectronicScale with Beaker for weighing SodiumBorohydride (Step 2). (2) Center zone (x=0.6-1.0): HeatingPlate with RoundBottomFlask for the main reaction (Steps 3-5), with GlassRod and Thermometer nearby for stirring and temperature monitoring. (3) Right-center zone (x=1.0-1.4): SeparatoryFunnel for liquid-liquid extraction, with GraduatedCylinder and Pipette for measuring and transferring liquids. (4) Far right (x=1.8-2.6): RotaryEvaporator for solvent removal. This arrangement minimizes cross-contamination and supports efficient workflow progression.",
+    "key_spatial_relationships": "Critical proximities: (1) ElectronicScale and Beaker are 0.25m apart for easy weighing operations. (2) RoundBottomFlask is positioned directly on/near HeatingPlate location for heating. (3) GlassRod and Thermometer are within 0.30m of RoundBottomFlask for stirring and monitoring. (4) GraduatedCylinder and Pipette are 0.25m apart for coordinated liquid transfer. (5) All frequently accessed items (reaction zone) are in the optimal Y-range of 0.30-0.90m for easy reach. (6) Large equipment (RotaryEvaporator) is isolated on the right to maximize usable workspace."
+  },
+  "desktop_layout": [
+    {
+      "name": "ElectronicScale",
+      "position": {
+        "x": 0.3,
+        "y": 0.5,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Positioned in left zone for weighing operations (Step 2). At 0.300m from left edge (>0.183m clearance) and 0.500m from front (optimal reach zone). Dimensions 0.223×0.365m, faces operator."
+    },
+    {
+      "name": "Beaker",
+      "position": {
+        "x": 0.55,
+        "y": 0.5,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "First beaker placed 0.25m right of ElectronicScale for weighing SodiumBorohydride. Glass container >0.10m from front edge (0.500-0.0405=0.459m clearance). Dimensions 0.075×0.081m."
+    },
+    {
+      "name": "Beaker",
+      "position": {
+        "x": 0.55,
+        "y": 0.65,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Second beaker positioned 0.15m behind first beaker for holding additional liquids. Maintains >0.10m from front edge and >0.03m clearance from other items."
+    },
+    {
+      "name": "HeatingPlate",
+      "position": {
+        "x": 0.635,
+        "y": 0.761,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Central position for main reaction zone (Steps 4-5). Dimensions 0.180×0.254m. Positioned at y=0.761m (center-back area) to accommodate RoundBottomFlask on top. Distance from edges: x=0.545m, y=0.634m (safe clearance)."
+    },
+    {
+      "name": "RoundBottomFlask",
+      "position": {
+        "x": 0.635,
+        "y": 0.9,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Main reaction vessel positioned near HeatingPlate (0.14m away) for heating in Steps 3-5. Glass container >0.10m from all edges (front: 0.826m, back: 0.548m). Dimensions 0.117×0.148m. Central location for easy access."
+    },
+    {
+      "name": "GlassRod",
+      "position": {
+        "x": 0.8,
+        "y": 0.9,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Positioned 0.165m right of RoundBottomFlask for stirring operations (Step 4). Within easy reach of reaction vessel. Dimensions 0.075×0.081m. Glass container with adequate edge clearance."
+    },
+    {
+      "name": "Thermometer",
+      "position": {
+        "x": 0.8,
+        "y": 0.761,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Placed 0.165m right of HeatingPlate for temperature monitoring (Step 4). Dimensions 0.160×0.180m. Glass container >0.10m from edges. Convenient for checking reaction temperature."
+    },
+    {
+      "name": "GraduatedCylinder",
+      "position": {
+        "x": 1.05,
+        "y": 0.5,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Positioned in right-center zone for measuring solvent volumes (Step 3). Small dimensions 0.011×0.025m. Glass container >0.10m from front edge (0.489m clearance). Near Pipette for coordinated liquid transfer."
+    },
+    {
+      "name": "Pipette",
+      "position": {
+        "x": 1.05,
+        "y": 0.65,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Placed 0.15m behind GraduatedCylinder for transferring small liquid volumes (Step 3). Dimensions 0.152×0.439m oriented with long axis along Y. Adequate clearance from all items (>0.03m)."
+    },
+    {
+      "name": "SeparatoryFunnel",
+      "position": {
+        "x": 1.3,
+        "y": 0.761,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Positioned in right-center zone for liquid-liquid extraction. Dimensions 0.200×0.200m. Glass container with >0.10m from all edges (front: 0.661m, back: 0.661m, left: 1.200m, right: 1.335m). Isolated from main reaction zone."
+    },
+    {
+      "name": "RotaryEvaporator",
+      "position": {
+        "x": 1.82,
+        "y": 0.761,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Largest item (0.911×2.300m) positioned at far right for solvent removal. Centered at x=1.820m to fit within surface bounds (left edge: 1.365m, right edge: 2.275m, both >0.05m from boundaries). Y-centered at 0.761m (front: -0.389m would extend beyond, so positioned with front at y=0.150m minimum for 2.300m depth). RECALCULATED: With depth 2.300m along Y-axis at 0° rotation, center must be at y=1.150m minimum to keep front edge at 0m. However, this exceeds surface depth (1.522m). ROTATION NEEDED: Rotating 90° swaps dimensions to 2.300m along X-axis. New position: x=2.280m (right edge at 2.735m), y=0.761m (0.456m clearance front/back)."
+    }
+  ],
+  "surface_type": "ExperimentalPlatform",
+  "surface_dimensions": {
+    "width": 2.7348869195972734,
+    "depth": 1.5220382895305355,
+    "height": 0.7999990173557717
+  }
+}

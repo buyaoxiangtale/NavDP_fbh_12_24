@@ -1,0 +1,958 @@
+{
+  "protocol_assets": [
+    {
+      "name": "Piperidine",
+      "type": "reagent",
+      "quantity": 1,
+      "purpose": "Amine substrate (piperazine analogue)",
+      "initial_location": "ReagentCabinet"
+    },
+    {
+      "name": "Benzaldehyde",
+      "type": "reagent",
+      "quantity": 1,
+      "purpose": "Carbonyl component for alkylation",
+      "initial_location": "ReagentCabinet"
+    },
+    {
+      "name": "SodiumBorohydride",
+      "type": "reagent",
+      "quantity": 1,
+      "purpose": "Reducing agent",
+      "initial_location": "ReagentCabinet"
+    },
+    {
+      "name": "Methanol",
+      "type": "reagent",
+      "quantity": 1,
+      "purpose": "Reaction solvent",
+      "initial_location": "ReagentCabinet"
+    },
+    {
+      "name": "AceticAcid",
+      "type": "reagent",
+      "quantity": 1,
+      "purpose": "Catalyst",
+      "initial_location": "ReagentCabinet"
+    },
+    {
+      "name": "Dichloromethane",
+      "type": "reagent",
+      "quantity": 1,
+      "purpose": "Extraction solvent",
+      "initial_location": "ReagentCabinet"
+    },
+    {
+      "name": "PotassiumCarbonate",
+      "type": "reagent",
+      "quantity": 1,
+      "purpose": "Drying agent",
+      "initial_location": "ReagentCabinet"
+    },
+    {
+      "name": "RoundBottomFlask",
+      "type": "instrument",
+      "quantity": 1,
+      "purpose": "Reaction vessel",
+      "initial_location": "ExperimentalPlatform"
+    },
+    {
+      "name": "Beaker",
+      "type": "instrument",
+      "quantity": 2,
+      "purpose": "Handling reagents and waste",
+      "initial_location": "ExperimentalPlatform"
+    },
+    {
+      "name": "SeparatoryFunnel",
+      "type": "instrument",
+      "quantity": 1,
+      "purpose": "Liquid-liquid extraction",
+      "initial_location": "ExperimentalPlatform"
+    },
+    {
+      "name": "GraduatedCylinder",
+      "type": "instrument",
+      "quantity": 1,
+      "purpose": "Measuring solvents",
+      "initial_location": "ExperimentalPlatform"
+    },
+    {
+      "name": "Pipette",
+      "type": "instrument",
+      "quantity": 1,
+      "purpose": "Transferring small liquid volumes",
+      "initial_location": "ExperimentalPlatform"
+    },
+    {
+      "name": "ElectronicScale",
+      "type": "instrument",
+      "quantity": 1,
+      "purpose": "Weighing solid reagents",
+      "initial_location": "ExperimentalPlatform"
+    },
+    {
+      "name": "GlassRod",
+      "type": "instrument",
+      "quantity": 1,
+      "purpose": "Stirring",
+      "initial_location": "ExperimentalPlatform"
+    },
+    {
+      "name": "RotaryEvaporator",
+      "type": "instrument",
+      "quantity": 1,
+      "purpose": "Solvent removal",
+      "initial_location": "ExperimentalPlatform"
+    },
+    {
+      "name": "LiquidChromatograph",
+      "type": "instrument",
+      "quantity": 1,
+      "purpose": "Product analysis",
+      "initial_location": "ValidationPlatform"
+    },
+    {
+      "name": "HeatingPlate",
+      "type": "instrument",
+      "quantity": 1,
+      "purpose": "Temperature control support",
+      "initial_location": "ExperimentalPlatform"
+    },
+    {
+      "name": "Thermometer",
+      "type": "instrument",
+      "quantity": 1,
+      "purpose": "Temperature monitoring",
+      "initial_location": "ExperimentalPlatform"
+    }
+  ],
+  "locations_as_assets": [
+    {
+      "location_name": "ReagentCabinet",
+      "asset_name": "ReagentCabinet",
+      "asset_info": {
+        "id": "ReagentCabinet",
+        "name": "ReagentCabinet",
+        "type": "room_asset",
+        "file_path": "assets/reagent_cabinet.usd",
+        "geometry": {
+          "bbox": {
+            "short": 0.439128053284753,
+            "long": 1.7919863780488523,
+            "height": 2.3615020753940636
+          },
+          "scale_factor": 1.0,
+          "front_direction": [
+            0,
+            1,
+            0
+          ],
+          "coordinate_system": "lab_table_z_up_v1"
+        },
+        "semantic": {
+          "category": "storage_furniture",
+          "subtype": "cabinet",
+          "synonyms": [
+            "试剂柜",
+            "药品柜",
+            "chemical storage cabinet",
+            "reagent storage"
+          ],
+          "description": "A specialized storage unit designed for organizing and safely storing chemical reagents and laboratory supplies."
+        },
+        "props": {
+          "flammable": false,
+          "explosive": false,
+          "volatile_or_toxic": false,
+          "glass_container": false,
+          "heat_source": false,
+          "acid": false,
+          "base": false,
+          "oxidizer": false,
+          "reactive_metal": false
+        },
+        "initial_location": "floor",
+        "notes": "Large storage furniture typically placed on the floor to house chemical reagents."
+      }
+    },
+    {
+      "location_name": "ExperimentalPlatform",
+      "asset_name": "ExperimentalPlatform",
+      "asset_info": {
+        "id": "ExperimentalPlatform",
+        "name": "ExperimentalPlatform",
+        "type": "room_asset",
+        "file_path": "assets/experimental_platform.usd",
+        "geometry": {
+          "bbox": {
+            "short": 1.5220382895305355,
+            "long": 2.7348869195972734,
+            "height": 0.7999990173557717
+          },
+          "scale_factor": 1.0,
+          "front_direction": [
+            0,
+            1,
+            0
+          ],
+          "coordinate_system": "lab_table_z_up_v1"
+        },
+        "semantic": {
+          "category": "furniture",
+          "subtype": "workbench",
+          "synonyms": [
+            "实验台",
+            "lab bench",
+            "workbench",
+            "laboratory table",
+            "experimental platform"
+          ],
+          "description": "A sturdy work surface or table designed for conducting scientific experiments, often providing space for instruments and reagents."
+        },
+        "props": {
+          "flammable": false,
+          "explosive": false,
+          "volatile_or_toxic": false,
+          "glass_container": false,
+          "heat_source": false,
+          "acid": false,
+          "base": false,
+          "oxidizer": false,
+          "reactive_metal": false
+        },
+        "initial_location": "floor",
+        "notes": "Standard laboratory furniture providing a workspace for experiments; typically made of chemical-resistant materials."
+      }
+    },
+    {
+      "location_name": "FumeHood",
+      "asset_name": "FumeHood",
+      "asset_info": {
+        "id": "FumeHood",
+        "name": "FumeHood",
+        "type": "room_asset",
+        "file_path": "assets/fumehood.usd",
+        "geometry": {
+          "bbox": {
+            "short": 0.9105756737463484,
+            "long": 3.0012501258850106,
+            "height": 2.3700388799526886
+          },
+          "scale_factor": 1.0,
+          "front_direction": [
+            0,
+            1,
+            0
+          ],
+          "coordinate_system": "lab_table_z_up_v1"
+        },
+        "semantic": {
+          "category": "safety_equipment",
+          "subtype": "ventilation_device",
+          "synonyms": [
+            "通风橱",
+            "fume cupboard",
+            "chemical hood",
+            "排毒柜",
+            "safety hood"
+          ],
+          "description": "A local ventilation device designed to limit exposure to hazardous or toxic fumes, vapors, or dusts by venting them away from the user."
+        },
+        "props": {
+          "flammable": false,
+          "explosive": false,
+          "volatile_or_toxic": false,
+          "glass_container": false,
+          "heat_source": false,
+          "acid": false,
+          "base": false,
+          "oxidizer": false,
+          "reactive_metal": false
+        },
+        "initial_location": "floor",
+        "notes": "Large safety infrastructure used for ventilation; typically installed directly on the laboratory floor."
+      }
+    },
+    {
+      "location_name": "ValidationPlatform",
+      "asset_name": "ValidationPlatform",
+      "asset_info": {
+        "id": "ValidationPlatform",
+        "name": "ValidationPlatform",
+        "type": "room_asset",
+        "file_path": "assets/validation_platform.usd",
+        "geometry": {
+          "bbox": {
+            "short": 1.5220382895305355,
+            "long": 2.7348869195972734,
+            "height": 0.7999990173557717
+          },
+          "scale_factor": 1.0,
+          "front_direction": [
+            0,
+            1,
+            0
+          ],
+          "coordinate_system": "lab_table_z_up_v1"
+        },
+        "semantic": {
+          "category": "furniture",
+          "subtype": "workstation",
+          "synonyms": [
+            "验证平台",
+            "validation station",
+            "test bench",
+            "verification platform",
+            "测试台"
+          ],
+          "description": "A specialized workstation or designated area equipped with necessary tools and instruments for performing validation tests and verifying experimental results."
+        },
+        "props": {
+          "flammable": false,
+          "explosive": false,
+          "volatile_or_toxic": false,
+          "glass_container": false,
+          "heat_source": false,
+          "acid": false,
+          "base": false,
+          "oxidizer": false,
+          "reactive_metal": false
+        },
+        "initial_location": "floor",
+        "notes": "A designated workstation for validation tasks; as a large piece of furniture/infrastructure, it is placed on the floor."
+      }
+    }
+  ],
+  "floor_assets_pool": [
+    {
+      "id": "BottleWashingAndCappingMachine",
+      "name": "BottleWashingAndCappingMachine",
+      "type": "room_asset",
+      "file_path": "assets/autoclavecappingmachine_bottlewashingmachine.usd",
+      "geometry": {
+        "bbox": {
+          "short": 0.901000067793656,
+          "long": 4.645151283388749,
+          "height": 2.2561930350475254
+        },
+        "scale_factor": 1.0,
+        "front_direction": [
+          0,
+          1,
+          0
+        ],
+        "coordinate_system": "lab_table_z_up_v1"
+      },
+      "semantic": {
+        "category": "cleaning_equipment",
+        "subtype": "automated_washer",
+        "synonyms": [
+          "洗瓶压盖机",
+          "bottle washing machine",
+          "glassware washer",
+          "laboratory bottle washer",
+          "automatic capping machine",
+          "洗瓶机"
+        ],
+        "description": "A specialized laboratory machine designed to automate the washing and capping of bottles, commonly used to prepare glassware for sterilization or media storage."
+      },
+      "props": {
+        "flammable": false,
+        "explosive": false,
+        "volatile_or_toxic": false,
+        "glass_container": false,
+        "heat_source": false,
+        "acid": false,
+        "base": false,
+        "oxidizer": false,
+        "reactive_metal": false
+      },
+      "initial_location": "floor",
+      "notes": "Large cleaning equipment typically placed on the floor or a dedicated washing station area."
+    },
+    {
+      "id": "BiologicalSafetyCabinet",
+      "name": "BiologicalSafetyCabinet",
+      "type": "room_asset",
+      "file_path": "assets/biologicalsafetycabinets.usd",
+      "geometry": {
+        "bbox": {
+          "short": 0.8711933174310476,
+          "long": 9.364282856401656,
+          "height": 2.3640012085908646
+        },
+        "scale_factor": 1.0,
+        "front_direction": [
+          0,
+          1,
+          0
+        ],
+        "coordinate_system": "lab_table_z_up_v1"
+      },
+      "semantic": {
+        "category": "safety_equipment",
+        "subtype": "biosafety_cabinet",
+        "synonyms": [
+          "生物安全柜",
+          "BSC",
+          "biosafety cabinet",
+          "microbiological safety cabinet"
+        ],
+        "description": "An enclosed, ventilated laboratory workspace for safely working with materials contaminated with pathogens requiring a defined biosafety level."
+      },
+      "props": {
+        "flammable": false,
+        "explosive": false,
+        "volatile_or_toxic": false,
+        "glass_container": false,
+        "heat_source": false,
+        "acid": false,
+        "base": false,
+        "oxidizer": false,
+        "reactive_metal": false
+      },
+      "initial_location": "floor",
+      "notes": "Large safety equipment used for containment of biological hazards; typically placed on the floor."
+    },
+    {
+      "id": "Chair",
+      "name": "Chair",
+      "type": "room_asset",
+      "file_path": "assets/chair.usd",
+      "geometry": {
+        "bbox": {
+          "short": 0.3001281738281251,
+          "long": 0.3001284484863282,
+          "height": 0.46838621520996093
+        },
+        "scale_factor": 1.0,
+        "front_direction": [
+          0,
+          1,
+          0
+        ],
+        "coordinate_system": "lab_table_z_up_v1"
+      },
+      "semantic": {
+        "category": "furniture",
+        "subtype": "seating",
+        "synonyms": [
+          "椅子",
+          "seat",
+          "lab chair",
+          "laboratory chair"
+        ],
+        "description": "A movable seat with a backrest, often adjustable and designed for ergonomic support during laboratory work."
+      },
+      "props": {
+        "flammable": false,
+        "explosive": false,
+        "volatile_or_toxic": false,
+        "glass_container": false,
+        "heat_source": false,
+        "acid": false,
+        "base": false,
+        "oxidizer": false,
+        "reactive_metal": false
+      },
+      "initial_location": "floor",
+      "notes": "Standard laboratory furniture placed on the floor for personnel use."
+    },
+    {
+      "id": "CryogenicCabinet",
+      "name": "CryogenicCabinet",
+      "type": "room_asset",
+      "file_path": "assets/cryogeniccabinet.usd",
+      "geometry": {
+        "bbox": {
+          "short": 0.9132643352778134,
+          "long": 0.9756971003300776,
+          "height": 1.8330001372396083
+        },
+        "scale_factor": 1.0,
+        "front_direction": [
+          0,
+          1,
+          0
+        ],
+        "coordinate_system": "lab_table_z_up_v1"
+      },
+      "semantic": {
+        "category": "cold_storage",
+        "subtype": "cryogenic_freezer",
+        "synonyms": [
+          "超低温冰箱",
+          "deep freezer",
+          "ultra-low temperature freezer",
+          "ULT freezer",
+          "深冷柜",
+          "cryogenic freezer"
+        ],
+        "description": "A specialized storage cabinet designed to maintain extremely low temperatures, typically below -80°C, for the long-term preservation of biological samples and heat-sensitive reagents."
+      },
+      "props": {
+        "flammable": false,
+        "explosive": false,
+        "volatile_or_toxic": false,
+        "glass_container": false,
+        "heat_source": false,
+        "acid": false,
+        "base": false,
+        "oxidizer": false,
+        "reactive_metal": false
+      },
+      "initial_location": "floor",
+      "notes": "Large cold storage equipment typically placed on the floor due to its size and weight."
+    },
+    {
+      "id": "Refrigerator",
+      "name": "Refrigerator",
+      "type": "room_asset",
+      "file_path": "assets/fridge.usd",
+      "geometry": {
+        "bbox": {
+          "short": 0.8000000379979612,
+          "long": 0.864000041037798,
+          "height": 1.7500000831205398
+        },
+        "scale_factor": 1.0,
+        "front_direction": [
+          0,
+          1,
+          0
+        ],
+        "coordinate_system": "lab_table_z_up_v1"
+      },
+      "semantic": {
+        "category": "storage_equipment",
+        "subtype": "refrigerator",
+        "synonyms": [
+          "冰箱",
+          "fridge",
+          "lab refrigerator",
+          "cold storage unit"
+        ],
+        "description": "A thermally insulated appliance used to store reagents, samples, and biological materials at low temperatures to ensure preservation."
+      },
+      "props": {
+        "flammable": false,
+        "explosive": false,
+        "volatile_or_toxic": false,
+        "glass_container": false,
+        "heat_source": false,
+        "acid": false,
+        "base": false,
+        "oxidizer": false,
+        "reactive_metal": false
+      },
+      "initial_location": "floor",
+      "notes": "Large storage equipment typically placed on the floor. Used for preserving temperature-sensitive materials."
+    },
+    {
+      "id": "FumeHood2",
+      "name": "FumeHood2",
+      "type": "room_asset",
+      "file_path": "assets/fumehood.usd",
+      "geometry": {
+        "bbox": {
+          "short": 0.9105756737463484,
+          "long": 3.0012501258850106,
+          "height": 2.3700388799526886
+        },
+        "scale_factor": 1.0,
+        "front_direction": [
+          0,
+          1,
+          0
+        ],
+        "coordinate_system": "lab_table_z_up_v1"
+      },
+      "semantic": {
+        "category": "safety_equipment",
+        "subtype": "ventilation_device",
+        "synonyms": [
+          "通风橱",
+          "fume cupboard",
+          "chemical hood",
+          "排毒柜",
+          "safety hood"
+        ],
+        "description": "A local ventilation device designed to limit exposure to hazardous or toxic fumes, vapors, or dusts by venting them away from the user."
+      },
+      "props": {
+        "flammable": false,
+        "explosive": false,
+        "volatile_or_toxic": false,
+        "glass_container": false,
+        "heat_source": false,
+        "acid": false,
+        "base": false,
+        "oxidizer": false,
+        "reactive_metal": false
+      },
+      "initial_location": "floor",
+      "notes": "Large safety infrastructure used for ventilation; typically installed directly on the laboratory floor."
+    },
+    {
+      "id": "GloveBox",
+      "name": "GloveBox",
+      "type": "room_asset",
+      "file_path": "assets/glovebox_02.usd",
+      "geometry": {
+        "bbox": {
+          "short": 1.5801913629145372,
+          "long": 4.103313019964243,
+          "height": 1.6751821798015865
+        },
+        "scale_factor": 1.0,
+        "front_direction": [
+          0,
+          1,
+          0
+        ],
+        "coordinate_system": "lab_table_z_up_v1"
+      },
+      "semantic": {
+        "category": "containment_equipment",
+        "subtype": "glove_box",
+        "synonyms": [
+          "手套箱",
+          "inert atmosphere box",
+          "dry box",
+          "isolation glove box"
+        ],
+        "description": "A sealed container equipped with gloves that allows the manipulation of objects in a controlled, inert, or sterile atmosphere."
+      },
+      "props": {
+        "flammable": false,
+        "explosive": false,
+        "volatile_or_toxic": false,
+        "glass_container": false,
+        "heat_source": false,
+        "acid": false,
+        "base": false,
+        "oxidizer": false,
+        "reactive_metal": false
+      },
+      "initial_location": "floor",
+      "notes": "Large containment equipment used for handling air-sensitive or sterile materials; typically installed as a standalone unit on the floor."
+    },
+    {
+      "id": "Incubator",
+      "name": "Incubator",
+      "type": "room_asset",
+      "file_path": "assets/incubator_01.usd",
+      "geometry": {
+        "bbox": {
+          "short": 0.8000008818887667,
+          "long": 2.7012474157532163,
+          "height": 1.538316924547395
+        },
+        "scale_factor": 1.0,
+        "front_direction": [
+          0,
+          1,
+          0
+        ],
+        "coordinate_system": "lab_table_z_up_v1"
+      },
+      "semantic": {
+        "category": "laboratory_equipment",
+        "subtype": "temperature_control_device",
+        "synonyms": [
+          "培养箱",
+          "culture incubator",
+          "thermostatic chamber"
+        ],
+        "description": "A device used to grow and maintain microbiological cultures or cell cultures by maintaining optimal temperature, humidity, and other conditions."
+      },
+      "props": {
+        "flammable": false,
+        "explosive": false,
+        "volatile_or_toxic": false,
+        "glass_container": false,
+        "heat_source": true,
+        "acid": false,
+        "base": false,
+        "oxidizer": false,
+        "reactive_metal": false
+      },
+      "initial_location": "floor",
+      "notes": "Large equipment for maintaining biological cultures; generates controlled heat to maintain optimal temperature."
+    },
+    {
+      "id": "LaboratoryRoom",
+      "name": "LaboratoryRoom",
+      "type": "room_asset",
+      "file_path": "assets/room.usd",
+      "geometry": {
+        "bbox": {
+          "short": 8.590126543547495,
+          "long": 8.93547688104189,
+          "height": 3.671444652520116
+        },
+        "scale_factor": 1.0,
+        "front_direction": [
+          0,
+          1,
+          0
+        ],
+        "coordinate_system": "lab_table_z_up_v1"
+      },
+      "semantic": {
+        "category": "infrastructure",
+        "subtype": "spatial_entity",
+        "synonyms": [
+          "实验室",
+          "laboratory",
+          "lab",
+          "房间"
+        ],
+        "description": "A defined enclosed space equipped with necessary facilities, utilities, and safety measures for conducting scientific experiments and research."
+      },
+      "props": {
+        "flammable": false,
+        "explosive": false,
+        "volatile_or_toxic": false,
+        "glass_container": false,
+        "heat_source": false,
+        "acid": false,
+        "base": false,
+        "oxidizer": false,
+        "reactive_metal": false
+      },
+      "initial_location": "floor",
+      "notes": "The primary infrastructure defining the laboratory space; contains all other assets."
+    },
+    {
+      "id": "LaboratoryRoom",
+      "name": "LaboratoryRoom",
+      "type": "room_asset",
+      "file_path": "assets/room2.usd",
+      "geometry": {
+        "bbox": {
+          "short": 6.931352127782046,
+          "long": 8.293344444203917,
+          "height": 4.085760634422012
+        },
+        "scale_factor": 1.0,
+        "front_direction": [
+          0,
+          1,
+          0
+        ],
+        "coordinate_system": "lab_table_z_up_v1"
+      },
+      "semantic": {
+        "category": "infrastructure",
+        "subtype": "room",
+        "synonyms": [
+          "实验室",
+          "laboratory",
+          "lab",
+          "room"
+        ],
+        "description": "A designated physical space equipped for conducting scientific experiments, research, and teaching."
+      },
+      "props": {
+        "flammable": false,
+        "explosive": false,
+        "volatile_or_toxic": false,
+        "glass_container": false,
+        "heat_source": false,
+        "acid": false,
+        "base": false,
+        "oxidizer": false,
+        "reactive_metal": false
+      },
+      "initial_location": "floor",
+      "notes": "Infrastructure asset representing the physical laboratory space."
+    },
+    {
+      "id": "Shelf",
+      "name": "Shelf",
+      "type": "room_asset",
+      "file_path": "assets/shelf.usd",
+      "geometry": {
+        "bbox": {
+          "short": 1.5609786508026793,
+          "long": 3.0972735846126054,
+          "height": 1.6446061983591949
+        },
+        "scale_factor": 1.0,
+        "front_direction": [
+          0,
+          1,
+          0
+        ],
+        "coordinate_system": "lab_table_z_up_v1"
+      },
+      "semantic": {
+        "category": "furniture",
+        "subtype": "storage",
+        "synonyms": [
+          "置物架",
+          "货架",
+          "storage shelf",
+          "rack",
+          "shelving unit"
+        ],
+        "description": "A flat horizontal plane or structure used for storing laboratory equipment, reagents, and other items."
+      },
+      "props": {
+        "flammable": false,
+        "explosive": false,
+        "volatile_or_toxic": false,
+        "glass_container": false,
+        "heat_source": false,
+        "acid": false,
+        "base": false,
+        "oxidizer": false,
+        "reactive_metal": false
+      },
+      "initial_location": "floor",
+      "notes": "Standard laboratory furniture used for storage; typically placed on the floor or mounted to walls."
+    }
+  ],
+  "required_locations": {
+    "ReagentCabinet": [
+      {
+        "name": "Piperidine",
+        "type": "reagent",
+        "quantity": 1,
+        "purpose": "Amine substrate (piperazine analogue)",
+        "initial_location": "ReagentCabinet"
+      },
+      {
+        "name": "Benzaldehyde",
+        "type": "reagent",
+        "quantity": 1,
+        "purpose": "Carbonyl component for alkylation",
+        "initial_location": "ReagentCabinet"
+      },
+      {
+        "name": "SodiumBorohydride",
+        "type": "reagent",
+        "quantity": 1,
+        "purpose": "Reducing agent",
+        "initial_location": "ReagentCabinet"
+      },
+      {
+        "name": "Methanol",
+        "type": "reagent",
+        "quantity": 1,
+        "purpose": "Reaction solvent",
+        "initial_location": "ReagentCabinet"
+      },
+      {
+        "name": "AceticAcid",
+        "type": "reagent",
+        "quantity": 1,
+        "purpose": "Catalyst",
+        "initial_location": "ReagentCabinet"
+      },
+      {
+        "name": "Dichloromethane",
+        "type": "reagent",
+        "quantity": 1,
+        "purpose": "Extraction solvent",
+        "initial_location": "ReagentCabinet"
+      },
+      {
+        "name": "PotassiumCarbonate",
+        "type": "reagent",
+        "quantity": 1,
+        "purpose": "Drying agent",
+        "initial_location": "ReagentCabinet"
+      }
+    ],
+    "ExperimentalPlatform": [
+      {
+        "name": "RoundBottomFlask",
+        "type": "instrument",
+        "quantity": 1,
+        "purpose": "Reaction vessel",
+        "initial_location": "ExperimentalPlatform"
+      },
+      {
+        "name": "Beaker",
+        "type": "instrument",
+        "quantity": 2,
+        "purpose": "Handling reagents and waste",
+        "initial_location": "ExperimentalPlatform"
+      },
+      {
+        "name": "SeparatoryFunnel",
+        "type": "instrument",
+        "quantity": 1,
+        "purpose": "Liquid-liquid extraction",
+        "initial_location": "ExperimentalPlatform"
+      },
+      {
+        "name": "GraduatedCylinder",
+        "type": "instrument",
+        "quantity": 1,
+        "purpose": "Measuring solvents",
+        "initial_location": "ExperimentalPlatform"
+      },
+      {
+        "name": "Pipette",
+        "type": "instrument",
+        "quantity": 1,
+        "purpose": "Transferring small liquid volumes",
+        "initial_location": "ExperimentalPlatform"
+      },
+      {
+        "name": "ElectronicScale",
+        "type": "instrument",
+        "quantity": 1,
+        "purpose": "Weighing solid reagents",
+        "initial_location": "ExperimentalPlatform"
+      },
+      {
+        "name": "GlassRod",
+        "type": "instrument",
+        "quantity": 1,
+        "purpose": "Stirring",
+        "initial_location": "ExperimentalPlatform"
+      },
+      {
+        "name": "RotaryEvaporator",
+        "type": "instrument",
+        "quantity": 1,
+        "purpose": "Solvent removal",
+        "initial_location": "ExperimentalPlatform"
+      },
+      {
+        "name": "HeatingPlate",
+        "type": "instrument",
+        "quantity": 1,
+        "purpose": "Temperature control support",
+        "initial_location": "ExperimentalPlatform"
+      },
+      {
+        "name": "Thermometer",
+        "type": "instrument",
+        "quantity": 1,
+        "purpose": "Temperature monitoring",
+        "initial_location": "ExperimentalPlatform"
+      }
+    ],
+    "ValidationPlatform": [
+      {
+        "name": "LiquidChromatograph",
+        "type": "instrument",
+        "quantity": 1,
+        "purpose": "Product analysis",
+        "initial_location": "ValidationPlatform"
+      }
+    ]
+  },
+  "all_locations": [
+    "ReagentCabinet",
+    "ExperimentalPlatform",
+    "FumeHood",
+    "ValidationPlatform"
+  ]
+}

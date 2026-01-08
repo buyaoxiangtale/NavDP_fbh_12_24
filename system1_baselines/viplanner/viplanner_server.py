@@ -15,7 +15,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--port",type=int,default=8888)
 parser.add_argument("--config",type=str,default="./configs/viplanner.yaml")
 parser.add_argument("--checkpoint",type=str,default="./checkpoints/viplanner.pt")
-parser.add_argument("--m2f_config",type=str,default="~/miniconda3/envs/habitat/lib/python3.9/site-packages/mmdet/.mim/configs/mask2former/mask2former_r50_8xb2-lsj-50e_coco-panoptic.py")
+parser.add_argument("--m2f_config",type=str,default="/home/ubuntu/miniconda3/envs/viplanner/lib/python3.10/site-packages/mmdet/.mim/configs/mask2former/mask2former_r50_8xb2-lsj-50e_coco-panoptic.py")
 parser.add_argument("--m2f_checkpoint",type=str,default="./checkpoints/mask2former_r50_8xb2-lsj-50e_coco-panoptic_20230118_125535-54df384a.pth")
 args = parser.parse_known_args()[0]
 
@@ -38,12 +38,12 @@ def iplanner_reset():
                                             device='cuda:0')
     if viplanner_fps_writer is None:
         format_time = datetime.datetime.fromtimestamp(time.time())
-        format_time = format_time.strftime("%Y-%m-%d %H:%M:%S")
+        format_time = format_time.strftime("%Y-%m-%d %H:%M:%S").replace(":", "-").replace(" ", "_")
         viplanner_fps_writer = imageio.get_writer("{}_fps_pointgoal.mp4".format(format_time),fps=7)
     else:
         viplanner_fps_writer.close()
         format_time = datetime.datetime.fromtimestamp(time.time())
-        format_time = format_time.strftime("%Y-%m-%d %H:%M:%S")
+        format_time = format_time.strftime("%Y-%m-%d %H:%M:%S").replace(":", "-").replace(" ", "_")
         viplanner_fps_writer = imageio.get_writer("{}_fps_pointgoal.mp4".format(format_time),fps=7)
     return jsonify({"algo":"viplanner"})
 

@@ -1,0 +1,52 @@
+goal_pairs:
+- start:
+  - 2.0
+  - 6.8
+  - 0.0
+  end:
+  - 4.0
+  - 2.533
+  - 0.0
+- start:
+  - 4.0
+  - 2.533
+  - 0.0
+  end:
+  - 5.5
+  - 5.96
+  - 0.0
+- start:
+  - 5.5
+  - 5.96
+  - 0.0
+  end:
+  - 6.24
+  - 4.681
+  - 4.71238898038469
+- start:
+  - 6.24
+  - 4.681
+  - 4.71238898038469
+  end:
+  - 4.0
+  - 2.533
+  - 0.0
+- start:
+  - 4.0
+  - 2.533
+  - 0.0
+  end:
+  - 5.212
+  - 2.0
+  - 4.71238898038469
+metadata:
+  scene_name: Deprotection_and_Cyclization_of_Indole_Derivative_20251229_003726
+  num_targets: 8
+  num_goal_pairs: 5
+  config:
+    scene_name: Deprotection_and_Cyclization_of_Indole_Derivative_20251229_003726
+    scene_dir: /home/pjlab/fbh/LabUtopia/roomlayout/layout_new/Deprotection_and_Cyclization_of_Indole_Derivative_20251229_003726
+    room_assets_file: Deprotection_and_Cyclization_of_Indole_Derivative_room_isaacsim.json
+    protocol_file: protocol_Deprotection_and_Cyclization_o_20251215_102011.json
+    asset_lib_file: /home/pjlab/fbh/LabUtopia/roomlayout/layout_new/assets_annotated.json
+    offset_radius: 0.6

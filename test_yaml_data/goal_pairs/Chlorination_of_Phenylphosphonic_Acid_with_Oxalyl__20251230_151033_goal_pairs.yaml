@@ -1,0 +1,52 @@
+goal_pairs:
+- start:
+  - 1.5
+  - 6.8
+  - 0.0
+  end:
+  - 4.0
+  - 2.533
+  - 0.0
+- start:
+  - 4.0
+  - 2.533
+  - 0.0
+  end:
+  - 5.5
+  - 5.96
+  - 0.0
+- start:
+  - 5.5
+  - 5.96
+  - 0.0
+  end:
+  - 6.185
+  - 5.0
+  - 4.71238898038469
+- start:
+  - 6.185
+  - 5.0
+  - 4.71238898038469
+  end:
+  - 5.662
+  - 2.2
+  - 4.71238898038469
+- start:
+  - 5.662
+  - 2.2
+  - 4.71238898038469
+  end:
+  - 5.5
+  - 5.96
+  - 0.0
+metadata:
+  scene_name: Chlorination_of_Phenylphosphonic_Acid_with_Oxalyl__20251230_151033
+  num_targets: 8
+  num_goal_pairs: 5
+  config:
+    scene_name: Chlorination_of_Phenylphosphonic_Acid_with_Oxalyl__20251230_151033
+    scene_dir: /home/pjlab/fbh/LabUtopia/roomlayout/layout_new/Chlorination_of_Phenylphosphonic_Acid_with_Oxalyl__20251230_151033
+    room_assets_file: Chlorination_of_Phenylphosphonic_Acid_with_Oxalyl__room_isaacsim.json
+    protocol_file: protocol_Chlorination_of_Phenylphosphon_20251230_143759.json
+    asset_lib_file: /home/pjlab/fbh/LabUtopia/roomlayout/layout_new/assets_annotated.json
+    offset_radius: 0.6

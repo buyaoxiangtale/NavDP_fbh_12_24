@@ -1,0 +1,44 @@
+goal_pairs:
+- start:
+  - 2.5
+  - 7.025
+  - 0.0
+  end:
+  - 4.3
+  - 2.833
+  - 0.0
+- start:
+  - 4.3
+  - 2.833
+  - 0.0
+  end:
+  - 6.5
+  - 5.99
+  - 0.0
+- start:
+  - 6.5
+  - 5.99
+  - 0.0
+  end:
+  - 2.1
+  - 7.622
+  - 3.141592653589793
+- start:
+  - 2.1
+  - 7.622
+  - 3.141592653589793
+  end:
+  - 5.662
+  - 2.5
+  - 4.71238898038469
+metadata:
+  scene_name: Hydrolysis_of_Nitrile_to_Amide_20251229_003725
+  num_targets: 11
+  num_goal_pairs: 4
+  config:
+    scene_name: Hydrolysis_of_Nitrile_to_Amide_20251229_003725
+    scene_dir: /home/pjlab/fbh/LabUtopia/roomlayout/layout_new/Hydrolysis_of_Nitrile_to_Amide_20251229_003725
+    room_assets_file: Hydrolysis_of_Nitrile_to_Amide_room_isaacsim.json
+    protocol_file: protocol_Hydrolysis_of_Nitrile_to_Amide_20251215_102030.json
+    asset_lib_file: /home/pjlab/fbh/LabUtopia/roomlayout/layout_new/assets_annotated.json
+    offset_radius: 0.6

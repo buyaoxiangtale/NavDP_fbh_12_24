@@ -1,0 +1,29 @@
+{
+  "reasoning": {
+    "safety_analysis": "Only one instrument (LiquidChromatograph) needs to be placed on this surface. No chemical reagents or other instruments are included in the assets to arrange for this surface, so no chemical safety constraints (flammable-heat source, acid-base, incompatible chemicals) apply. The instrument will be positioned with adequate clearance from all edges (≥0.05m minimum).",
+    "workflow_strategy": "The LiquidChromatograph is used for product analysis in this oxidation experiment. It should be positioned to allow easy access for sample injection and data collection. Given its large footprint (1.257m × 1.369m), it will be centrally located on the ValidationPlatform to ensure stability and accessibility. The instrument faces the operator (front_direction toward +Y) for convenient operation.",
+    "key_spatial_relationships": "The LiquidChromatograph is the only item on this surface. It is positioned centrally with its long axis (1.369m) parallel to the X-axis (0° rotation) to optimize the use of the surface width (2.735m). This leaves adequate space on all sides for operator access and maintenance. The position ensures all boundary constraints are satisfied with comfortable margins."
+  },
+  "desktop_layout": [
+    {
+      "name": "LiquidChromatograph",
+      "position": {
+        "x": 1.368,
+        "y": 0.761,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Centered on ValidationPlatform. At 0° rotation: long edge (1.369m) parallel to X-axis, short edge (1.257m) parallel to Y-axis. X-range: [1.368 - 1.369/2, 1.368 + 1.369/2] = [0.684, 2.052], Y-range: [0.761 - 1.257/2, 0.761 + 1.257/2] = [0.133, 1.390]. All edges maintain >0.05m clearance: left edge at 0.684m (>0.05m from 0), right edge at 2.052m (<2.735m, clearance 0.683m), front edge at 0.133m (>0.05m from 0), back edge at 1.390m (<1.522m, clearance 0.132m). Position allows operator access from front and provides stable, centered placement for this analytical instrument."
+    }
+  ],
+  "surface_type": "ValidationPlatform",
+  "surface_dimensions": {
+    "width": 2.7348869195972734,
+    "depth": 1.5220382895305355,
+    "height": 0.7999990173557717
+  }
+}

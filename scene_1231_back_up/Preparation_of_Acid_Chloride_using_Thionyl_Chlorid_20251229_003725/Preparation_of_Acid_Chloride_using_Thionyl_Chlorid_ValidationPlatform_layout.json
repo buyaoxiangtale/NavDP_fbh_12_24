@@ -1,0 +1,29 @@
+{
+  "reasoning": {
+    "safety_analysis": "Only one instrument (InfraredSpectrophotometer) needs to be placed on the ValidationPlatform. This is an analytical instrument with no chemical hazards, heat sources, or flammable materials. No chemical safety constraints apply as there are no reagents or reactive materials to arrange on this surface. The instrument will be positioned safely away from all edges with appropriate clearance.",
+    "workflow_strategy": "The InfraredSpectrophotometer is an analytical instrument used at the end of the synthesis workflow to verify the product (acid chloride) by detecting the carbonyl peak shift. Since this is the only item on the ValidationPlatform, it should be positioned centrally for easy access and optimal workflow. The instrument will be placed in a convenient location that allows the operator to approach from the front (Y=0 side) while maintaining safe distances from all edges.",
+    "key_spatial_relationships": "As a single instrument on the surface, the InfraredSpectrophotometer is positioned centrally with adequate clearance from all edges. The placement at mid-depth (Y ≈ 1.37m) ensures easy access while keeping the instrument stable and secure. The central X-position (≈ 0.76m) provides balanced placement on the work surface."
+  },
+  "desktop_layout": [
+    {
+      "name": "InfraredSpectrophotometer",
+      "position": {
+        "x": 0.761,
+        "y": 1.368,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Centered on ValidationPlatform for optimal access. Dimensions: 0.355m (short) × 0.483m (long) × 0.171m (height). At 0° rotation (default), long edge (0.483m) is parallel to X-axis. Position calculated: X = 1.522/2 = 0.761m (centered horizontally), Y = 2.735/2 = 1.368m (centered vertically). Clearances verified: X-min = 0.761 - 0.483/2 = 0.519m > 0.05m ✓, X-max = 0.761 + 0.483/2 = 1.003m < 1.472m ✓, Y-min = 1.368 - 0.355/2 = 1.190m > 0.05m ✓, Y-max = 1.368 + 0.355/2 = 1.545m < 2.685m ✓. All boundary constraints satisfied with substantial margins."
+    }
+  ],
+  "surface_type": "ValidationPlatform",
+  "surface_dimensions": {
+    "width": 1.5220382895305355,
+    "depth": 2.7348869195972734,
+    "height": 0.7999990173557717
+  }
+}

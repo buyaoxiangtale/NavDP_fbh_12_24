@@ -1,0 +1,29 @@
+{
+  "reasoning": {
+    "safety_analysis": "Only one instrument (LiquidChromatograph) needs to be placed on this surface. No chemical reagents or heating sources are included in the assets to arrange for this surface, so no flammable-heat source separation constraints apply. The LiquidChromatograph is analytical equipment with no inherent chemical hazards. Standard safety practices require maintaining minimum edge clearances (0.05m from edges) and ensuring the instrument is fully contained within the surface boundaries.",
+    "workflow_strategy": "The LiquidChromatograph is used for product analysis in the final stage of the synthesis workflow. It should be positioned to allow easy access while maximizing available space. Given the instrument's large footprint (1.257m × 1.369m), careful positioning is required to fit it on the ValidationPlatform (1.522m × 2.735m). The instrument is placed centrally with optimal orientation to allow operator access from the front (Y=0 side) while maintaining all safety clearances.",
+    "key_spatial_relationships": "The LiquidChromatograph is the only item on this surface, serving as the analytical station for the synthesis workflow. Its position is optimized for: (1) Full containment within surface boundaries, (2) Adequate clearance from all edges (≥0.05m), (3) Operator accessibility from the front of the bench, (4) Efficient use of the available workspace."
+  },
+  "desktop_layout": [
+    {
+      "name": "LiquidChromatograph",
+      "position": {
+        "x": 0.761,
+        "y": 1.368,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Positioned at the center of the ValidationPlatform. At 0° rotation (front_direction = (0,1,0)), the instrument's short dimension (1.257m) aligns with the X-axis and long dimension (1.369m) aligns with the Y-axis. Position calculations: X-range = [0.761 - 1.257/2, 0.761 + 1.257/2] = [0.133, 1.389]m (clearance from edges: 0.133m left, 0.133m right, both >0.05m ✓). Y-range = [1.368 - 1.369/2, 1.368 + 1.369/2] = [0.684, 2.052]m (clearance from edges: 0.684m front, 0.683m back, both >0.05m ✓). All boundaries satisfied. Centered placement provides optimal access and workspace utilization."
+    }
+  ],
+  "surface_type": "ValidationPlatform",
+  "surface_dimensions": {
+    "width": 1.5220382895305355,
+    "depth": 2.7348869195972734,
+    "height": 0.7999990173557717
+  }
+}

@@ -317,3 +317,9 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# cd /home/ubuntu/fengbh/NavDP
+# python teleop_pointgoal_wheeled.py \
+#     --scene_dir /home/ubuntu/fengbh/NavDP/fbh_test_scene \
+#     --scene_index 1 \
+#     --port 8888

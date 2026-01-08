@@ -1,0 +1,60 @@
+goal_pairs:
+- start:
+  - 2.8
+  - 6.695
+  - 0.0
+  end:
+  - 4.0
+  - 2.533
+  - 0.0
+- start:
+  - 4.0
+  - 2.533
+  - 0.0
+  end:
+  - 6.5
+  - 5.96
+  - 0.0
+- start:
+  - 6.5
+  - 5.96
+  - 0.0
+  end:
+  - 6.185
+  - 4.8
+  - 4.71238898038469
+- start:
+  - 6.185
+  - 4.8
+  - 4.71238898038469
+  end:
+  - 6.5
+  - 5.96
+  - 0.0
+- start:
+  - 6.5
+  - 5.96
+  - 0.0
+  end:
+  - 4.833
+  - 2.0
+  - 4.71238898038469
+- start:
+  - 4.833
+  - 2.0
+  - 4.71238898038469
+  end:
+  - 6.5
+  - 5.96
+  - 0.0
+metadata:
+  scene_name: Basic_Methanolysis_of_Acetate_Ester_20251229_003725
+  num_targets: 9
+  num_goal_pairs: 6
+  config:
+    scene_name: Basic_Methanolysis_of_Acetate_Ester_20251229_003725
+    scene_dir: /home/pjlab/fbh/LabUtopia/roomlayout/layout_new/Basic_Methanolysis_of_Acetate_Ester_20251229_003725
+    room_assets_file: Basic_Methanolysis_of_Acetate_Ester_room_isaacsim.json
+    protocol_file: protocol_Basic_Methanolysis_of_Acetate__20251215_101943.json
+    asset_lib_file: /home/pjlab/fbh/LabUtopia/roomlayout/layout_new/assets_annotated.json
+    offset_radius: 0.6

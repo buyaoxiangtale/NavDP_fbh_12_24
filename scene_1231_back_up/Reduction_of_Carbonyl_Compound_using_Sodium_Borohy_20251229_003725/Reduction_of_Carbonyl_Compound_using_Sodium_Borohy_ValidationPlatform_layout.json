@@ -1,0 +1,29 @@
+{
+  "reasoning": {
+    "safety_analysis": "This layout contains only one instrument (LiquidChromatograph) with no chemical reagents or other instruments on this surface. Therefore, no chemical safety constraints (flammable-heat source, incompatible chemicals, acid-base separations) apply. The instrument is positioned with adequate clearance from all edges (>0.05m minimum) and does not contain glass components requiring the 0.10m front edge constraint.",
+    "workflow_strategy": "The LiquidChromatograph is positioned for product analysis in this reduction experiment. It is placed centrally on the ValidationPlatform to allow easy access from the front (operator position at Y=0) while maximizing stability. The instrument faces the standard direction (front_direction = 0,1,0) toward the back of the surface, which is the typical operator-facing orientation. This positioning allows the operator to access controls and sample injection ports comfortably.",
+    "key_spatial_relationships": "The LiquidChromatograph is the only item on this surface. It is positioned with its center at (0.761m, 1.368m), which places it centrally in the X-direction and in the middle-to-back region of the Y-direction. Given its large footprint (1.257m × 1.369m), this central placement ensures: (1) minimum 0.05m clearance from left edge (0.761 - 1.369/2 = 0.0765m), (2) minimum 0.05m clearance from right edge (1.522 - 0.761 - 1.369/2 = 0.0765m), (3) minimum 0.05m clearance from front edge (1.368 - 1.257/2 = 0.7395m >> 0.05m), and (4) minimum 0.05m clearance from back edge (2.735 - 1.368 - 1.257/2 = 0.7385m >> 0.05m). The instrument is oriented at 0° rotation for standard operation."
+  },
+  "desktop_layout": [
+    {
+      "name": "LiquidChromatograph",
+      "position": {
+        "x": 0.761,
+        "y": 1.368,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Centrally positioned for product analysis with optimal access. At 0° rotation, dimensions are: X-span = 1.369m (long axis), Y-span = 1.257m (short axis). Position (0.761, 1.368) ensures: X-range [0.0765m to 1.4455m], Y-range [0.7395m to 1.9965m]. All edges maintain >0.05m clearance: left edge 0.0765m, right edge 0.0765m, front edge 0.7395m, back edge 0.7385m. Standard 0° orientation faces operator for ease of use."
+    }
+  ],
+  "surface_type": "ValidationPlatform",
+  "surface_dimensions": {
+    "width": 1.5220382895305355,
+    "depth": 2.7348869195972734,
+    "height": 0.7999990173557717
+  }
+}

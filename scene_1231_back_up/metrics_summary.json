@@ -1,0 +1,986 @@
+{
+  "summary": {
+    "total_files": 33,
+    "success_count": 33,
+    "error_count": 0,
+    "summary_stats": {
+      "avg_asset_count": 27.606060606060606,
+      "total_collisions": 25,
+      "total_boundary_violations": 32,
+      "total_height_errors": 0,
+      "avg_collisions_per_file": 0.7575757575757576,
+      "avg_boundary_violations_per_file": 0.9696969696969697,
+      "avg_height_errors_per_file": 0.0
+    }
+  },
+  "results": [
+    {
+      "file": "Alkylation_of_Ethyl_Acetoacetate_with_Bis_4-fluoro_20251229_003726/Alkylation_of_Ethyl_Acetoacetate_with_Bis_4-fluoro_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Alkylation_of_Ethyl_Acetoacetate_with_Bis_4-fluoro_20251229_003726/Alkylation_of_Ethyl_Acetoacetate_with_Bis_4-fluoro_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 31,
+          "floor_assets": 12,
+          "desktop_objects": 18
+        },
+        "collision_count": 0,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Basic_Methanolysis_of_Acetate_Ester_20251229_003725/Basic_Methanolysis_of_Acetate_Ester_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Basic_Methanolysis_of_Acetate_Ester_20251229_003725/Basic_Methanolysis_of_Acetate_Ester_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 25,
+          "floor_assets": 10,
+          "desktop_objects": 14
+        },
+        "collision_count": 0,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Boc_Deprotection_of_Benzyl-methyl-piperidin-4-yl-a_20251229_003725/Boc_Deprotection_of_Benzyl-methyl-piperidin-4-yl-a_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Boc_Deprotection_of_Benzyl-methyl-piperidin-4-yl-a_20251229_003725/Boc_Deprotection_of_Benzyl-methyl-piperidin-4-yl-a_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 25,
+          "floor_assets": 9,
+          "desktop_objects": 15
+        },
+        "collision_count": 1,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "RoundBottomFlask",
+              "object2": "HeatingPlate",
+              "work_surface": "experimental_platform",
+              "overlap_area_cm2": 77.51757589861049
+            }
+          ],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Boc_Deprotection_of_Hydrazine_Derivative_20251230_151033/Boc_Deprotection_of_Hydrazine_Derivative_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Boc_Deprotection_of_Hydrazine_Derivative_20251230_151033/Boc_Deprotection_of_Hydrazine_Derivative_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 26,
+          "floor_assets": 9,
+          "desktop_objects": 16
+        },
+        "collision_count": 1,
+        "boundary_violation_count": 2,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "RotaryEvaporator",
+              "object2": "Refrigerator",
+              "work_surface": "floor",
+              "overlap_area_cm2": 1056.000214308506
+            }
+          ],
+          "boundary_violations": [
+            {
+              "object": "FumeHood",
+              "work_surface": "floor",
+              "out_distance_cm": 13.022456509942515
+            },
+            {
+              "object": "ReagentCabinet",
+              "work_surface": "floor",
+              "out_distance_cm": 8.45007548686283
+            }
+          ],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Boc_Deprotection_of_Piperazine_Derivative__Model___20251229_003725/Boc_Deprotection_of_Piperazine_Derivative__Model___room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Boc_Deprotection_of_Piperazine_Derivative__Model___20251229_003725/Boc_Deprotection_of_Piperazine_Derivative__Model___room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 29,
+          "floor_assets": 11,
+          "desktop_objects": 17
+        },
+        "collision_count": 0,
+        "boundary_violation_count": 3,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [],
+          "boundary_violations": [
+            {
+              "object": "FumeHood",
+              "work_surface": "floor",
+              "out_distance_cm": 13.022456509942515
+            },
+            {
+              "object": "ReagentCabinet",
+              "work_surface": "floor",
+              "out_distance_cm": 17.450075486862815
+            },
+            {
+              "object": "Shelf",
+              "work_surface": "floor",
+              "out_distance_cm": 17.542605362759208
+            }
+          ],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Chlorination_of_Phenylphosphonic_Acid_with_Oxalyl__20251230_151033/Chlorination_of_Phenylphosphonic_Acid_with_Oxalyl__room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Chlorination_of_Phenylphosphonic_Acid_with_Oxalyl__20251230_151033/Chlorination_of_Phenylphosphonic_Acid_with_Oxalyl__room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 24,
+          "floor_assets": 11,
+          "desktop_objects": 12
+        },
+        "collision_count": 0,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Chlorination_of_Triazolyl-Benzyl_Alcohol_using_Thi_20251229_003726/Chlorination_of_Triazolyl-Benzyl_Alcohol_using_Thi_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Chlorination_of_Triazolyl-Benzyl_Alcohol_using_Thi_20251229_003726/Chlorination_of_Triazolyl-Benzyl_Alcohol_using_Thi_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 29,
+          "floor_assets": 11,
+          "desktop_objects": 17
+        },
+        "collision_count": 1,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "RotaryEvaporator",
+              "object2": "ValidationPlatform",
+              "work_surface": "floor",
+              "overlap_area_cm2": 1069.4115753324545
+            }
+          ],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Deprotection_and_Cyclization_of_Indole_Derivative_20251229_003726/Deprotection_and_Cyclization_of_Indole_Derivative_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Deprotection_and_Cyclization_of_Indole_Derivative_20251229_003726/Deprotection_and_Cyclization_of_Indole_Derivative_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 20,
+          "floor_assets": 9,
+          "desktop_objects": 10
+        },
+        "collision_count": 0,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Deprotection_of_a_Pyrrolidone_Derivative_20251229_003726/Deprotection_of_a_Pyrrolidone_Derivative_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Deprotection_of_a_Pyrrolidone_Derivative_20251229_003726/Deprotection_of_a_Pyrrolidone_Derivative_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 29,
+          "floor_assets": 10,
+          "desktop_objects": 18
+        },
+        "collision_count": 1,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "ElectronicScale",
+              "object2": "HeatingPlate",
+              "work_surface": "experimental_platform",
+              "overlap_area_cm2": 206.5502399141848
+            }
+          ],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Fmoc_Deprotection_of_Peptide_Intermediate_20251229_003725/Fmoc_Deprotection_of_Peptide_Intermediate_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Fmoc_Deprotection_of_Peptide_Intermediate_20251229_003725/Fmoc_Deprotection_of_Peptide_Intermediate_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 25,
+          "floor_assets": 9,
+          "desktop_objects": 15
+        },
+        "collision_count": 1,
+        "boundary_violation_count": 1,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "Pipette",
+              "object2": "Pipette",
+              "work_surface": "experimental_platform",
+              "overlap_area_cm2": 316.8129075966262
+            }
+          ],
+          "boundary_violations": [
+            {
+              "object": "Refrigerator",
+              "work_surface": "floor",
+              "out_distance_cm": 49.02615784780355
+            }
+          ],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Hydrolysis_of_Ethyl_α_α-dimethyl-3-pyridylacetate__20251229_003726/Hydrolysis_of_Ethyl_α_α-dimethyl-3-pyridylacetate__room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Hydrolysis_of_Ethyl_α_α-dimethyl-3-pyridylacetate__20251229_003726/Hydrolysis_of_Ethyl_α_α-dimethyl-3-pyridylacetate__room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 23,
+          "floor_assets": 9,
+          "desktop_objects": 13
+        },
+        "collision_count": 1,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "FumeHood",
+              "object2": "RotaryEvaporator",
+              "work_surface": "floor",
+              "overlap_area_cm2": 412.3800257330552
+            }
+          ],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Hydrolysis_of_Nitrile_to_Amide_20251229_003725/Hydrolysis_of_Nitrile_to_Amide_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Hydrolysis_of_Nitrile_to_Amide_20251229_003725/Hydrolysis_of_Nitrile_to_Amide_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 31,
+          "floor_assets": 9,
+          "desktop_objects": 21
+        },
+        "collision_count": 1,
+        "boundary_violation_count": 2,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "ExperimentalPlatform",
+              "object2": "RotaryEvaporator",
+              "work_surface": "floor",
+              "overlap_area_cm2": 458.0930752440536
+            }
+          ],
+          "boundary_violations": [
+            {
+              "object": "ReagentCabinet",
+              "work_surface": "floor",
+              "out_distance_cm": 17.450075486862815
+            },
+            {
+              "object": "Shelf",
+              "work_surface": "floor",
+              "out_distance_cm": 17.542605362759208
+            }
+          ],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Knoevenagel_Condensation_Protocol_20251230_151033/Knoevenagel_Condensation_Protocol_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Knoevenagel_Condensation_Protocol_20251230_151033/Knoevenagel_Condensation_Protocol_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 40,
+          "floor_assets": 12,
+          "desktop_objects": 27
+        },
+        "collision_count": 1,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "Pipette",
+              "object2": "Beaker",
+              "work_surface": "experimental_platform",
+              "overlap_area_cm2": 51.58847141354244
+            }
+          ],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Methylation_of_Beta-Keto_Ester_with_Diazomethane_20251229_003725/Methylation_of_Beta-Keto_Ester_with_Diazomethane_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Methylation_of_Beta-Keto_Ester_with_Diazomethane_20251229_003725/Methylation_of_Beta-Keto_Ester_with_Diazomethane_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 25,
+          "floor_assets": 11,
+          "desktop_objects": 13
+        },
+        "collision_count": 1,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "ValidationPlatform",
+              "object2": "RotaryEvaporator",
+              "work_surface": "floor",
+              "overlap_area_cm2": 13859.310409570076
+            }
+          ],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Nucleophilic_Reaction_of_Chlorophenylisocyanate_wi_20251229_003726/Nucleophilic_Reaction_of_Chlorophenylisocyanate_wi_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Nucleophilic_Reaction_of_Chlorophenylisocyanate_wi_20251229_003726/Nucleophilic_Reaction_of_Chlorophenylisocyanate_wi_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 30,
+          "floor_assets": 10,
+          "desktop_objects": 19
+        },
+        "collision_count": 1,
+        "boundary_violation_count": 4,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "GrahamCondenser",
+              "object2": "SeparatoryFunnel",
+              "work_surface": "experimental_platform",
+              "overlap_area_cm2": 25.35736974156046
+            }
+          ],
+          "boundary_violations": [
+            {
+              "object": "FumeHood",
+              "work_surface": "floor",
+              "out_distance_cm": 17.522456509942508
+            },
+            {
+              "object": "ReagentCabinet",
+              "work_surface": "floor",
+              "out_distance_cm": 17.85007548686277
+            },
+            {
+              "object": "ValidationPlatform",
+              "work_surface": "floor",
+              "out_distance_cm": 12.728070424432225
+            },
+            {
+              "object": "Shelf",
+              "work_surface": "floor",
+              "out_distance_cm": 17.442605362759206
+            }
+          ],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Oxidation_of_Methyl_Thiosalicylate_to_Sulfoxide_20251229_003726/Oxidation_of_Methyl_Thiosalicylate_to_Sulfoxide_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Oxidation_of_Methyl_Thiosalicylate_to_Sulfoxide_20251229_003726/Oxidation_of_Methyl_Thiosalicylate_to_Sulfoxide_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 33,
+          "floor_assets": 11,
+          "desktop_objects": 21
+        },
+        "collision_count": 2,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "ValidationPlatform",
+              "object2": "Shelf",
+              "work_surface": "floor",
+              "overlap_area_cm2": 7242.0755465173515
+            },
+            {
+              "object1": "SodiumSulfite",
+              "object2": "Water",
+              "work_surface": "reagent_cabinet",
+              "overlap_area_cm2": 14.090758054046798
+            }
+          ],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Oxidation_of_N-Propanol_to_Propionaldehyde_using_C_20251230_151033/Oxidation_of_N-Propanol_to_Propionaldehyde_using_C_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Oxidation_of_N-Propanol_to_Propionaldehyde_using_C_20251230_151033/Oxidation_of_N-Propanol_to_Propionaldehyde_using_C_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 28,
+          "floor_assets": 11,
+          "desktop_objects": 16
+        },
+        "collision_count": 0,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Preparation_of_1_3-Benzothiazol-6-sulfinic_Acid_So_20251229_003725/Preparation_of_1_3-Benzothiazol-6-sulfinic_Acid_So_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Preparation_of_1_3-Benzothiazol-6-sulfinic_Acid_So_20251229_003725/Preparation_of_1_3-Benzothiazol-6-sulfinic_Acid_So_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 20,
+          "floor_assets": 8,
+          "desktop_objects": 11
+        },
+        "collision_count": 0,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Preparation_of_2-Methoxy-4-_1-Boc-4-piperidyloxy_b_20251229_003726/Preparation_of_2-Methoxy-4-_1-Boc-4-piperidyloxy_b_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Preparation_of_2-Methoxy-4-_1-Boc-4-piperidyloxy_b_20251229_003726/Preparation_of_2-Methoxy-4-_1-Boc-4-piperidyloxy_b_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 24,
+          "floor_assets": 11,
+          "desktop_objects": 12
+        },
+        "collision_count": 1,
+        "boundary_violation_count": 3,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "ValidationPlatform",
+              "object2": "RotaryEvaporator",
+              "work_surface": "floor",
+              "overlap_area_cm2": 9109.794774512708
+            }
+          ],
+          "boundary_violations": [
+            {
+              "object": "FumeHood",
+              "work_surface": "floor",
+              "out_distance_cm": 13.022456509942515
+            },
+            {
+              "object": "ReagentCabinet",
+              "work_surface": "floor",
+              "out_distance_cm": 17.450075486862815
+            },
+            {
+              "object": "Shelf",
+              "work_surface": "floor",
+              "out_distance_cm": 17.542605362759208
+            }
+          ],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Preparation_of_Acid_Chloride_using_Oxalyl_Chloride_20251229_003725/Preparation_of_Acid_Chloride_using_Oxalyl_Chloride_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Preparation_of_Acid_Chloride_using_Oxalyl_Chloride_20251229_003725/Preparation_of_Acid_Chloride_using_Oxalyl_Chloride_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 22,
+          "floor_assets": 10,
+          "desktop_objects": 11
+        },
+        "collision_count": 0,
+        "boundary_violation_count": 2,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [],
+          "boundary_violations": [
+            {
+              "object": "FumeHood",
+              "work_surface": "floor",
+              "out_distance_cm": 13.022456509942515
+            },
+            {
+              "object": "ReagentCabinet",
+              "work_surface": "floor",
+              "out_distance_cm": 17.450075486862815
+            }
+          ],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Preparation_of_Acid_Chloride_using_Thionyl_Chlorid_20251229_003725/Preparation_of_Acid_Chloride_using_Thionyl_Chlorid_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Preparation_of_Acid_Chloride_using_Thionyl_Chlorid_20251229_003725/Preparation_of_Acid_Chloride_using_Thionyl_Chlorid_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 24,
+          "floor_assets": 11,
+          "desktop_objects": 12
+        },
+        "collision_count": 0,
+        "boundary_violation_count": 4,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [],
+          "boundary_violations": [
+            {
+              "object": "FumeHood",
+              "work_surface": "floor",
+              "out_distance_cm": 17.522456509942508
+            },
+            {
+              "object": "ReagentCabinet",
+              "work_surface": "floor",
+              "out_distance_cm": 17.550075486862937
+            },
+            {
+              "object": "ValidationPlatform",
+              "work_surface": "floor",
+              "out_distance_cm": 12.728070424432225
+            },
+            {
+              "object": "Shelf",
+              "work_surface": "floor",
+              "out_distance_cm": 7.492605362759202
+            }
+          ],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Preparation_of_Ethyl_4-_chloromethyl_-1_2_5-trimet_20251229_003725/Preparation_of_Ethyl_4-_chloromethyl_-1_2_5-trimet_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Preparation_of_Ethyl_4-_chloromethyl_-1_2_5-trimet_20251229_003725/Preparation_of_Ethyl_4-_chloromethyl_-1_2_5-trimet_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 20,
+          "floor_assets": 11,
+          "desktop_objects": 8
+        },
+        "collision_count": 2,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "ExperimentalPlatform",
+              "object2": "Chair",
+              "work_surface": "floor",
+              "overlap_area_cm2": 900.7700315807017
+            },
+            {
+              "object1": "ExperimentalPlatform",
+              "object2": "Chair",
+              "work_surface": "floor",
+              "overlap_area_cm2": 900.7700315807017
+            }
+          ],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Reduction_of_Carbonyl_Compound_using_Sodium_Borohy_20251229_003725/Reduction_of_Carbonyl_Compound_using_Sodium_Borohy_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Reduction_of_Carbonyl_Compound_using_Sodium_Borohy_20251229_003725/Reduction_of_Carbonyl_Compound_using_Sodium_Borohy_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 29,
+          "floor_assets": 11,
+          "desktop_objects": 17
+        },
+        "collision_count": 1,
+        "boundary_violation_count": 3,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "GraduatedCylinder",
+              "object2": "Pipette",
+              "work_surface": "experimental_platform",
+              "overlap_area_cm2": 2.6524430066972897
+            }
+          ],
+          "boundary_violations": [
+            {
+              "object": "FumeHood",
+              "work_surface": "floor",
+              "out_distance_cm": 33.022456509942444
+            },
+            {
+              "object": "ReagentCabinet",
+              "work_surface": "floor",
+              "out_distance_cm": 17.450075486862815
+            },
+            {
+              "object": "Shelf",
+              "work_surface": "floor",
+              "out_distance_cm": 17.542605362759208
+            }
+          ],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Synthesis_of_1-n-Heptyl-3-n-octylthiourea__Adapted_20251229_003725/Synthesis_of_1-n-Heptyl-3-n-octylthiourea__Adapted_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Synthesis_of_1-n-Heptyl-3-n-octylthiourea__Adapted_20251229_003725/Synthesis_of_1-n-Heptyl-3-n-octylthiourea__Adapted_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 27,
+          "floor_assets": 10,
+          "desktop_objects": 16
+        },
+        "collision_count": 1,
+        "boundary_violation_count": 2,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "ValidationPlatform",
+              "object2": "RotaryEvaporator",
+              "work_surface": "floor",
+              "overlap_area_cm2": 6433.916249949097
+            }
+          ],
+          "boundary_violations": [
+            {
+              "object": "FumeHood",
+              "work_surface": "floor",
+              "out_distance_cm": 13.022456509942515
+            },
+            {
+              "object": "ReagentCabinet",
+              "work_surface": "floor",
+              "out_distance_cm": 17.450075486862815
+            }
+          ],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Synthesis_of_3-_4-acetyloxyphenyl_glutaric_anhydri_20251229_003725/Synthesis_of_3-_4-acetyloxyphenyl_glutaric_anhydri_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Synthesis_of_3-_4-acetyloxyphenyl_glutaric_anhydri_20251229_003725/Synthesis_of_3-_4-acetyloxyphenyl_glutaric_anhydri_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 25,
+          "floor_assets": 11,
+          "desktop_objects": 13
+        },
+        "collision_count": 0,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Synthesis_of_Ethyl_2-_2-methyl-3_4_6-trifluorobenz_20251229_003726/Synthesis_of_Ethyl_2-_2-methyl-3_4_6-trifluorobenz_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Synthesis_of_Ethyl_2-_2-methyl-3_4_6-trifluorobenz_20251229_003726/Synthesis_of_Ethyl_2-_2-methyl-3_4_6-trifluorobenz_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 32,
+          "floor_assets": 13,
+          "desktop_objects": 18
+        },
+        "collision_count": 2,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "Refrigerator",
+              "object2": "RotaryEvaporator",
+              "work_surface": "floor",
+              "overlap_area_cm2": 3974.0224683474003
+            },
+            {
+              "object1": "RotaryEvaporator",
+              "object2": "RotaryEvaporator",
+              "work_surface": "floor",
+              "overlap_area_cm2": 7924.629334140428
+            }
+          ],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Synthesis_of_N-Benzyl-N'-benzoylthiourea_20251229_003725/Synthesis_of_N-Benzyl-N'-benzoylthiourea_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Synthesis_of_N-Benzyl-N'-benzoylthiourea_20251229_003725/Synthesis_of_N-Benzyl-N'-benzoylthiourea_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 23,
+          "floor_assets": 11,
+          "desktop_objects": 11
+        },
+        "collision_count": 3,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "ValidationPlatform",
+              "object2": "Chair",
+              "work_surface": "floor",
+              "overlap_area_cm2": 354.4013711616903
+            },
+            {
+              "object1": "HeatingPlate",
+              "object2": "RoundBottomFlask",
+              "work_surface": "experimental_platform",
+              "overlap_area_cm2": 173.25847901435267
+            },
+            {
+              "object1": "GraduatedCylinder",
+              "object2": "Pipette",
+              "work_surface": "experimental_platform",
+              "overlap_area_cm2": 2.6524430066972897
+            }
+          ],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Synthesis_of_N-Benzylpiperidine_via_Reductive_Alky_20251229_003725/Synthesis_of_N-Benzylpiperidine_via_Reductive_Alky_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Synthesis_of_N-Benzylpiperidine_via_Reductive_Alky_20251229_003725/Synthesis_of_N-Benzylpiperidine_via_Reductive_Alky_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 30,
+          "floor_assets": 11,
+          "desktop_objects": 18
+        },
+        "collision_count": 0,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Synthesis_of_N-__3-chlorophenyl_carbamothioyl_benz_20251229_003725/Synthesis_of_N-__3-chlorophenyl_carbamothioyl_benz_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Synthesis_of_N-__3-chlorophenyl_carbamothioyl_benz_20251229_003725/Synthesis_of_N-__3-chlorophenyl_carbamothioyl_benz_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 26,
+          "floor_assets": 11,
+          "desktop_objects": 14
+        },
+        "collision_count": 0,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Synthesis_of_Pyrazolo-pyridine_Analog_via_Thermal__20251229_003725/Synthesis_of_Pyrazolo-pyridine_Analog_via_Thermal__room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Synthesis_of_Pyrazolo-pyridine_Analog_via_Thermal__20251229_003725/Synthesis_of_Pyrazolo-pyridine_Analog_via_Thermal__room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 28,
+          "floor_assets": 10,
+          "desktop_objects": 17
+        },
+        "collision_count": 0,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Synthesis_of_Thiazole_Derivative_via_Hantzsch_Cycl_20251229_003725/Synthesis_of_Thiazole_Derivative_via_Hantzsch_Cycl_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Synthesis_of_Thiazole_Derivative_via_Hantzsch_Cycl_20251229_003725/Synthesis_of_Thiazole_Derivative_via_Hantzsch_Cycl_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 43,
+          "floor_assets": 12,
+          "desktop_objects": 30
+        },
+        "collision_count": 1,
+        "boundary_violation_count": 3,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "TestTube",
+              "object2": "TestTube",
+              "work_surface": "experimental_platform",
+              "overlap_area_cm2": 50.843727995736785
+            }
+          ],
+          "boundary_violations": [
+            {
+              "object": "FumeHood",
+              "work_surface": "floor",
+              "out_distance_cm": 13.022456509942515
+            },
+            {
+              "object": "ReagentCabinet",
+              "work_surface": "floor",
+              "out_distance_cm": 17.450075486862815
+            },
+            {
+              "object": "Shelf",
+              "work_surface": "floor",
+              "out_distance_cm": 17.542605362759208
+            }
+          ],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Synthesis_of_Thiourea_Derivative_20251229_003725/Synthesis_of_Thiourea_Derivative_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Synthesis_of_Thiourea_Derivative_20251229_003725/Synthesis_of_Thiourea_Derivative_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 28,
+          "floor_assets": 11,
+          "desktop_objects": 16
+        },
+        "collision_count": 2,
+        "boundary_violation_count": 0,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [
+            {
+              "object1": "HeatingPlate",
+              "object2": "RoundBottomFlask",
+              "work_surface": "experimental_platform",
+              "overlap_area_cm2": 173.25847901435267
+            },
+            {
+              "object1": "HeatingPlate",
+              "object2": "Thermometer",
+              "work_surface": "experimental_platform",
+              "overlap_area_cm2": 80.33981933593786
+            }
+          ],
+          "boundary_violations": [],
+          "height_errors": []
+        }
+      }
+    },
+    {
+      "file": "Urea_Synthesis_Quinazoline_Analog_20251230_151033/Urea_Synthesis_Quinazoline_Analog_room_isaacsim.json",
+      "file_path": "OUTPUT/1231_o/Urea_Synthesis_Quinazoline_Analog_20251230_151033/Urea_Synthesis_Quinazoline_Analog_room_isaacsim.json",
+      "metrics": {
+        "asset_count": {
+          "total": 37,
+          "floor_assets": 11,
+          "desktop_objects": 25
+        },
+        "collision_count": 0,
+        "boundary_violation_count": 3,
+        "height_error_count": 0,
+        "details": {
+          "collisions": [],
+          "boundary_violations": [
+            {
+              "object": "FumeHood",
+              "work_surface": "floor",
+              "out_distance_cm": 17.522456509942508
+            },
+            {
+              "object": "ReagentCabinet",
+              "work_surface": "floor",
+              "out_distance_cm": 17.450075486862815
+            },
+            {
+              "object": "Shelf",
+              "work_surface": "floor",
+              "out_distance_cm": 17.442605362759206
+            }
+          ],
+          "height_errors": []
+        }
+      }
+    }
+  ]
+}

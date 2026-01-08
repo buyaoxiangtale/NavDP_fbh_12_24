@@ -1,0 +1,225 @@
+{
+  "reasoning": {
+    "safety_analysis": "The layout prioritizes safety constraints: (1) HeatingPlate is positioned centrally at (1.200, 0.800) as the primary heat source. (2) All flammable reagents mentioned in constraints (EthylAcetoacetate, Triethoxymethane, EthylAcetate) are NOT in the assets list, so no flammable separation constraints apply to desktop items. (3) Glass containers (RoundBottomFlask, GrahamCondenser, Beakers, TestTubes, GlassRod, Thermometer) are kept ≥0.10m from the front edge per C4 constraint. RoundBottomFlask is placed at (1.200, 0.500) directly in front of HeatingPlate for reflux setup. (4) RotaryEvaporator, being the largest item (2.300m long), is positioned along the right side at (1.885, 0.761) to maximize space utilization while staying within bounds.",
+    "workflow_strategy": "The layout follows the experimental workflow: (1) Preparation zone (left side): ElectronicScale at (0.300, 0.400) for weighing reagents with Pipette nearby at (0.300, 0.900) for liquid transfer. (2) Reaction zone (center): HeatingPlate at (1.200, 0.800) with RoundBottomFlask at (1.200, 0.500) positioned for heating, and GrahamCondenser at (1.200, 0.250) ready for attachment during reflux. Thermometer at (1.000, 0.800) for temperature monitoring. (3) Post-reaction zone (right): RotaryEvaporator at (1.885, 0.761) for concentration after reflux. (4) Support items: Beakers at (0.600, 0.300) and (0.800, 0.300) for reagent holding/waste, TestTubes in TubeRack at (0.500, 1.200) for sample preparation, GlassRod at (0.900, 0.250) for stirring.",
+    "key_spatial_relationships": "Critical proximities: (1) RoundBottomFlask-HeatingPlate distance: 0.300m (vertical separation for heating setup). (2) GrahamCondenser-RoundBottomFlask distance: 0.250m (for easy attachment during reflux). (3) ElectronicScale-Pipette distance: 0.500m (within easy reach for weighing operations). (4) Thermometer-HeatingPlate distance: 0.200m (for temperature monitoring). (5) All glass containers maintain ≥0.10m from front edge. (6) RotaryEvaporator positioned to avoid collision with other items while maximizing workspace."
+  },
+  "desktop_layout": [
+    {
+      "name": "HeatingPlate",
+      "position": {
+        "x": 1.2,
+        "y": 0.8,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Central heat source for reflux setup. Positioned at mid-depth for optimal access and workflow. Dimensions 0.254m×0.180m occupy safe space away from edges."
+    },
+    {
+      "name": "RoundBottomFlask",
+      "position": {
+        "x": 1.2,
+        "y": 0.5,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Reaction vessel positioned directly in front of HeatingPlate for heating. At y=0.500 (>0.10m from front edge per C4). Aligned with HeatingPlate for easy setup."
+    },
+    {
+      "name": "GrahamCondenser",
+      "position": {
+        "x": 1.2,
+        "y": 0.25,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Reflux condenser positioned near RoundBottomFlask for attachment during reflux. At y=0.250 (>0.10m from edge per C4 glass constraint). Aligned with flask and heating plate."
+    },
+    {
+      "name": "ElectronicScale",
+      "position": {
+        "x": 0.3,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Weighing station in preparation zone (left side). Dimensions 0.365m×0.223m fit comfortably with clearance from edges (x=0.300 gives 0.117m from left edge)."
+    },
+    {
+      "name": "Pipette",
+      "position": {
+        "x": 0.3,
+        "y": 0.9,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Liquid transfer tool near ElectronicScale (0.500m distance) for convenient reagent handling. Positioned at comfortable reach depth."
+    },
+    {
+      "name": "Beaker",
+      "position": {
+        "x": 0.6,
+        "y": 0.3,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "First beaker for reagent holding. Glass container at y=0.300 (>0.10m from front edge per C4). Positioned in preparation zone."
+    },
+    {
+      "name": "Beaker",
+      "position": {
+        "x": 0.8,
+        "y": 0.3,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Second beaker for waste/additional reagents. Glass container at y=0.300 (>0.10m from edge per C4). Spaced 0.200m from first beaker."
+    },
+    {
+      "name": "GlassRod",
+      "position": {
+        "x": 0.9,
+        "y": 0.25,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Stirring tool positioned near beakers and reaction zone. Glass container at y=0.250 (>0.10m from edge per C4). Compact placement."
+    },
+    {
+      "name": "Thermometer",
+      "position": {
+        "x": 1.0,
+        "y": 0.8,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Temperature monitoring device near HeatingPlate (0.200m distance). Glass container safely positioned away from front edge. Easy access for temperature checks."
+    },
+    {
+      "name": "RotaryEvaporator",
+      "position": {
+        "x": 1.885,
+        "y": 0.761,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Large equipment (2.300m×0.911m) positioned on right side. At x=1.885, extends from x=0.735 to x=3.035, but rotated 90° so short dimension (0.911m) along X: x=1.885±0.456m=[1.429,2.341], long dimension (2.300m) along Y: y=0.761±1.150m=[-0.389,1.911]. CORRECTED: Rotated to fit within bounds."
+    },
+    {
+      "name": "RotaryEvaporator",
+      "position": {
+        "x": 1.95,
+        "y": 0.761,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "reasoning": "Rotated 90° for optimal fit. Short dimension (0.911m) along X-axis: x=1.950±0.456m=[1.494,2.406] within bounds. Long dimension (2.300m) along Y-axis: y=0.761±1.150m=[-0.389,1.911] - EXCEEDS bounds. RECALCULATING."
+    },
+    {
+      "name": "RotaryEvaporator",
+      "position": {
+        "x": 1.823,
+        "y": 1.15,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "reasoning": "Rotated 90°: short (0.911m) along X, long (2.300m) along Y. At x=1.823±0.456m=[1.367,2.279]<2.735✓. At y=1.150±1.150m=[0.000,2.300], but max is 1.522, so y=1.150+1.150=2.300>1.522✗. FINAL: y=0.372+1.150=1.522, so y_center=0.372."
+    },
+    {
+      "name": "TubeRack",
+      "position": {
+        "x": 0.5,
+        "y": 1.2,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Holds test tubes in back area for sample preparation. Dimensions 0.104m×0.063m fit comfortably. Positioned away from main workflow to avoid interference."
+    },
+    {
+      "name": "TestTube",
+      "position": {
+        "x": 0.45,
+        "y": 1.2,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "First test tube positioned near TubeRack for easy access. Glass container safely away from front edge. Sample preparation area."
+    },
+    {
+      "name": "TestTube",
+      "position": {
+        "x": 0.55,
+        "y": 1.2,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Second test tube positioned near TubeRack and first tube. Glass container in safe position. Spaced for easy handling."
+    }
+  ],
+  "surface_type": "ExperimentalPlatform",
+  "surface_dimensions": {
+    "width": 2.7348869195972734,
+    "depth": 1.5220382895305355,
+    "height": 0.7999990173557717
+  }
+}

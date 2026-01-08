@@ -1,0 +1,141 @@
+{
+  "reasoning": {
+    "safety_analysis": "This is a reagent cabinet storage layout, so no heating equipment is present on this surface. All items are reagent bottles with 0.100m × 0.100m footprints. Key safety considerations: (1) Flammable reagents (PhenylIsocyanate, Triethylamine, Hexane, EthylAcetate, Acetonitrile) are separated from each other by >0.30m where incompatible. (2) Bases (MetaChloroaniline, Triethylamine, PotassiumCarbonate) are grouped together but maintain minimum clearances. (3) All glass containers are placed ≥0.10m from front edge. (4) Volatile/toxic materials are distributed to prevent concentration of hazards. Since this is storage (not active use), the primary concern is organization and accessibility for Step 1 retrieval.",
+    "workflow_strategy": "Layout optimized for Step 1 retrieval sequence. Reagents are arranged in three rows: (1) Front row (Y≈0.12m): Primary reaction reagents (MetaChloroaniline, PhenylIsocyanate, Dichloromethane) for immediate access. (2) Middle row (Y≈0.22m): Catalysts and workup reagents (Triethylamine, PotassiumCarbonate, SodiumChloride). (3) Back row (Y≈0.34m): Solvents for analysis and workup (Hexane, EthylAcetate, Acetonitrile). This arrangement allows sequential retrieval from left to right, matching the experimental workflow from reaction setup through analysis.",
+    "key_spatial_relationships": "Nine reagent bottles arranged in 3×3 grid pattern with 0.15-0.20m spacing. Front row contains the three most critical reagents for the initial reaction. Flammable solvents (Hexane, EthylAcetate, Acetonitrile) are positioned in the back row for safety. Bases are distributed across rows to prevent clustering. All items maintain >0.03m clearance and are >0.10m from front edge. Total X-span uses ~1.50m of available 1.792m width, leaving edge margins."
+  },
+  "desktop_layout": [
+    {
+      "name": "MetaChloroaniline",
+      "position": {
+        "x": 0.3,
+        "y": 0.12,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Primary amine substrate, front-left position for easy access. Glass container placed 0.120m from front edge (>0.10m requirement). First item to be retrieved in Step 1."
+    },
+    {
+      "name": "PhenylIsocyanate",
+      "position": {
+        "x": 0.65,
+        "y": 0.12,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Isocyanate electrophile, front-center position. Flammable and moisture-sensitive reagent. Distance from MetaChloroaniline: 0.350m. Glass container >0.10m from front edge."
+    },
+    {
+      "name": "Dichloromethane",
+      "position": {
+        "x": 1.0,
+        "y": 0.12,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Primary reaction solvent, front-right position. Volatile/toxic solvent placed for easy access. Distance from PhenylIsocyanate: 0.350m. Maintains >0.10m from front edge."
+    },
+    {
+      "name": "Triethylamine",
+      "position": {
+        "x": 0.3,
+        "y": 0.24,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Base catalyst, middle-left position. Flammable and volatile base. Distance from MetaChloroaniline (above): 0.120m vertical separation. Distance from PotassiumCarbonate: 0.350m."
+    },
+    {
+      "name": "PotassiumCarbonate",
+      "position": {
+        "x": 0.65,
+        "y": 0.24,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Drying agent, middle-center position. Solid base for workup. Distance from Triethylamine: 0.350m. Distance from PhenylIsocyanate (above): 0.120m vertical separation."
+    },
+    {
+      "name": "SodiumChloride",
+      "position": {
+        "x": 1.0,
+        "y": 0.24,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Brine preparation salt, middle-right position. Non-hazardous solid. Distance from PotassiumCarbonate: 0.350m. Distance from Dichloromethane (above): 0.120m vertical separation."
+    },
+    {
+      "name": "Hexane",
+      "position": {
+        "x": 0.3,
+        "y": 0.36,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Wash solvent, back-left position. Flammable and volatile solvent placed in back row. Distance from Triethylamine (front): 0.120m. Distance from EthylAcetate: 0.350m."
+    },
+    {
+      "name": "EthylAcetate",
+      "position": {
+        "x": 0.65,
+        "y": 0.36,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "TLC/Analysis solvent, back-center position. Flammable and volatile. Distance from Hexane: 0.350m. Distance from PotassiumCarbonate (front): 0.120m. Distance from Acetonitrile: 0.350m."
+    },
+    {
+      "name": "Acetonitrile",
+      "position": {
+        "x": 1.0,
+        "y": 0.36,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "HPLC analysis solvent, back-right position. Flammable and volatile. Distance from EthylAcetate: 0.350m. Distance from SodiumChloride (front): 0.120m. Completes 3×3 grid layout."
+    }
+  ],
+  "surface_type": "ReagentCabinet",
+  "surface_dimensions": {
+    "width": 1.7919863780488523,
+    "depth": 0.439128053284753,
+    "height": 0.8
+  }
+}

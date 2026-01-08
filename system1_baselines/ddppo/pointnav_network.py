@@ -5,6 +5,29 @@ from gym import spaces
 from gym.spaces import Dict as SpaceDict
 from gym.spaces import Discrete
 from torch import Tensor
+import os
+import sys
+
+# 添加 vlfm 目录到 Python 路径，以便加载检查点时能找到 vlfm 模块
+_current_dir = os.path.dirname(os.path.abspath(__file__))
+_vlfm_dir = os.path.join(_current_dir, "vlfm")
+if os.path.exists(_vlfm_dir) and _vlfm_dir not in sys.path:
+    sys.path.insert(0, _vlfm_dir)
+
+# 尝试导入 vlfm 模块，以便 pickle 在反序列化时能找到它们
+try:
+    import vlfm.obs_transformers.resize  # noqa: F401
+    import vlfm.obs_transformers.utils  # noqa: F401
+except ImportError:
+    # 如果导入失败，尝试从 vlfm/vlfm 目录导入
+    _vlfm_vlfm_dir = os.path.join(_vlfm_dir, "vlfm")
+    if os.path.exists(_vlfm_vlfm_dir) and _vlfm_vlfm_dir not in sys.path:
+        sys.path.insert(0, _vlfm_vlfm_dir)
+    try:
+        import vlfm.obs_transformers.resize  # noqa: F401
+        import vlfm.obs_transformers.utils  # noqa: F401
+    except ImportError:
+        pass  # 如果仍然失败，继续执行（可能在加载时会有问题，但至少尝试了）
 
 habitat_version = ""
 
@@ -148,13 +171,26 @@ def load_pointnav_policy(file_path: str) -> PointNavResNetTensorOutputPolicy:
                 normalize_visual_inputs=False,
                 obs_transform=None,
             )
-        ckpt_dict = torch.load(file_path, map_location="cpu")
+        # 使用 weights_only=False 以允许加载包含自定义类的检查点
+        # 同时确保 vlfm 模块已经在路径中
+        try:
+            ckpt_dict = torch.load(file_path, map_location="cpu", weights_only=False)
+        except Exception as e:
+            # 如果失败，尝试使用 weights_only=True（但可能仍然失败）
+            print(f"[WARNING] 使用 weights_only=False 加载失败: {e}")
+            ckpt_dict = torch.load(file_path, map_location="cpu")
         state_dict = ckpt_dict["state_dict"]
         pointnav_policy.load_state_dict(state_dict)
         return pointnav_policy
 
     else:
-        ckpt_dict = torch.load(file_path, map_location="cpu")
+        # 使用 weights_only=False 以允许加载包含自定义类的检查点
+        try:
+            ckpt_dict = torch.load(file_path, map_location="cpu", weights_only=False)
+        except Exception as e:
+            # 如果失败，尝试使用 weights_only=True（但可能仍然失败）
+            print(f"[WARNING] 使用 weights_only=False 加载失败: {e}")
+            ckpt_dict = torch.load(file_path, map_location="cpu")
         pointnav_policy = PointNavResNetTensorOutputPolicy()
         current_state_dict = pointnav_policy.state_dict()
         # Let old checkpoints work with new code

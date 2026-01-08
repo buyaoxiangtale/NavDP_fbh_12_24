@@ -1,0 +1,60 @@
+goal_pairs:
+- start:
+  - 2.5
+  - 6.465
+  - 0.0
+  end:
+  - 3.0
+  - 2.533
+  - 0.0
+- start:
+  - 3.0
+  - 2.533
+  - 0.0
+  end:
+  - 6.5
+  - 5.14
+  - 0.0
+- start:
+  - 6.5
+  - 5.14
+  - 0.0
+  end:
+  - 6.185
+  - 5.0
+  - 4.71238898038469
+- start:
+  - 6.185
+  - 5.0
+  - 4.71238898038469
+  end:
+  - 6.5
+  - 5.14
+  - 0.0
+- start:
+  - 6.5
+  - 5.14
+  - 0.0
+  end:
+  - 6.185
+  - 5.0
+  - 4.71238898038469
+- start:
+  - 6.185
+  - 5.0
+  - 4.71238898038469
+  end:
+  - 5.5
+  - 0.533
+  - 0.0
+metadata:
+  scene_name: Fmoc_Deprotection_of_Peptide_Intermediate_20251229_003725
+  num_targets: 10
+  num_goal_pairs: 6
+  config:
+    scene_name: Fmoc_Deprotection_of_Peptide_Intermediate_20251229_003725
+    scene_dir: /home/pjlab/fbh/LabUtopia/roomlayout/layout_new/Fmoc_Deprotection_of_Peptide_Intermediate_20251229_003725
+    room_assets_file: Fmoc_Deprotection_of_Peptide_Intermediate_room_isaacsim.json
+    protocol_file: protocol_Fmoc_Deprotection_of_Peptide_I_20251215_101955.json
+    asset_lib_file: /home/pjlab/fbh/LabUtopia/roomlayout/layout_new/assets_annotated.json
+    offset_radius: 0.6

@@ -13,7 +13,7 @@ parser.add_argument(
 parser.add_argument(
     "--scene_scale", type=float, default=1.0)
 parser.add_argument(
-    "--stop_threshold", type=float, default=-3.0)
+    "--stop_threshold", type=float, default=-2.0)
 parser.add_argument(
     "--num_envs", type=int, default=1)
 parser.add_argument(
@@ -266,7 +266,7 @@ while simulation_app.is_running():
             if dones[i] == True:
                 episode_num += 1
                 navigator_reset(env_id=i,port=args_cli.port)
-                success_flag = (np.sqrt(np.square(goal_poses[i]).sum())<1.5).astype(np.float32)
+                success_flag = (np.sqrt(np.square(goal_poses[i]).sum())<0.5).astype(np.float32)
                 fps_writer[i].close()
                 evaluation_metrics.append({'success':success_flag,
                                            'spl': np.clip(euclidean[i] / trajectory_length[i],0,1) * success_flag,

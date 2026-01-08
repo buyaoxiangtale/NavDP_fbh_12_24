@@ -1,0 +1,36 @@
+goal_pairs:
+- start:
+  - 2.2
+  - 6.805
+  - 0.0
+  end:
+  - 5.5
+  - 5.99
+  - 0.0
+- start:
+  - 5.5
+  - 5.99
+  - 0.0
+  end:
+  - 6.185
+  - 3.5
+  - 4.71238898038469
+- start:
+  - 6.185
+  - 3.5
+  - 4.71238898038469
+  end:
+  - 5.663
+  - 5.9
+  - 4.71238898038469
+metadata:
+  scene_name: Chlorination_of_Triazolyl-Benzyl_Alcohol_using_Thi_20251229_003726
+  num_targets: 11
+  num_goal_pairs: 3
+  config:
+    scene_name: Chlorination_of_Triazolyl-Benzyl_Alcohol_using_Thi_20251229_003726
+    scene_dir: /home/pjlab/fbh/LabUtopia/roomlayout/layout_new/Chlorination_of_Triazolyl-Benzyl_Alcohol_using_Thi_20251229_003726
+    room_assets_file: Chlorination_of_Triazolyl-Benzyl_Alcohol_using_Thi_room_isaacsim.json
+    protocol_file: protocol_Chlorination_of_Triazolyl-Benz_20251215_102005.json
+    asset_lib_file: /home/pjlab/fbh/LabUtopia/roomlayout/layout_new/assets_annotated.json
+    offset_radius: 0.6

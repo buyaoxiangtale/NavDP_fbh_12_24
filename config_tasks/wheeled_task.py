@@ -94,7 +94,7 @@ def arrival_terminal_check(env: ManagerBasedEnv,
     robot_vel = robot_asset.data.root_lin_vel_w
     distance = torch.square(robot_pos[:,0:2] - goal_pos[:,0:2]).sum(axis=1).sqrt()
     velocity = torch.abs(robot_vel).sum(axis=1)
-    return (distance < 1.0) & (velocity < 0.5)
+    return (distance < 0.5) & (velocity < 0.5)
 
 def exploration_reset(env: ManagerBasedEnv, 
                       env_ids: torch.Tensor, 

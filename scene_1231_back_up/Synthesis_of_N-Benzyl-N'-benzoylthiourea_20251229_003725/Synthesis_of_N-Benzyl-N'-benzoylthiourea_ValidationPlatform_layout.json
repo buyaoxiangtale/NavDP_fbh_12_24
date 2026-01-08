@@ -1,0 +1,29 @@
+{
+  "reasoning": {
+    "safety_analysis": "Only one instrument (LiquidChromatograph) needs to be placed on this surface. No chemical reagents or heating elements are included in the assets to arrange for this surface, so there are no flammable-heat source separations or chemical incompatibility constraints to consider. The instrument will be positioned with adequate clearance from all edges (≥0.05m minimum).",
+    "workflow_strategy": "The LiquidChromatograph is used for analyzing product purity at the end of the synthesis workflow. It should be positioned to allow easy access while maximizing available workspace. Given its large dimensions (1.257m × 1.369m footprint), careful placement is needed to ensure it fits within the surface boundaries with proper clearance.",
+    "key_spatial_relationships": "The LiquidChromatograph is a large analytical instrument that will occupy a significant portion of the ValidationPlatform surface. Positioning it centrally with slight offset allows for optimal access and maintains required edge clearances. The instrument faces the operator (front_direction toward +Y) for standard operation."
+  },
+  "desktop_layout": [
+    {
+      "name": "LiquidChromatograph",
+      "position": {
+        "x": 0.761,
+        "y": 1.368,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Centered on the ValidationPlatform surface. At 0° rotation, the long dimension (1.369m) is parallel to X-axis and short dimension (1.257m) is parallel to Y-axis. Position calculations: X-range [0.761 - 1.369/2, 0.761 + 1.369/2] = [0.077, 1.445]m (clearance from edges: 0.077m left, 0.077m right). Y-range [1.368 - 1.257/2, 1.368 + 1.257/2] = [0.740, 1.997]m (clearance: 0.740m front, 0.738m back). All clearances exceed the 0.05m minimum requirement. This central placement provides optimal access for analytical work while keeping the instrument stable and within all boundary constraints."
+    }
+  ],
+  "surface_type": "ValidationPlatform",
+  "surface_dimensions": {
+    "width": 1.5220382895305355,
+    "depth": 2.7348869195972734,
+    "height": 0.7999990173557717
+  }
+}

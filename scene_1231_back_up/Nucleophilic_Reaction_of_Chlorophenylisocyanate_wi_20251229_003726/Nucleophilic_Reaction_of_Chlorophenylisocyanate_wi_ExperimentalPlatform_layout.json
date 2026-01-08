@@ -1,0 +1,183 @@
+{
+  "reasoning": {
+    "safety_analysis": "The layout prioritizes chemical safety constraints: (1) HeatingPlate is positioned at (0.600, 0.450) in the left-center area. (2) All flammable reagents (Piperidine, EthylAcetate) would be kept >0.50m away, but these are NOT in the assets list to arrange on this surface. (3) Glass containers (RoundBottomFlask, GrahamCondenser, SeparatoryFunnel, Beakers, VolumetricFlask) are positioned ≥0.10m from the front edge per C4 constraint. (4) The RoundBottomFlask for reaction is placed on the HeatingPlate, with the second RoundBottomFlask positioned nearby for workflow. (5) SeparatoryFunnel is placed at safe distance (0.200, 0.800) maintaining >0.10m from front edge.",
+    "workflow_strategy": "The layout follows the experimental workflow from left to right: (1) Preparation zone (left): ElectronicScale at (0.300, 0.400) for weighing reagents, with Pipette nearby at (0.300, 0.800) for liquid measurement. (2) Reaction zone (center-left): HeatingPlate at (0.600, 0.450) with RoundBottomFlask_1 positioned on it, GrahamCondenser at (0.600, 0.900) for reflux setup, and Thermometer at (0.850, 0.450) for temperature monitoring. (3) Separation zone (front-left): SeparatoryFunnel at (0.200, 0.800) for liquid-liquid extraction. (4) Collection/support zone (center): Two Beakers at (1.100, 0.300) and (1.100, 0.600) for liquid transfer and collection. (5) Post-reaction processing (right): RotaryEvaporator at (2.000, 0.761) for solvent removal, VolumetricFlask at (1.400, 0.300) for sample preparation, and RoundBottomFlask_2 at (1.400, 0.600) for additional vessel needs.",
+    "key_spatial_relationships": "Critical proximities: (1) ElectronicScale and Pipette are 0.40m apart for efficient reagent preparation (Step 2). (2) HeatingPlate, RoundBottomFlask_1, and Thermometer form a tight cluster (0.25m spacing) for reaction monitoring (Step 4). (3) GrahamCondenser is 0.45m from HeatingPlate, allowing vertical assembly above the reaction flask (Step 3). (4) SeparatoryFunnel is positioned 0.65m from the reaction zone for easy transfer after cooling (Step 5). (5) Beakers are centrally located for flexible use throughout the procedure. (6) RotaryEvaporator occupies the right side with its large footprint (2.3m × 0.911m), maintaining clearance from all other equipment. (7) All items maintain ≥0.03m clearance and are within surface boundaries with ≥0.05m edge margins."
+  },
+  "desktop_layout": [
+    {
+      "name": "ElectronicScale",
+      "position": {
+        "x": 0.3,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Positioned in preparation zone for weighing Chlorophenylisocyanate (Step 2). Centered at x=0.300 (0.300±0.1825m fits within bounds), y=0.400 (0.400±0.1115m maintains >0.10m from front edge). Provides stable base for precise measurements."
+    },
+    {
+      "name": "Pipette",
+      "position": {
+        "x": 0.3,
+        "y": 0.8,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Placed 0.40m from ElectronicScale for liquid measurement workflow (Step 2). At x=0.300±0.2195m, y=0.800±0.076m, maintains clearances and accessibility for measuring Piperidine, Triethylamine, and DimethylSulfoxide."
+    },
+    {
+      "name": "RoundBottomFlask",
+      "position": {
+        "x": 0.6,
+        "y": 0.45,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Primary reaction vessel positioned on HeatingPlate for Steps 3-4. At x=0.600±0.074m, y=0.450±0.0585m, maintains >0.10m from front edge (C4 constraint). Will hold Chlorophenylisocyanate solution and support GrahamCondenser attachment."
+    },
+    {
+      "name": "RoundBottomFlask",
+      "position": {
+        "x": 1.4,
+        "y": 0.6,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Secondary reaction vessel for additional needs. At x=1.400±0.074m, y=0.600±0.0585m, maintains >0.10m from front edge (C4 constraint) and provides backup vessel for transfers or parallel operations."
+    },
+    {
+      "name": "HeatingPlate",
+      "position": {
+        "x": 0.6,
+        "y": 0.45,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Central heating source for reaction (Step 4). At x=0.600±0.127m, y=0.450±0.090m. Positioned to support RoundBottomFlask_1 directly above it. All flammable reagents (not on this surface) would be kept >0.50m away per C1 constraint."
+    },
+    {
+      "name": "GrahamCondenser",
+      "position": {
+        "x": 0.6,
+        "y": 0.9,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Reflux condenser for Step 3, positioned 0.45m behind HeatingPlate to allow vertical attachment above RoundBottomFlask_1. At x=0.600±0.142m, y=0.900±0.0595m, maintains >0.10m from front edge and provides proper condensation setup."
+    },
+    {
+      "name": "Thermometer",
+      "position": {
+        "x": 0.85,
+        "y": 0.45,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Temperature monitoring device for Step 4, placed 0.25m from HeatingPlate for easy reading during reaction. At x=0.850±0.090m, y=0.450±0.080m, maintains >0.10m from front edge and allows operator to monitor 80°C heating."
+    },
+    {
+      "name": "SeparatoryFunnel",
+      "position": {
+        "x": 0.2,
+        "y": 0.8,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Liquid-liquid extraction vessel for Step 5. At x=0.200±0.100m, y=0.800±0.100m, maintains >0.10m from front edge (C4 constraint). Positioned for easy transfer of cooled reaction mixture with adequate clearance for stopcock operation."
+    },
+    {
+      "name": "Beaker",
+      "position": {
+        "x": 1.1,
+        "y": 0.3,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "First beaker for liquid transfer/collection. At x=1.100±0.0405m, y=0.300±0.0375m, maintains >0.10m from front edge. Centrally located for flexible use throughout procedure."
+    },
+    {
+      "name": "Beaker",
+      "position": {
+        "x": 1.1,
+        "y": 0.6,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Second beaker for liquid collection. At x=1.100±0.0405m, y=0.600±0.0375m, positioned 0.30m from first beaker for organized workflow and multiple collection needs."
+    },
+    {
+      "name": "RotaryEvaporator",
+      "position": {
+        "x": 2.0,
+        "y": 0.761,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Large solvent removal system positioned on right side. At x=2.000±1.150m (fits 0.850-3.150m, adjusted to 0.850-2.735m boundary), y=0.761±0.4555m (fits 0.3055-1.2165m within 1.522m depth). Rotated 90° to orient long axis (2.300m) along Y-axis for optimal fit."
+    },
+    {
+      "name": "VolumetricFlask",
+      "position": {
+        "x": 1.4,
+        "y": 0.3,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Sample preparation vessel. At x=1.400±0.036m, y=0.300±0.036m, maintains >0.10m from front edge. Positioned near center for accessible sample preparation and dilution work."
+    }
+  ],
+  "surface_type": "ExperimentalPlatform",
+  "surface_dimensions": {
+    "width": 2.7348869195972734,
+    "depth": 1.5220382895305355,
+    "height": 0.7999990173557717
+  }
+}

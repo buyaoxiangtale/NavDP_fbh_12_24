@@ -1,0 +1,351 @@
+{
+  "reasoning": {
+    "safety_analysis": "Critical safety constraints addressed: (1) HeatingPlate positioned at (0.600, 0.400) in the left-center zone. (2) All flammable reagents (Ethanol, EthylAcetate, Hexane) would be kept >0.50m away, but none are listed in Assets to Arrange. (3) Glass containers (RoundBottomFlask, GrahamCondenser, Beakers, etc.) all positioned ≥0.10m from front edge (Y≥0.10m). (4) RoundBottomFlask placed directly on HeatingPlate for reaction setup at (0.600, 0.400). (5) All items maintain ≥0.03m clearance from each other and ≥0.05m from surface edges.",
+    "workflow_strategy": "Layout organized in three functional zones: LEFT (reaction zone): HeatingPlate with RoundBottomFlask, GrahamCondenser positioned above for reflux setup, Thermometer nearby for monitoring. CENTER-LEFT: ElectronicScale for weighing reagents, Beakers for holding solutions, GraduatedCylinder and Pipette for liquid handling. CENTER-RIGHT: SeparatoryFunnel for extraction, GravityChromatographyColumn for purification. RIGHT: RotaryEvaporator (largest instrument) positioned to maximize available space. FRONT-RIGHT: TubeRack with TestTubes for fraction collection. This arrangement follows the experimental workflow: weighing → reaction → extraction → purification → collection.",
+    "key_spatial_relationships": "RoundBottomFlask (0.600, 0.400) positioned on HeatingPlate for direct heating. GrahamCondenser (0.600, 0.750) placed behind flask for vertical reflux assembly. Thermometer (0.450, 0.500) within 0.20m of reaction for temperature monitoring. ElectronicScale (0.950, 0.300) in accessible center zone for weighing operations. Beakers positioned near scale for reagent transfer. RotaryEvaporator (2.150, 0.761) in right zone utilizing full depth. GravityChromatographyColumn (1.400, 0.650) in center for purification. TubeRack (2.600, 0.200) at front-right for easy fraction access. All glass items maintain safe distances from edges and adequate spacing for manipulation."
+  },
+  "desktop_layout": [
+    {
+      "name": "HeatingPlate",
+      "position": {
+        "x": 0.6,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Central reaction zone, positioned for safe operation with adequate clearance from edges (0.473m from left, 0.273m from front). Serves as base for RoundBottomFlask."
+    },
+    {
+      "name": "RoundBottomFlask",
+      "position": {
+        "x": 0.6,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Placed directly on HeatingPlate for heating. Position satisfies glass container constraint (Y=0.400m > 0.10m from front edge). Central location for reaction assembly."
+    },
+    {
+      "name": "GrahamCondenser",
+      "position": {
+        "x": 0.6,
+        "y": 0.75,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Positioned behind RoundBottomFlask for vertical reflux setup. Distance from front edge: 0.750m > 0.10m (glass constraint satisfied). Allows proper condenser attachment to flask."
+    },
+    {
+      "name": "Thermometer",
+      "position": {
+        "x": 0.45,
+        "y": 0.5,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Adjacent to reaction setup for temperature monitoring. Distance from RoundBottomFlask: 0.158m (within easy reach). Glass container positioned Y=0.500m > 0.10m from front."
+    },
+    {
+      "name": "ElectronicScale",
+      "position": {
+        "x": 0.95,
+        "y": 0.3,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Center-left position for weighing operations. Adequate clearance from HeatingPlate (0.350m). Accessible location (Y=0.300m) for frequent use in reagent preparation."
+    },
+    {
+      "name": "Beaker",
+      "position": {
+        "x": 1.2,
+        "y": 0.2,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "First beaker near scale for holding weighed reagents. Glass container positioned Y=0.200m > 0.10m from front edge. Distance from HeatingPlate: 0.632m (safe)."
+    },
+    {
+      "name": "Beaker",
+      "position": {
+        "x": 1.35,
+        "y": 0.2,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Second beaker for solutions/waste. Positioned adjacent to first beaker with 0.109m clearance. Glass constraint satisfied (Y=0.200m > 0.10m)."
+    },
+    {
+      "name": "GraduatedCylinder",
+      "position": {
+        "x": 1.2,
+        "y": 0.35,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Small footprint item for measuring liquids. Positioned near scale and beakers for workflow efficiency. Glass container Y=0.350m > 0.10m from front."
+    },
+    {
+      "name": "Pipette",
+      "position": {
+        "x": 1.35,
+        "y": 0.45,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "reasoning": "Rotated 90° to align long axis (0.439m) along Y-axis, minimizing X-space usage. Positioned for liquid transfer operations near measurement tools."
+    },
+    {
+      "name": "GlassRod",
+      "position": {
+        "x": 0.8,
+        "y": 0.2,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Stirring rod positioned in front zone for easy access. Glass container Y=0.200m > 0.10m from front. Near reaction area for mixing operations."
+    },
+    {
+      "name": "SeparatoryFunnel",
+      "position": {
+        "x": 1.6,
+        "y": 0.65,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Center-right position for liquid-liquid extraction. Glass container Y=0.650m > 0.10m from front. Adequate space (0.200m footprint) with clearances maintained."
+    },
+    {
+      "name": "GravityChromatographyColumn",
+      "position": {
+        "x": 1.4,
+        "y": 0.65,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Purification zone in center area. Glass container Y=0.650m > 0.10m from front. Tall column (0.500m height) positioned with adequate clearance from other items."
+    },
+    {
+      "name": "TubeRack",
+      "position": {
+        "x": 2.6,
+        "y": 0.2,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Front-right position for fraction collection. Easily accessible (Y=0.200m). Clearance from right edge: 0.083m > 0.05m. Near chromatography area."
+    },
+    {
+      "name": "TestTube",
+      "position": {
+        "x": 2.6,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Test tube 1/10: Behind TubeRack for fraction collection. Glass container Y=0.400m > 0.10m from front."
+    },
+    {
+      "name": "TestTube",
+      "position": {
+        "x": 2.6,
+        "y": 0.6,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Test tube 2/10: Arranged in column behind rack. Glass constraint satisfied (Y=0.600m > 0.10m)."
+    },
+    {
+      "name": "TestTube",
+      "position": {
+        "x": 2.45,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Test tube 3/10: Adjacent position for organized fraction storage. Y=0.400m > 0.10m from front."
+    },
+    {
+      "name": "TestTube",
+      "position": {
+        "x": 2.45,
+        "y": 0.6,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Test tube 4/10: Grid arrangement for efficient space usage. Glass constraint satisfied."
+    },
+    {
+      "name": "TestTube",
+      "position": {
+        "x": 2.3,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Test tube 5/10: Continuing organized grid pattern. Y=0.400m > 0.10m from front."
+    },
+    {
+      "name": "TestTube",
+      "position": {
+        "x": 2.3,
+        "y": 0.6,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Test tube 6/10: Grid position for fraction collection. Glass constraint satisfied."
+    },
+    {
+      "name": "TestTube",
+      "position": {
+        "x": 2.15,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Test tube 7/10: Maintaining organized arrangement. Y=0.400m > 0.10m from front."
+    },
+    {
+      "name": "TestTube",
+      "position": {
+        "x": 2.0,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Test tube 8/10: Grid arrangement continues. Glass constraint satisfied."
+    },
+    {
+      "name": "TestTube",
+      "position": {
+        "x": 2.0,
+        "y": 0.6,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Test tube 9/10: Organized fraction collection area. Y=0.600m > 0.10m from front."
+    },
+    {
+      "name": "TestTube",
+      "position": {
+        "x": 1.85,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Test tube 10/10: Final tube in organized grid. Glass constraint satisfied (Y=0.400m > 0.10m)."
+    },
+    {
+      "name": "RotaryEvaporator",
+      "position": {
+        "x": 2.15,
+        "y": 0.761,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "reasoning": "Largest instrument (0.911×2.300m) rotated 90° to align 2.300m dimension along Y-axis. Positioned in right zone utilizing full depth. X-range: [1.695, 2.605], Y-range: [0.305, 1.217]. All boundaries satisfied with clearances maintained."
+    }
+  ],
+  "surface_type": "ExperimentalPlatform",
+  "surface_dimensions": {
+    "width": 2.7348869195972734,
+    "depth": 1.5220382895305355,
+    "height": 0.7999990173557717
+  }
+}

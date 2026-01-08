@@ -1,0 +1,267 @@
+{
+  "reasoning": {
+    "safety_analysis": "Critical safety constraints addressed: (1) HeatingPlate positioned at center-back (x=1.368, y=1.200) to serve as heat source zone. (2) All flammable solvents (Ethanol, EthylAcetate, Hexane) are kept >0.50m away - though these reagents are NOT in the assets list, the HeatingPlate is positioned to maintain safe distances from any future flammable materials. (3) All glass containers (RoundBottomFlask, GrahamCondenser, SeparatoryFunnel, GravityChromatographyColumn, Beakers, GraduatedCylinder, TestTubes, GlassRod, Thermometer) are positioned ≥0.10m from front edge (Y≥0.10m). (4) All items maintain ≥0.05m from all edges and ≥0.03m clearance between items.",
+    "workflow_strategy": "Layout organized in logical workflow zones: LEFT ZONE (x=0.2-0.8): Preparation area with ElectronicScale (0.300, 0.400) for weighing, Pipette (0.650, 0.400) for liquid transfer, and GraduatedCylinder (0.500, 0.250) for measurements. CENTER ZONE (x=0.9-1.8): Reaction area with HeatingPlate (1.368, 1.200) at back, RoundBottomFlask (1.200, 0.900) in front of it for heating, GrahamCondenser (1.200, 0.500) positioned for reflux setup, and Thermometer (1.500, 0.900) nearby for monitoring. RIGHT ZONE (x=1.9-2.6): Separation and purification area with SeparatoryFunnel (2.100, 1.100) for extraction, GravityChromatographyColumn (2.400, 1.100) for purification, TubeRack (2.100, 0.400) with TestTubes for fraction collection. FRONT ROW: Beakers (0.900, 0.200 and 1.600, 0.200) for mixing/collection, GlassRod (1.050, 0.200) for stirring.",
+    "key_spatial_relationships": "Reaction setup: RoundBottomFlask-GrahamCondenser-HeatingPlate form vertical assembly at center (x≈1.2-1.4, y=0.5-1.2). Measurement tools clustered left (ElectronicScale, Pipette, GraduatedCylinder within 0.35m). Separation tools clustered right (SeparatoryFunnel, GravityChromatographyColumn, TubeRack within 0.40m). All items used in Steps 2-5 are within comfortable reach (Y: 0.20-1.20m). Glass containers maintain safe distances from edges and each other."
+  },
+  "desktop_layout": [
+    {
+      "name": "ElectronicScale",
+      "position": {
+        "x": 0.3,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Left front zone for weighing reagents (Step 2). Position allows 0.183m from left edge, 0.400m from front edge, providing stable placement for precision measurements."
+    },
+    {
+      "name": "GraduatedCylinder",
+      "position": {
+        "x": 0.5,
+        "y": 0.25,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Small measuring tool placed in preparation zone near ElectronicScale (0.20m away). At 0.250m from front edge (>0.10m glass safety requirement). Used in Step 2 for volume measurements."
+    },
+    {
+      "name": "Pipette",
+      "position": {
+        "x": 0.65,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Liquid transfer tool in preparation zone, 0.35m from ElectronicScale for coordinated weighing/measuring workflow (Step 2). Positioned for easy access."
+    },
+    {
+      "name": "Beaker",
+      "position": {
+        "x": 0.9,
+        "y": 0.2,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "First beaker for brine solution preparation (Step 2). At 0.200m from front (>0.10m glass requirement), centered between preparation and reaction zones."
+    },
+    {
+      "name": "GlassRod",
+      "position": {
+        "x": 1.05,
+        "y": 0.2,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Stirring rod placed near first beaker (0.15m away) for mixing in Step 3. Front position for easy access, >0.10m from edge."
+    },
+    {
+      "name": "GrahamCondenser",
+      "position": {
+        "x": 1.2,
+        "y": 0.5,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Reflux condenser positioned in center reaction zone. Will attach to RoundBottomFlask (0.40m away) for Step 4 reflux setup. Tall item (0.520m) placed with clearance from edges."
+    },
+    {
+      "name": "RoundBottomFlask",
+      "position": {
+        "x": 1.2,
+        "y": 0.9,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Main reaction vessel in center zone, 0.40m in front of condenser for vertical assembly. Distance to HeatingPlate: 0.31m (will be placed on it during Step 4). >0.10m from edges (glass safety)."
+    },
+    {
+      "name": "HeatingPlate",
+      "position": {
+        "x": 1.368,
+        "y": 1.2,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Heat source at center-back position (Step 4). Maintains >0.50m safety distance from any flammable materials. Positioned to support RoundBottomFlask heating with 0.31m spacing for setup."
+    },
+    {
+      "name": "Thermometer",
+      "position": {
+        "x": 1.5,
+        "y": 0.9,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Temperature monitoring tool placed 0.30m from RoundBottomFlask for Step 4 reflux monitoring. Glass container >0.10m from edges."
+    },
+    {
+      "name": "Beaker",
+      "position": {
+        "x": 1.6,
+        "y": 0.2,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Second beaker for collection/mixing, front center position for easy access. >0.10m from front edge (glass safety), positioned between reaction and separation zones."
+    },
+    {
+      "name": "SeparatoryFunnel",
+      "position": {
+        "x": 2.1,
+        "y": 1.1,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Extraction tool in right-back zone for Step 5 liquid-liquid extraction. Glass container with 0.422m from back edge, 0.535m from right edge. Distance from RoundBottomFlask: 0.92m for transfer workflow."
+    },
+    {
+      "name": "GravityChromatographyColumn",
+      "position": {
+        "x": 2.4,
+        "y": 1.1,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Purification column in right-back zone, 0.30m from SeparatoryFunnel for sequential workflow. Tall item (0.500m) with adequate clearance: 0.235m from right edge, 0.422m from back edge."
+    },
+    {
+      "name": "TubeRack",
+      "position": {
+        "x": 2.1,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Fraction collection rack in right zone, positioned below SeparatoryFunnel (0.70m away) and GravityChromatographyColumn (0.72m away) for collecting fractions."
+    },
+    {
+      "name": "TestTube",
+      "position": {
+        "x": 2.1,
+        "y": 0.6,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "First test tube positioned 0.20m behind TubeRack for fraction collection. Glass container >0.10m from edges."
+    },
+    {
+      "name": "TestTube",
+      "position": {
+        "x": 2.25,
+        "y": 0.6,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Second test tube, 0.15m right of first tube, maintaining 0.03m+ clearance for fraction collection array."
+    },
+    {
+      "name": "TestTube",
+      "position": {
+        "x": 2.4,
+        "y": 0.6,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Third test tube, continuing array pattern 0.15m from second tube for organized fraction collection."
+    },
+    {
+      "name": "TestTube",
+      "position": {
+        "x": 2.55,
+        "y": 0.6,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Fourth test tube, 0.15m from third tube, maintaining array spacing. 0.185m from right edge (adequate clearance)."
+    },
+    {
+      "name": "TestTube",
+      "position": {
+        "x": 2.2,
+        "y": 0.75,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Fifth test tube in second row, 0.15m behind first row for additional fraction collection capacity. All test tubes form organized collection array."
+    }
+  ],
+  "surface_type": "ExperimentalPlatform",
+  "surface_dimensions": {
+    "width": 2.7348869195972734,
+    "depth": 1.5220382895305355,
+    "height": 0.7999990173557717
+  }
+}

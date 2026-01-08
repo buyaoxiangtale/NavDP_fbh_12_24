@@ -1,0 +1,29 @@
+{
+  "reasoning": {
+    "safety_analysis": "Only one instrument (GasChromatographyMassSpectrometer) needs to be placed on this surface. Since no reagents or other instruments are included in the assets to arrange, there are no chemical safety constraints to evaluate (no flammable-heat source separations, no incompatible chemical pairs, etc.). The GCMS is a heat source instrument but poses no safety conflicts when placed alone. Standard laboratory safety practices apply.",
+    "workflow_strategy": "The GasChromatographyMassSpectrometer is positioned for optimal accessibility and workflow efficiency. It is placed in the center-right area of the ValidationPlatform, allowing easy access from the front while maintaining adequate clearance from all edges. This positioning supports the final analysis step of the chlorination experiment, where the product will be analyzed after synthesis and purification steps (which occur elsewhere). The central placement ensures the operator can comfortably access the instrument controls and sample injection port.",
+    "key_spatial_relationships": "The GCMS is the sole item on this surface, serving as a dedicated analysis station. Its dimensions (0.398m × 1.194m × 0.556m) allow for centered placement with generous clearances. The instrument is oriented with its long axis (1.194m) parallel to the X-axis (0° rotation) to maximize front-to-back workspace and maintain comfortable operator access from the front edge of the platform."
+  },
+  "desktop_layout": [
+    {
+      "name": "GasChromatographyMassSpectrometer",
+      "position": {
+        "x": 0.761,
+        "y": 1.368,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Centered on ValidationPlatform for optimal access. At 0° rotation, long axis (1.194m) is parallel to X-axis. Position calculations: X-range [0.761-0.597 to 0.761+0.597] = [0.164 to 1.358]m, well within [0.05 to 1.472]m bounds. Y-range [1.368-0.199 to 1.368+0.199] = [1.169 to 1.567]m, well within [0.05 to 2.685]m bounds. All clearances >0.05m from edges satisfied. Centered placement (X≈0.761 is half of 1.522m, Y≈1.368 is half of 2.735m) provides balanced workspace and easy operator access for product analysis."
+    }
+  ],
+  "surface_type": "ValidationPlatform",
+  "surface_dimensions": {
+    "width": 1.5220382895305355,
+    "depth": 2.7348869195972734,
+    "height": 0.7999990173557717
+  }
+}

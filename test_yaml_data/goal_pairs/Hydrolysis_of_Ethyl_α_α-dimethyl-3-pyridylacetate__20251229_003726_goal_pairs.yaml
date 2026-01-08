@@ -1,0 +1,52 @@
+goal_pairs:
+- start:
+  - 2.3
+  - 6.766
+  - 0.0
+  end:
+  - 4.3
+  - 2.533
+  - 0.0
+- start:
+  - 4.3
+  - 2.533
+  - 0.0
+  end:
+  - 5.8
+  - 5.96
+  - 0.0
+- start:
+  - 5.8
+  - 5.96
+  - 0.0
+  end:
+  - 4.05
+  - 6.5
+  - 4.71238898038469
+- start:
+  - 4.05
+  - 6.5
+  - 4.71238898038469
+  end:
+  - 5.662
+  - 4.5
+  - 4.71238898038469
+- start:
+  - 5.662
+  - 4.5
+  - 4.71238898038469
+  end:
+  - 5.8
+  - 5.96
+  - 0.0
+metadata:
+  scene_name: Hydrolysis_of_Ethyl_α_α-dimethyl-3-pyridylacetate__20251229_003726
+  num_targets: 9
+  num_goal_pairs: 5
+  config:
+    scene_name: Hydrolysis_of_Ethyl_α_α-dimethyl-3-pyridylacetate__20251229_003726
+    scene_dir: /home/pjlab/fbh/LabUtopia/roomlayout/layout_new/Hydrolysis_of_Ethyl_α_α-dimethyl-3-pyridylacetate__20251229_003726
+    room_assets_file: Hydrolysis_of_Ethyl_α_α-dimethyl-3-pyridylacetate__room_isaacsim.json
+    protocol_file: protocol_Hydrolysis_of_Ethyl_α,α-dimeth_20251215_102029.json
+    asset_lib_file: /home/pjlab/fbh/LabUtopia/roomlayout/layout_new/assets_annotated.json
+    offset_radius: 0.6

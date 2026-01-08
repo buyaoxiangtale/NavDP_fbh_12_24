@@ -1,0 +1,29 @@
+{
+  "reasoning": {
+    "safety_analysis": "Only one instrument (GasChromatographyMassSpectrometer) needs to be placed on this surface. As a heat source instrument, it requires adequate clearance from edges and sufficient space for operation. Since no flammable reagents or incompatible chemicals are being placed on this surface, the primary safety concern is maintaining proper edge clearances (≥0.05m from edges) and ensuring the instrument is stable and accessible. The instrument will be positioned with sufficient clearance from all edges to prevent accidental contact or falls.",
+    "workflow_strategy": "The GasChromatographyMassSpectrometer is used for product analysis at the end of the oxidation reaction workflow. Positioning it centrally on the ValidationPlatform provides easy access from multiple angles and allows for sample introduction from the front. The instrument is oriented with its front facing the operator (standard 0° orientation) for intuitive operation and sample loading. This central placement also ensures balanced weight distribution on the platform.",
+    "key_spatial_relationships": "The GC-MS is the only item on this dedicated validation platform, allowing it to occupy a central position without spatial conflicts. The instrument's substantial footprint (0.398m × 1.194m) requires careful positioning to maintain edge clearances while maximizing accessibility. Centered positioning provides approximately 0.56m clearance on the left side, 0.16m on the right side, and adequate front-to-back spacing for cable management and ventilation."
+  },
+  "desktop_layout": [
+    {
+      "name": "GasChromatographyMassSpectrometer",
+      "position": {
+        "x": 0.761,
+        "y": 1.368,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Centered on ValidationPlatform for optimal access and stability. At 0° rotation (front_direction = (0,1,0)), the long axis (1.194m) is parallel to X-axis, short axis (0.398m) parallel to Y-axis. Position calculations: X-center at 1.522/2 = 0.761m (occupies 0.164m to 1.358m, clearances: 0.164m from left, 0.164m from right, both >0.05m). Y-center at 2.735/2 = 1.368m (occupies 1.169m to 1.567m, clearances: 1.169m from front, 1.168m from back, both >>0.05m). This central placement ensures safe operation, easy sample access, and proper ventilation for the heat-generating instrument."
+    }
+  ],
+  "surface_type": "ValidationPlatform",
+  "surface_dimensions": {
+    "width": 1.5220382895305355,
+    "depth": 2.7348869195972734,
+    "height": 0.7999990173557717
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "reasoning": {
+    "safety_analysis": "1) HeatingPlate positioned at center-back (1.367, 1.200) to serve as heat source. 2) Methanol (flammable) would be kept in reagent cabinet per procedure, not on this surface - no flammable reagents in assets list. 3) Glass containers (RoundBottomFlask, Beakers, SeparatoryFunnel, GraduatedCylinder, Thermometer, GlassRod) all positioned ≥0.10m from front edge per C4 constraint. 4) RoundBottomFlask placed on HeatingPlate for reaction setup. 5) All glass items have adequate clearance from edges to prevent breakage.",
+    "workflow_strategy": "Layout follows reaction workflow: 1) Front-left zone (0.3-0.6m Y): Measurement and preparation tools (GraduatedCylinder, Pipette) for easy access. 2) Center zone (0.8-1.2m Y): Reaction area with HeatingPlate and RoundBottomFlask for Steps 2-5. 3) Left side: Beaker for cooling bath near reaction flask. 4) Right side: SeparatoryFunnel for extraction step, Thermometer for monitoring. 5) Back area: GlassRod as auxiliary tool. All items used together in Steps 2-5 are within 0.20-0.40m for efficient workflow.",
+    "key_spatial_relationships": "1) RoundBottomFlask (1.367, 1.200) positioned directly on HeatingPlate for heating/stirring. 2) Beaker_1 (0.800, 1.050) placed 0.58m from RoundBottomFlask for cooling bath setup. 3) Thermometer (0.500, 1.100) positioned 0.87m from HeatingPlate for temperature monitoring. 4) GraduatedCylinder (0.400, 0.400) and Pipette (0.900, 0.450) in front zone for reagent measurement/transfer. 5) SeparatoryFunnel (2.200, 0.900) positioned right side for extraction work. 6) All items maintain ≥0.03m clearance and are within surface bounds with appropriate edge distances."
+  },
+  "desktop_layout": [
+    {
+      "name": "HeatingPlate",
+      "position": {
+        "x": 1.367,
+        "y": 1.2,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Central position for reaction control. Dimensions 0.254×0.180m at 0° orientation. Positioned away from front edge (Y=1.200m) for safety. Serves as base for RoundBottomFlask."
+    },
+    {
+      "name": "RoundBottomFlask",
+      "position": {
+        "x": 1.367,
+        "y": 1.2,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Reaction vessel placed on HeatingPlate. Dimensions 0.148×0.117m. Glass container positioned >0.10m from front edge (Y=1.200m). Central location for Steps 2-5 workflow."
+    },
+    {
+      "name": "Beaker",
+      "position": {
+        "x": 0.8,
+        "y": 1.05,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Cooling bath container for Step 5. Dimensions 0.081×0.075m. Positioned 0.58m from RoundBottomFlask for easy access. Glass container >0.10m from front edge (Y=1.050m)."
+    },
+    {
+      "name": "Beaker",
+      "position": {
+        "x": 1.9,
+        "y": 1.1,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Second beaker for auxiliary use. Dimensions 0.081×0.075m. Positioned right-center area. Glass container >0.10m from front edge (Y=1.100m). Maintains clearance from other items."
+    },
+    {
+      "name": "Pipette",
+      "position": {
+        "x": 0.9,
+        "y": 0.45,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Liquid transfer tool for Steps 3-4. Dimensions 0.439×0.152m at 0° orientation. Front-center position (Y=0.450m) for easy access during reagent addition."
+    },
+    {
+      "name": "GraduatedCylinder",
+      "position": {
+        "x": 0.4,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Solvent measurement for Step 2. Dimensions 0.025×0.011m. Front-left position for easy access. Glass container positioned >0.10m from front edge (Y=0.400m)."
+    },
+    {
+      "name": "Thermometer",
+      "position": {
+        "x": 0.5,
+        "y": 1.1,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Temperature monitoring for Step 5. Dimensions 0.180×0.160m. Positioned 0.87m from HeatingPlate for cooling bath monitoring. Glass container >0.10m from front edge (Y=1.100m)."
+    },
+    {
+      "name": "SeparatoryFunnel",
+      "position": {
+        "x": 2.2,
+        "y": 0.9,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Liquid-liquid extraction tool. Dimensions 0.200×0.200m. Right-side position for extraction workflow. Glass container >0.10m from front edge (Y=0.900m). Maintains >0.05m from right edge."
+    },
+    {
+      "name": "GlassRod",
+      "position": {
+        "x": 1.9,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Stirring aid. Dimensions 0.081×0.075m. Right-front position for auxiliary use. Glass container >0.10m from front edge (Y=0.400m). Accessible but not interfering with main workflow."
+    }
+  ],
+  "surface_type": "ExperimentalPlatform",
+  "surface_dimensions": {
+    "width": 2.7348869195972734,
+    "depth": 1.5220382895305355,
+    "height": 0.7999990173557717
+  }
+}

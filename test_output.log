@@ -1,0 +1,1278 @@
+================================================================================
+[DEBUG] Command line arguments:
+  --scene_dir: /home/ubuntu/fengbh/NavDP/fbh_test_scene
+  --scene_index: 2
+  --num_envs: 1
+  --num_episodes: 10
+  --speed: 0.5
+  --port: 8888
+================================================================================
+[DEBUG] Available scenes in directory: 3 total
+[DEBUG] Scene list (order from os.listdir):
+  [0] fbh_12_29
+  [1] fbh_12_16
+  [2] fbh_001 <-- SELECTED
+
+[DEBUG] Selected scene: fbh_001
+[DEBUG] Full scene path: /home/ubuntu/fengbh/NavDP/fbh_test_scene/fbh_001
+[DEBUG] Expected save directory: ./pointgoal_navdp_fbh_test_scene/fbh_001/
+[DEBUG] Full save path: /home/ubuntu/fengbh/NavDP/pointgoal_navdp_fbh_test_scene/fbh_001
+================================================================================
+
+[INFO] Starting Isaac Sim... (this may take a moment)
+================================================================================
+[Warning] [omni.isaac.kit.simulation_app] Modules: ['omni.kit_app'] were loaded before SimulationApp was started and might not be loaded correctly.
+[Warning] [omni.isaac.kit.simulation_app] Please check to make sure no extra omniverse or pxr modules are imported before the call to SimulationApp(...)
+Loading user config located at: '/home/ubuntu/miniconda3/envs/isaaclab/lib/python3.10/site-packages/omni/data/Kit/Isaac-Sim/4.2/user.config.json'
+[Info] [carb] Logging to file: /home/ubuntu/miniconda3/envs/isaaclab/lib/python3.10/site-packages/omni/logs/Kit/Isaac-Sim/4.2/kit_20251229_191805.log
+2025-12-29 11:18:05 [0ms] [Warning] [omni.kit.app.plugin] No crash reporter present, dumps uploading isn't available.
+[0.083s] [ext: omni.blobkey-1.1.2] startup
+[0.084s] [ext: omni.kit.async_engine-0.0.1] startup
+[0.162s] [ext: omni.stats-1.0.1] startup
+[0.164s] [ext: omni.datastore-0.0.0] startup
+[0.168s] [ext: omni.client-1.2.0] startup
+[0.193s] [ext: omni.ujitso.default-1.0.0] startup
+[0.193s] [ext: omni.gpu_foundation.shadercache.vulkan-1.0.0] startup
+[0.195s] [ext: omni.hsscclient-1.1.1] startup
+[0.196s] [ext: omni.assets.plugins-0.0.0] startup
+[0.197s] [ext: omni.gpu_foundation-0.0.0] startup
+[0.203s] [ext: carb.windowing.plugins-1.0.0] startup
+[0.211s] [ext: omni.kit.renderer.init-0.0.0] startup
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 570.169       | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 4090          | Yes: 0 |     | 24810   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2684      | 045eb2aa.. |
+|     |                                  |        |     |            | bc        |            |
+|=============================================================================================|
+| OS: 22.04.5 LTS (Jammy Jellyfish) ubuntu, Version: 22.04.5, Kernel: 6.8.0-40-generic
+| XServer Vendor: The X.Org Foundation, XServer Version: 12101004 (1.21.1.4)
+| Processor: Intel(R) Xeon(R) w5-2445 | Cores: 10 | Logical: 20
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 257462 | Free Memory: 224403
+| Total Page/Swap (MB): 0 | Free Page/Swap: 0
+|---------------------------------------------------------------------------------------------|
+[0.948s] [ext: omni.kit.pipapi-0.0.0] startup
+[0.949s] [ext: omni.kit.pip_archive-0.0.0] startup
+[0.949s] [ext: omni.materialx.libs-1.0.4] startup
+[0.957s] [ext: omni.kit.loop-isaac-1.2.0] startup
+[0.957s] [ext: omni.kit.test-1.1.0] startup
+[0.990s] [ext: omni.kit.telemetry-0.5.0] startup
+[1.013s] [ext: omni.usd.config-1.0.4] startup
+[1.016s] [ext: omni.gpucompute.plugins-0.0.0] startup
+[1.017s] [ext: omni.usd.libs-1.0.1] startup
+[1.106s] [ext: omni.iray.libs-0.0.0] startup
+[1.111s] [ext: omni.mdl.neuraylib-0.2.8] startup
+[1.113s] [ext: omni.mdl-55.0.1] startup
+[1.129s] [ext: omni.kit.usd.mdl-1.0.1] startup
+[1.229s] [ext: omni.usd.schema.omnigraph-1.0.0] startup
+[1.237s] [ext: omni.usd.schema.physx-106.1.9] startup
+[1.264s] [ext: omni.usd.schema.audio-0.0.0] startup
+[1.268s] [ext: omni.usd.schema.geospatial-0.0.0] startup
+[1.271s] [ext: omni.usd.schema.semantics-0.0.0] startup
+[1.273s] [ext: omni.usd.schema.anim-0.0.0] startup
+[1.294s] [ext: omni.kit.actions.core-1.0.0] startup
+[1.296s] [ext: omni.kit.commands-1.4.9] startup
+[1.299s] [ext: omni.kit.usd_undo-0.1.8] startup
+[1.300s] [ext: omni.appwindow-1.1.8] startup
+[1.301s] [ext: omni.graph.exec-0.9.4] startup
+[1.302s] [ext: omni.kit.renderer.core-1.0.2] startup
+[1.323s] [ext: omni.kit.exec.core-0.13.4] startup
+[1.327s] [ext: omni.kit.renderer.capture-0.0.0] startup
+[1.329s] [ext: carb.audio-0.1.0] startup
+[1.332s] [ext: omni.kit.renderer.imgui-1.0.1] startup
+[1.399s] [ext: omni.kit.audiodeviceenum-1.0.1] startup
+[1.400s] [ext: omni.ui-2.25.22] startup
+[1.409s] [ext: omni.usd_resolver-1.0.0] startup
+[1.412s] [ext: omni.kit.window.popup_dialog-2.0.24] startup
+[1.416s] [ext: omni.usd.core-1.4.1] startup
+[1.418s] [ext: omni.timeline-1.0.10] startup
+[1.420s] [ext: omni.kit.widget.nucleus_connector-1.1.9] startup
+[1.421s] [ext: omni.hydra.scene_delegate-0.3.3] startup
+[1.427s] [ext: omni.kit.widget.path_field-2.0.10] startup
+[1.428s] [ext: omni.usd-1.12.2] startup
+[1.471s] [ext: omni.kit.menu.core-1.0.4] startup
+[1.471s] [ext: omni.kit.widget.browser_bar-2.0.10] startup
+[1.472s] [ext: omni.kit.helper.file_utils-0.1.8] startup
+[1.473s] [ext: omni.kit.widget.context_menu-1.2.2] startup
+[1.474s] [ext: omni.kit.notification_manager-1.0.9] startup
+[1.476s] [ext: omni.kit.widget.options_menu-1.1.6] startup
+[1.478s] [ext: omni.kit.widget.filebrowser-2.10.51] startup
+[1.482s] [ext: omni.ui.scene-1.10.3] startup
+[1.486s] [ext: omni.kit.widget.options_button-1.0.3] startup
+[1.486s] [ext: omni.kit.clipboard-1.0.4] startup
+[1.487s] [ext: omni.kit.widget.filter-1.1.4] startup
+[1.488s] [ext: omni.kit.window.filepicker-2.10.40] startup
+[1.496s] [ext: omni.kit.usd.layers-2.1.36] startup
+[1.504s] [ext: omni.kit.widget.searchfield-1.1.8] startup
+[1.504s] [ext: omni.kit.hotkeys.core-1.3.5] startup
+[1.507s] [ext: omni.kit.window.file_exporter-1.0.30] startup
+[1.509s] [ext: omni.kit.context_menu-1.8.1] startup
+[1.510s] [ext: omni.activity.core-1.0.1] startup
+[1.512s] [ext: omni.kit.widget.stage-2.11.2] startup
+[1.520s] [ext: omni.inspect-1.0.1] startup
+[1.521s] [ext: omni.kit.widget.prompt-1.0.7] startup
+[1.522s] [ext: omni.hydra.rtx.shadercache.vulkan-1.0.0] startup
+[1.523s] [ext: usdrt.scenegraph-7.5.0] startup
+[1.559s] [ext: omni.ujitso.processor.texture-1.0.0] startup
+[1.560s] [ext: omni.volume-0.5.0] startup
+[1.563s] [ext: omni.ujitso.client-0.0.0] startup
+[1.564s] [ext: omni.kit.menu.utils-1.5.27] startup
+[1.568s] [ext: omni.hydra.rtx-1.0.0] startup
+[1.588s] [ext: omni.graph.tools-1.79.0] startup
+[1.605s] [ext: omni.graph.core-2.179.2] startup
+[1.608s] [ext: omni.kit.widget.settings-1.2.2] startup
+[1.609s] [ext: omni.kit.widget.text_editor-1.0.2] startup
+[1.611s] [ext: omni.debugdraw-0.1.3] startup
+[1.614s] [ext: omni.graph-1.140.0] startup
+[1.650s] [ext: omni.kit.window.preferences-1.6.0] startup
+[1.657s] [ext: omni.kvdb-106.1.9] startup
+[1.659s] [ext: omni.convexdecomposition-106.1.9] startup
+[1.665s] [ext: omni.physx.foundation-106.1.9] startup
+[1.667s] [ext: omni.localcache-106.1.9] startup
+[1.669s] [ext: omni.kit.hydra_texture-1.3.9] startup
+[1.672s] [ext: omni.kit.window.file_importer-1.1.12] startup
+[1.674s] [ext: omni.kit.viewport.registry-104.0.6] startup
+[1.675s] [ext: omni.kit.property.adapter.core-1.0.1] startup
+[1.677s] [ext: omni.kit.widget.viewport-106.1.0] startup
+[1.682s] [ext: omni.kit.material.library-1.5.6] startup
+[1.687s] [ext: omni.hydra.engine.stats-1.0.2] startup
+[1.692s] [ext: omni.kit.widget.highlight_label-1.0.2] startup
+[1.693s] [ext: omni.kit.property.adapter.fabric-1.0.1] startup
+[1.695s] [ext: omni.kit.viewport.window-107.0.6] startup
+[1.710s] [ext: omni.kit.window.property-1.11.3] startup
+[1.713s] [ext: omni.kit.property.adapter.usd-1.0.1] startup
+[1.714s] [ext: omni.usdphysics-106.1.9] startup
+[1.719s] [ext: omni.ui_query-1.1.4] startup
+[1.720s] [ext: omni.kit.viewport.utility-1.0.17] startup
+[1.721s] [ext: omni.kit.property.usd-4.2.8] startup
+[1.730s] [ext: omni.physx.cooking-106.1.9] startup
+[1.744s] [ext: omni.graph.ui-1.70.2] startup
+[1.761s] [ext: omni.physx-106.1.9] startup
+[1.775s] [ext: omni.graph.scriptnode-1.20.1] startup
+[1.777s] [ext: omni.physx.stageupdate-106.1.9] startup
+[1.782s] [ext: omni.graph.ui_nodes-1.26.0] startup
+[1.791s] [ext: omni.isaac.version-1.1.0] startup
+[1.798s] [ext: omni.kit.primitive.mesh-1.0.17] startup
+[1.806s] [ext: omni.kit.stage_template.core-1.1.22] startup
+[1.808s] [ext: omni.isaac.nucleus-0.3.1] startup
+[1.809s] [ext: omni.kit.widget.graph-1.12.15] startup
+[1.817s] [ext: omni.kit.stage_templates-1.2.5] startup
+[1.824s] [ext: omni.graph.action_core-1.1.6] startup
+[1.831s] [ext: omni.kit.graph.delegate.default-1.2.2] startup
+[1.833s] [ext: omni.graph.image.core-0.4.5] startup
+[1.836s] [ext: omni.graph.action_nodes-1.24.0] startup
+[1.843s] [ext: omni.kit.graph.editor.core-1.5.3] startup
+[1.847s] [ext: omni.graph.image.nodes-1.1.0] startup
+[1.850s] [ext: omni.graph.action-1.102.1] startup
+[1.851s] [ext: omni.warp.core-1.2.1] startup
+[1.934s] [ext: omni.kit.graph.usd.commands-1.3.1] startup
+[1.936s] [ext: omni.physics.tensors-106.1.9] startup
+[1.946s] [ext: omni.graph.nodes-1.146.1] startup
+[1.969s] [ext: omni.kit.widget.material_preview-1.0.16] startup
+[1.978s] [ext: omni.physx.tensors-106.1.9] startup
+[1.985s] [ext: omni.warp-1.2.1] startup
+[1.990s] [ext: omni.syntheticdata-0.6.9] startup
+[2.043s] [ext: omni.kit.window.material_graph-1.8.18] startup
+[2.109s] [ext: omni.isaac.core-3.19.5] startup
+[3.324s] [ext: omni.replicator.core-1.11.20] startup
+2025-12-29 11:18:09 [3,282ms] [Warning] [omni.replicator.core.scripts.annotators] Annotator PostProcessDispatch is already registered, overwriting annotator template
+[3.449s] [ext: omni.graph.bundle.action-2.4.1] startup
+[3.454s] [ext: omni.isaac.kit-1.13.2] startup
+[3.455s] [ext: omni.replicator.isaac-1.15.2] startup
+[3.494s] [ext: omni.physx.fabric-106.1.9] startup
+[3.504s] [ext: omni.isaac.cloner-0.8.1] startup
+[3.508s] [ext: omni.kit.viewport.rtx-104.0.1] startup
+[3.509s] [ext: isaaclab.python.headless-1.2.0] startup
+[3.509s] [ext: isaaclab.python.headless.rendering-1.2.0] startup
+[3.519s] Simulation App Starting
+[5.156s] app ready
+[5.452s] Simulation App Startup Complete
+2025-12-29 11:18:12 [7,009ms] [Warning] [pxr.Semantics] pxr.Semantics is deprecated - please use Semantics instead
+2025-12-29 11:18:14 [8,983ms] [Warning] [omni.isaac.lab.envs.manager_based_env] Seed not set for the environment. The environment creation may not be deterministic.
+2025-12-29 11:18:15 [9,668ms] [Error] [omni.physx.plugin] PhysX error: Supplied PxGeometry is not valid. Shape creation method returns NULL., FILE /builds/omniverse/physics/physx/source/physx/src/NpFactory.cpp, LINE 737
+2025-12-29 11:18:15 [9,668ms] [Error] [omni.physx.plugin] PhysX Shape failed to be created on a prim: /World/Scene/terrain/instrument_1/Group_001/Group_012/Group_026/Group_027/Mesh_031!
+2025-12-29 11:18:15 [9,668ms] [Error] [omni.physx.plugin] PhysX error: Supplied PxGeometry is not valid. Shape creation method returns NULL., FILE /builds/omniverse/physics/physx/source/physx/src/NpFactory.cpp, LINE 737
+2025-12-29 11:18:15 [9,668ms] [Error] [omni.physx.plugin] PhysX Shape failed to be created on a prim: /World/Scene/terrain/instrument_1/Group_001/Group_012/Group_026/Group_028!
+2025-12-29 11:18:15 [9,668ms] [Error] [omni.physx.plugin] PhysX error: Supplied PxGeometry is not valid. Shape creation method returns NULL., FILE /builds/omniverse/physics/physx/source/physx/src/NpFactory.cpp, LINE 737
+2025-12-29 11:18:15 [9,668ms] [Error] [omni.physx.plugin] PhysX Shape failed to be created on a prim: /World/Scene/terrain/instrument_1/Group_001/Group_012/Group_026/Group_029/Mesh_033!
+2025-12-29 11:18:15 [9,669ms] [Error] [omni.physx.plugin] PhysX error: Supplied PxGeometry is not valid. Shape creation method returns NULL., FILE /builds/omniverse/physics/physx/source/physx/src/NpFactory.cpp, LINE 737
+2025-12-29 11:18:15 [9,669ms] [Error] [omni.physx.plugin] PhysX Shape failed to be created on a prim: /World/Scene/terrain/instrument_1/Group_001/Group_012/Group_026/Group_030!
+2025-12-29 11:18:15 [9,740ms] [Warning] [omni.physx.plugin] Detected an articulation at /World/envs/env_0/Robot with more than 4 velocity iterations being added to a TGS scene.The related behavior changed recently, please consult the changelog. This warning will only print once.
+2025-12-29 11:18:29 [23,578ms] [Error] [omni.hydra] [UsdToMdl] Prim '/World/Scene/terrain/instrument_20/Looks/Lime__Ceramic_Mtl__Chemistry/baseColorTex' parameter 'texture': References an asset that can not be found: '/home/ubuntu/Documents/chemistry-lab-simulator/assets/chemistry_lab/objects/SubUSDs/textures/Lime._Ceramic facture DifMap Final.jpg'
+2025-12-29 11:18:29 [23,578ms] [Error] [omni.hydra] [UsdToMdl] Prim '/World/Scene/terrain/instrument_20/Looks/Lime__Ceramic_Mtl__Chemistry/baseColorTex' parameter 'texture': References an asset that can not be found: '/home/ubuntu/Documents/chemistry-lab-simulator/assets/chemistry_lab/objects/SubUSDs/textures/Lime._Ceramic facture DifMap Final.jpg'
+2025-12-29 11:18:29 [23,578ms] [Error] [omni.hydra] [UsdToMdl] Prim '/World/Scene/terrain/instrument_20/Looks/Lime__Ceramic_Mtl__Chemistry/metallicRoughnessTex' parameter 'texture': References an asset that can not be found: '/home/ubuntu/Documents/chemistry-lab-simulator/assets/chemistry_lab/objects/SubUSDs/textures/Lime._Lime._Metal facture BWMap Final.jpg'
+2025-12-29 11:18:29 [23,578ms] [Error] [omni.hydra] [UsdToMdl] Prim '/World/Scene/terrain/instrument_20/Looks/Lime__Ceramic_Mtl__Chemistry/metallicRoughnessTex' parameter 'texture': References an asset that can not be found: '/home/ubuntu/Documents/chemistry-lab-simulator/assets/chemistry_lab/objects/SubUSDs/textures/Lime._Lime._Metal facture BWMap Final.jpg'
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_421> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 432 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_044> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_034> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 156 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_074> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_025> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_064> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_053> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_445> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 8736 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning: in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_002> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 84 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_045> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_026> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_229> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 360 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_446> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 324 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_036> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning: in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_003> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 84 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_037> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_447> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 4536 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_046> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_075> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_038> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning: in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_006> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 120 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_027> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_076> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_066> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_039> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_046> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_066> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning: in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_007> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 6 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_028> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_453> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 6516 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_067> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.hydra.scene_delegate.plugin] Calling getBypassRenderSkelMeshProcessing for prim /World/Scene/terrain/instrument_1/Group_001/Group_008/Editable_mesh_043.proto_Editable_mesh_042Shape_id0 that has not been populated
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_047> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_047> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_067> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_029> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_060> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning: in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_009> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 120 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,661ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_068> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_423> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 3456 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_048> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_030> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_048> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_068> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning: in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_010> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 6 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_077> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_031> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_514> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 6516 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_054> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 156 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_041> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_049> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_061> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_069> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_078> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_426> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 324 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_042> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning: in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_012> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 120 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_434> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 37836 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_062> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_515> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 3564 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_070> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning: in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_105> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 324 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_043> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_032> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 156 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_063> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_080> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_071> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning: in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_106> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 96 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_436> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 3744 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_428> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 2856 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_033> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_081> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 156 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning: in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_107> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1104 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_072> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_073> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_439> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 2016 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_429> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 2946 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_051> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_055> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_437> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 288 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_440> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 324 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning: in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_108> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_430> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 132 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_069> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_052> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 156 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_074> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_441> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 324 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_070> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_053> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_433> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 3744 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_071> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_054> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 156 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_442> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 936 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_049> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_055> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_072> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_444> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 324 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_075> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_056> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_073> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_076> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_051> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,662ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_057> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_438> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 37836 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_112> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 6 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_058> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 156 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_077> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_052> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 156 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_078> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_114> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 96 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_039> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_056> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_082> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_080> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_057> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_081> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 156 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_058> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 156 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_041> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_082> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_042> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_230> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 252 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_121> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 258 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_060> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_043> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_231> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 324 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_122> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 324 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_061> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_232> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 360 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_123> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 96 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_062> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_234> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 6 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_124> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1104 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_063> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_045> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_125> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_064> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_420> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 432 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,663ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_126> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,664ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_10/Group_01/mesh_454> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 6516 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,664ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_3/Group/mesh_013> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,664ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_127> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 258 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,664ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_225> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 264 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,664ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_037> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,664ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_190> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 7368 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,664ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_109> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,664ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_038> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,664ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_110> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 258 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_16/group_127/mesh_025> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 6672 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_14/group_127/mesh_025> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 6672 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_17/group_127/mesh_025> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 6672 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_111> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 96 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_189> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 12600 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_18/group_127/mesh_025> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 6672 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_028> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_191> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 8832 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_032> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 156 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_029> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_034> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 156 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_033> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_030> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_15/group_127/mesh_025> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 6672 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_12/group_127/mesh_025> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 6672 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_036> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1284 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_031> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_025> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_13/group_127/mesh_025> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 6672 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_026> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_027> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_115> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 6 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_013> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_116> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 324 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_119> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_120> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_117> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 96 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_0/Group/mesh_118> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 1104 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,665ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_2/Group/mesh_044> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 36 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,666ms] [Warning] [omni.usd] Warning (secondary thread): in ComputeFlattened at line 364 of /builds/omniverse/usd-ci/USD/pxr/usd/usdGeom/primvar.cpp -- For primvar attribute 'primvars:st' on 'Mesh' prim </World/Scene/terrain/instrument_11/group_127/mesh_025> on stage with rootLayer @anon:0x134b2910:World0.usd@, sessionLayer @anon:0x135245a0:World0-session.usda@: Found 6672 invalid indices at positions [0, 1, 2, 3, 4, ...] that are out of range [0,0).
+
+2025-12-29 11:18:51 [45,723ms] [Warning] [omni.hydra] Disabling DLSS Frame Generation for at least one view due to incompatible render outputs and OmniGraph postprocessing being active
+2025-12-29 11:18:52 [46,208ms] [Error] [rtx.scenedb.plugin] MirroredBall environment format not supported yet.
+2025-12-29 11:18:52 [46,277ms] [Error] [omni.hydra] [UsdToMdl] Prim '/World/Scene/terrain/instrument_20/Looks/Lime__Ceramic_Mtl__Chemistry/baseColorTex' parameter 'texture': References an asset that can not be found: '/home/ubuntu/Documents/chemistry-lab-simulator/assets/chemistry_lab/objects/SubUSDs/textures/Lime._Ceramic facture DifMap Final.jpg'
+2025-12-29 11:18:52 [46,277ms] [Error] [omni.hydra] [UsdToMdl] Prim '/World/Scene/terrain/instrument_20/Looks/Lime__Ceramic_Mtl__Chemistry/metallicRoughnessTex' parameter 'texture': References an asset that can not be found: '/home/ubuntu/Documents/chemistry-lab-simulator/assets/chemistry_lab/objects/SubUSDs/textures/Lime._Lime._Metal facture BWMap Final.jpg'
+/home/ubuntu/fengbh/NavDP/config_tasks/wheeled_task.py:54: UserWarning: The use of `x.T` on tensors of dimension other than 2 to reverse their shape is deprecated and it will throw an error in a future release. Consider `x.mT` to transpose batches of matrices or `x.permute(*torch.arange(x.ndim - 1, -1, -1))` to reverse the dimensions of a tensor. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3683.)
+  rel_pos[i] = torch.matmul(torch.inverse(robot_rot[i]),(goal_pos[i] - robot_pos[i]).T)
+2025-12-29 11:18:54 [48,374ms] [Warning] [imageio_ffmpeg] IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (1000, 1000) to (1008, 1008) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+[INFO][AppLauncher]: Loading experience file: /home/ubuntu/fbh/NavDP/baselines/navdp/IsaacLab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.rendering.kit
+Starting kit application with the following args:  ['/home/ubuntu/miniconda3/envs/isaaclab/lib/python3.10/site-packages/isaacsim/exts/omni.isaac.kit/omni/isaac/kit/simulation_app.py', '/home/ubuntu/fbh/NavDP/baselines/navdp/IsaacLab/source/extensions/omni.isaac.lab/omni/isaac/lab/app/../../../../../../apps/isaaclab.python.headless.rendering.kit', '--/app/tokens/exe-path=/home/ubuntu/miniconda3/envs/isaaclab/lib/python3.10/site-packages/omni', '--/persistent/app/viewport/displayOptions=3094', '--/rtx/materialDb/syncLoads=True', '--/rtx/hydra/materialSyncLoads=True', '--/omni.kit.plugin/syncUsdLoads=True', '--/app/renderer/resolution/width=1280', '--/app/renderer/resolution/height=720', '--/app/window/width=1440', '--/app/window/height=900', '--/renderer/multiGpu/enabled=True', '--/app/fastShutdown=True', '--ext-folder', '/home/ubuntu/miniconda3/envs/isaaclab/lib/python3.10/site-packages/isaacsim/exts', '--ext-folder', '/home/ubuntu/miniconda3/envs/isaaclab/lib/python3.10/site-packages/isaacsim/apps', '--/renderer/activeGpu=0', '--/physics/cudaDevice=0', '--portable', '--no-window', '--/app/window/hideUi=True']
+Passing the following args to the base kit application:  ['--scene_dir', '/home/ubuntu/fengbh/NavDP/fbh_test_scene', '--scene_index', '2', '--num_envs', '1', '--num_episodes', '10', '--port', '8888']
+Warp 1.2.1 initialized:
+   CUDA Toolkit 11.8, Driver 12.8
+   Devices:
+     "cpu"      : "x86_64"
+     "cuda:0"   : "NVIDIA GeForce RTX 4090" (24 GiB, sm_89, mempool enabled)
+   Kernel cache:
+     /home/ubuntu/.cache/warp/1.2.1
+[DEBUG] Building scene_path = /home/ubuntu/fengbh/NavDP/fbh_test_scene/fbh_001/
+[DEBUG] usd_path = /home/ubuntu/fengbh/NavDP/fbh_test_scene/fbh_001/Alkylation_of_Ethyl_Acetoacetate_with_Bis(4-fluoro_room_isaacsim.usd
+[DEBUG] init_path = /home/ubuntu/fengbh/NavDP/fbh_test_scene/fbh_001/12_23_pointgoal_pairs.npy
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : None
+	Physics step-size     : 0.01
+	Rendering step-size   : 0.15
+	Environment step-size : 0.15
+[INFO]: Time taken for scene creation : 0.252801 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 0.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/Scene']
+	Replicate physics     : True
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+[INFO]: Time taken for simulation start : 37.055633 seconds
+[INFO] Command Manager:  <CommandManager> contains 0 active terms.
++------------------------+
+|  Active Command Terms  |
++--------+-------+-------+
+| Index  | Name  |  Type |
++--------+-------+-------+
++--------+-------+-------+
+
+[INFO] Action Manager:  <ActionManager> contains 1 active terms.
++----------------------------------+
+|  Active Action Terms (shape: 2)  |
++--------+------------+------------+
+| Index  | Name       |  Dimension |
++--------+------------+------------+
+|   0    | joint_vel  |          2 |
++--------+------------+------------+
+
+[INFO] Observation Manager: <ObservationManager> contains 4 groups.
++-------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (13,)) |
++-------------+---------------------------+-------------+
+|    Index    | Name                      |    Shape    |
++-------------+---------------------------+-------------+
+|      0      | base_lin_vel              |     (3,)    |
+|      1      | base_ang_vel              |     (3,)    |
+|      2      | base_pos                  |     (3,)    |
+|      3      | base_rot                  |     (4,)    |
++-------------+---------------------------+-------------+
++----------------------------------------------------------------+
+| Active Observation Terms in Group: 'rgb' (shape: (360, 640, 3)) |
++-----------+---------------------------+------------------------+
+|   Index   | Name                      |         Shape          |
++-----------+---------------------------+------------------------+
+|     0     | rgb_measurement           |     (360, 640, 3)      |
++-----------+---------------------------+------------------------+
++------------------------------------------------------------------+
+| Active Observation Terms in Group: 'depth' (shape: (360, 640, 1)) |
++-----------+------------------------------+-----------------------+
+|   Index   | Name                         |         Shape         |
++-----------+------------------------------+-----------------------+
+|     0     | depth_measurement            |     (360, 640, 1)     |
++-----------+------------------------------+-----------------------+
++-----------------------------------------------------------+
+| Active Observation Terms in Group: 'goal_pose' (shape: (3,)) |
++------------+---------------------------------+------------+
+|   Index    | Name                            |   Shape    |
++------------+---------------------------------+------------+
+|     0      | pose_measurement                |    (3,)    |
++------------+---------------------------------+------------+
+
+[INFO] Event Manager:  <EventManager> contains 1 active terms.
++----------------------------------+
+| Active Event Terms in Mode: 'reset' |
++------------+---------------------+
+|   Index    | Name                |
++------------+---------------------+
+|     0      | reset_pose          |
++------------+---------------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 3 active terms.
++--------------------------------+
+|    Active Termination Terms    |
++-------+-------------+----------+
+| Index | Name        | Time Out |
++-------+-------------+----------+
+|   0   | time_out    |   True   |
+|   1   | arrive_goal |  False   |
+|   2   | stuck       |  False   |
++-------+-------------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 1 active terms.
++------------------------+
+|  Active Reward Terms   |
++-------+-------+--------+
+| Index | Name  | Weight |
++-------+-------+--------+
+|   0   | alive |    1.0 |
++-------+-------+--------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+Directly setting scale for prim: </World/Scene/terrain>
+Successfully set scale for prim </World/Scene/terrain>
+http://localhost:8888/navigator_reset
+[DEBUG] algo = navdp
+****************************************************************************************************
+[DEBUG] save_dir = ./pointgoal_navdp_fbh_test_scene/fbh_001/
+[DEBUG] Scene name from scene_dir.split('/') = fbh_test_scene
+[DEBUG] Scene name from scene_path.split('/')[-2] = fbh_001
+[DEBUG] Full save directory path will be: /home/ubuntu/fengbh/NavDP/pointgoal_navdp_fbh_test_scene/fbh_001
+****************************************************************************************************
+No trajectory available, using zero action
+No trajectory available, using zero action
+
+******************************************************************************
+This program contains Ipopt, a library for large-scale nonlinear optimization.
+ Ipopt is released as open source code under the Eclipse Public License (EPL).
+         For more information visit https://github.com/coin-or/Ipopt
+******************************************************************************
+
+solve mpc cost 0.2348029613494873
+solve mpc cost 0.0231781005859375
+solve mpc cost 0.020164012908935547
+solve mpc cost 0.020627498626708984
+solve mpc cost 0.01028585433959961
+solve mpc cost 0.021665573120117188
+solve mpc cost 0.009742021560668945
+solve mpc cost 0.02223801612854004
+solve mpc cost 0.009619951248168945
+solve mpc cost 0.020767927169799805
+solve mpc cost 0.010043144226074219
+solve mpc cost 0.01976180076599121
+solve mpc cost 0.00887608528137207
+solve mpc cost 0.021222829818725586
+solve mpc cost 0.013878583908081055
+2025-12-29 11:18:57 [51,866ms] [Warning] [imageio_ffmpeg] IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (1000, 1000) to (1008, 1008) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+2025-12-29 11:19:10 [64,257ms] [Warning] [imageio_ffmpeg] IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (1000, 1000) to (1008, 1008) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+2025-12-29 11:19:24 [78,926ms] [Warning] [imageio_ffmpeg] IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (1000, 1000) to (1008, 1008) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+2025-12-29 11:19:30 [84,625ms] [Warning] [imageio_ffmpeg] IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (1000, 1000) to (1008, 1008) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+solve mpc cost 0.022028207778930664
+solve mpc cost 0.021012306213378906
+solve mpc cost 0.00885152816772461
+http://localhost:8888/navigator_reset
+solve mpc cost 0.0228421688079834
+solve mpc cost 0.02189779281616211
+solve mpc cost 0.015530824661254883
+solve mpc cost 0.02241349220275879
+solve mpc cost 0.02150559425354004
+solve mpc cost 0.02071976661682129
+solve mpc cost 0.009897947311401367
+solve mpc cost 0.020381689071655273
+solve mpc cost 0.021187782287597656
+solve mpc cost 0.009287834167480469
+solve mpc cost 0.021762609481811523
+solve mpc cost 0.02174210548400879
+solve mpc cost 0.021783828735351562
+solve mpc cost 0.010293245315551758
+solve mpc cost 0.020455360412597656
+solve mpc cost 0.022561311721801758
+solve mpc cost 0.0160982608795166
+solve mpc cost 0.021729707717895508
+solve mpc cost 0.022789955139160156
+solve mpc cost 0.02222466468811035
+solve mpc cost 0.01261281967163086
+solve mpc cost 0.023482084274291992
+solve mpc cost 0.02323746681213379
+solve mpc cost 0.022299766540527344
+solve mpc cost 0.013417243957519531
+solve mpc cost 0.021189451217651367
+solve mpc cost 0.021835803985595703
+solve mpc cost 0.02166604995727539
+solve mpc cost 0.01224207878112793
+solve mpc cost 0.023054838180541992
+solve mpc cost 0.02367997169494629
+solve mpc cost 0.02247786521911621
+solve mpc cost 0.009202718734741211
+solve mpc cost 0.023017168045043945
+solve mpc cost 0.022870779037475586
+solve mpc cost 0.008764505386352539
+solve mpc cost 0.020586729049682617
+solve mpc cost 0.021701574325561523
+solve mpc cost 0.021136760711669922
+solve mpc cost 0.013119220733642578
+solve mpc cost 0.023902177810668945
+solve mpc cost 0.0225985050201416
+solve mpc cost 0.02308034896850586
+solve mpc cost 0.00890803337097168
+solve mpc cost 0.023950576782226562
+solve mpc cost 0.023650407791137695
+solve mpc cost 0.015540122985839844
+solve mpc cost 0.021060943603515625
+solve mpc cost 0.02202320098876953
+solve mpc cost 0.022891521453857422
+solve mpc cost 0.012444019317626953
+solve mpc cost 0.021160602569580078
+solve mpc cost 0.023331403732299805
+solve mpc cost 0.022279977798461914
+solve mpc cost 0.01004791259765625
+solve mpc cost 0.021474838256835938
+solve mpc cost 0.02100372314453125
+solve mpc cost 0.009384870529174805
+solve mpc cost 0.025026798248291016
+solve mpc cost 0.022077322006225586
+solve mpc cost 0.02368474006652832
+solve mpc cost 0.010861635208129883
+solve mpc cost 0.018965482711791992
+http://localhost:8888/navigator_reset
+solve mpc cost 0.0224611759185791
+solve mpc cost 0.022859811782836914
+solve mpc cost 0.011568307876586914
+solve mpc cost 0.02176523208618164
+solve mpc cost 0.023774385452270508
+solve mpc cost 0.021628379821777344
+solve mpc cost 0.009278059005737305
+solve mpc cost 0.020401954650878906
+solve mpc cost 0.019710063934326172
+solve mpc cost 0.011633157730102539
+solve mpc cost 0.026422977447509766
+solve mpc cost 0.023596763610839844
+solve mpc cost 0.023303508758544922
+solve mpc cost 0.015767335891723633
+solve mpc cost 0.023873329162597656
+solve mpc cost 0.023049354553222656
+solve mpc cost 0.023278474807739258
+solve mpc cost 0.009318351745605469
+solve mpc cost 0.022325754165649414
+solve mpc cost 0.023246288299560547
+solve mpc cost 0.01388239860534668
+solve mpc cost 0.021721601486206055
+solve mpc cost 0.025151491165161133
+solve mpc cost 0.021254777908325195
+solve mpc cost 0.009799957275390625
+solve mpc cost 0.023815155029296875
+solve mpc cost 0.02369070053100586
+solve mpc cost 0.009683847427368164
+solve mpc cost 0.026139020919799805
+solve mpc cost 0.020755290985107422
+solve mpc cost 0.01188206672668457
+solve mpc cost 0.020844697952270508
+solve mpc cost 0.021230220794677734
+solve mpc cost 0.022821903228759766
+solve mpc cost 0.008633136749267578
+solve mpc cost 0.022902488708496094
+solve mpc cost 0.022129058837890625
+solve mpc cost 0.022562742233276367
+solve mpc cost 0.008393287658691406
+solve mpc cost 0.02424764633178711
+solve mpc cost 0.021884918212890625
+solve mpc cost 0.00989389419555664
+solve mpc cost 0.023126602172851562
+solve mpc cost 0.024033784866333008
+solve mpc cost 0.012581586837768555
+solve mpc cost 0.024584293365478516
+solve mpc cost 0.022982358932495117
+solve mpc cost 0.021474361419677734
+solve mpc cost 0.009791851043701172
+solve mpc cost 0.02411341667175293
+solve mpc cost 0.023923158645629883
+solve mpc cost 0.024517536163330078
+solve mpc cost 0.010404586791992188
+solve mpc cost 0.02108907699584961
+solve mpc cost 0.02342820167541504
+solve mpc cost 0.008332967758178711
+solve mpc cost 0.021467208862304688
+solve mpc cost 0.02309441566467285
+solve mpc cost 0.010055780410766602
+solve mpc cost 0.021480083465576172
+solve mpc cost 0.0231931209564209
+solve mpc cost 0.024499893188476562
+solve mpc cost 0.008975505828857422
+solve mpc cost 0.021395206451416016
+solve mpc cost 0.023180007934570312
+solve mpc cost 0.012324333190917969
+solve mpc cost 0.024257183074951172
+solve mpc cost 0.02470874786376953
+solve mpc cost 0.02200460433959961
+solve mpc cost 0.008878707885742188
+solve mpc cost 0.023710012435913086
+solve mpc cost 0.02172255516052246
+solve mpc cost 0.011641502380371094
+solve mpc cost 0.021704673767089844
+solve mpc cost 0.022336959838867188
+http://localhost:8888/navigator_reset
+solve mpc cost 0.02242279052734375
+solve mpc cost 0.022603750228881836
+solve mpc cost 0.01978445053100586
+solve mpc cost 0.009932756423950195
+solve mpc cost 0.021209716796875
+solve mpc cost 0.021358966827392578
+solve mpc cost 0.00939035415649414
+solve mpc cost 0.02165985107421875
+solve mpc cost 0.00995182991027832
+solve mpc cost 0.020779132843017578
+solve mpc cost 0.013550758361816406
+solve mpc cost 0.021667957305908203
+solve mpc cost 0.020233631134033203
+solve mpc cost 0.009778976440429688
+solve mpc cost 0.022015810012817383
+solve mpc cost 0.010112285614013672
+solve mpc cost 0.021717548370361328
+solve mpc cost 0.015446662902832031
+solve mpc cost 0.020786046981811523
+solve mpc cost 0.02157115936279297
+solve mpc cost 0.010300874710083008
+solve mpc cost 0.021883010864257812
+solve mpc cost 0.008902549743652344
+solve mpc cost 0.020354509353637695
+solve mpc cost 0.009242773056030273
+solve mpc cost 0.021021127700805664
+solve mpc cost 0.009186506271362305
+solve mpc cost 0.021516799926757812
+solve mpc cost 0.012580156326293945
+solve mpc cost 0.021185636520385742
+http://localhost:8888/navigator_reset
+solve mpc cost 0.021322965621948242
+solve mpc cost 0.022592544555664062
+solve mpc cost 0.009562015533447266
+solve mpc cost 0.023828983306884766
+solve mpc cost 0.021770000457763672
+solve mpc cost 0.009996175765991211
+solve mpc cost 0.021793603897094727
+solve mpc cost 0.021212100982666016
+solve mpc cost 0.02244400978088379
+solve mpc cost 0.009203910827636719
+solve mpc cost 0.02178955078125
+solve mpc cost 0.019691944122314453
+solve mpc cost 0.01581597328186035
+solve mpc cost 0.023197174072265625
+solve mpc cost 0.02133011817932129
+solve mpc cost 0.020930051803588867
+solve mpc cost 0.00872802734375
+solve mpc cost 0.02419734001159668
+solve mpc cost 0.02372431755065918
+solve mpc cost 0.015680789947509766
+solve mpc cost 0.020904541015625
+solve mpc cost 0.0247495174407959
+solve mpc cost 0.0223543643951416
+solve mpc cost 0.009151697158813477
+solve mpc cost 0.02204728126525879
+solve mpc cost 0.027812957763671875
+solve mpc cost 0.012211084365844727
+solve mpc cost 0.02214503288269043
+solve mpc cost 0.02348804473876953
+solve mpc cost 0.023535490036010742
+solve mpc cost 0.014360666275024414
+solve mpc cost 0.022780179977416992
+solve mpc cost 0.020918846130371094
+solve mpc cost 0.024019956588745117
+solve mpc cost 0.00978398323059082
+solve mpc cost 0.02252674102783203
+solve mpc cost 0.022503137588500977
+solve mpc cost 0.020427227020263672
+solve mpc cost 0.010205984115600586
+solve mpc cost 0.021624088287353516
+solve mpc cost 0.023305654525756836
+solve mpc cost 0.014597892761230469
+solve mpc cost 0.023819923400878906
+solve mpc cost 0.02071666717529297
+solve mpc cost 0.022287368774414062
+solve mpc cost 0.009400129318237305
+solve mpc cost 0.023661375045776367
+solve mpc cost 0.024141788482666016
+solve mpc cost 0.00928497314453125
+solve mpc cost 0.022570133209228516
+solve mpc cost 0.023139238357543945
+solve mpc cost 0.014985322952270508
+solve mpc cost 0.02344512939453125
+solve mpc cost 0.021947860717773438
+2025-12-29 11:19:42 [96,993ms] [Warning] [imageio_ffmpeg] IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (1000, 1000) to (1008, 1008) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+2025-12-29 11:19:52 [106,679ms] [Warning] [imageio_ffmpeg] IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (1000, 1000) to (1008, 1008) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+2025-12-29 11:19:58 [112,187ms] [Warning] [imageio_ffmpeg] IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (1000, 1000) to (1008, 1008) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+2025-12-29 11:20:10 [124,358ms] [Warning] [imageio_ffmpeg] IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (1000, 1000) to (1008, 1008) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+2025-12-29 11:20:19 [133,662ms] [Warning] [imageio_ffmpeg] IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (1000, 1000) to (1008, 1008) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+solve mpc cost 0.023151159286499023
+solve mpc cost 0.010350465774536133
+solve mpc cost 0.024647951126098633
+solve mpc cost 0.022475242614746094
+solve mpc cost 0.013436555862426758
+solve mpc cost 0.02211618423461914
+solve mpc cost 0.022660017013549805
+solve mpc cost 0.010668039321899414
+solve mpc cost 0.02535724639892578
+http://localhost:8888/navigator_reset
+solve mpc cost 0.024003982543945312
+solve mpc cost 0.02830791473388672
+solve mpc cost 0.009994983673095703
+solve mpc cost 0.021024227142333984
+solve mpc cost 0.022249937057495117
+solve mpc cost 0.012610912322998047
+solve mpc cost 0.02137160301208496
+solve mpc cost 0.022837400436401367
+solve mpc cost 0.022205114364624023
+solve mpc cost 0.014834165573120117
+solve mpc cost 0.020102500915527344
+solve mpc cost 0.020902633666992188
+solve mpc cost 0.02132129669189453
+solve mpc cost 0.009380102157592773
+solve mpc cost 0.02154707908630371
+solve mpc cost 0.023671627044677734
+solve mpc cost 0.010457754135131836
+solve mpc cost 0.021631956100463867
+solve mpc cost 0.02106189727783203
+solve mpc cost 0.009503841400146484
+solve mpc cost 0.023468732833862305
+solve mpc cost 0.02140522003173828
+solve mpc cost 0.015117883682250977
+solve mpc cost 0.020577669143676758
+solve mpc cost 0.02161574363708496
+solve mpc cost 0.020548343658447266
+solve mpc cost 0.012740850448608398
+solve mpc cost 0.022640466690063477
+solve mpc cost 0.021862506866455078
+solve mpc cost 0.02072906494140625
+solve mpc cost 0.009940385818481445
+solve mpc cost 0.02465677261352539
+solve mpc cost 0.02334308624267578
+solve mpc cost 0.02218341827392578
+solve mpc cost 0.009505987167358398
+solve mpc cost 0.022116899490356445
+solve mpc cost 0.02022528648376465
+solve mpc cost 0.009269952774047852
+solve mpc cost 0.02408599853515625
+solve mpc cost 0.020689964294433594
+solve mpc cost 0.011460065841674805
+solve mpc cost 0.020099401473999023
+solve mpc cost 0.021311283111572266
+solve mpc cost 0.020532608032226562
+solve mpc cost 0.01128840446472168
+solve mpc cost 0.020740985870361328
+solve mpc cost 0.0210268497467041
+solve mpc cost 0.012840747833251953
+solve mpc cost 0.020816802978515625
+solve mpc cost 0.021786212921142578
+http://localhost:8888/navigator_reset
+solve mpc cost 0.021798372268676758
+solve mpc cost 0.020098447799682617
+solve mpc cost 0.02155900001525879
+solve mpc cost 0.011173725128173828
+solve mpc cost 0.02130436897277832
+solve mpc cost 0.009099721908569336
+solve mpc cost 0.02417302131652832
+solve mpc cost 0.008824348449707031
+solve mpc cost 0.02093672752380371
+solve mpc cost 0.010149955749511719
+solve mpc cost 0.022939205169677734
+solve mpc cost 0.020636320114135742
+solve mpc cost 0.009121894836425781
+solve mpc cost 0.020552396774291992
+solve mpc cost 0.010683059692382812
+solve mpc cost 0.01987290382385254
+solve mpc cost 0.010866403579711914
+solve mpc cost 0.02128434181213379
+solve mpc cost 0.010918617248535156
+solve mpc cost 0.02309274673461914
+solve mpc cost 0.009286642074584961
+solve mpc cost 0.020589590072631836
+solve mpc cost 0.012354612350463867
+solve mpc cost 0.022551774978637695
+solve mpc cost 0.022045612335205078
+solve mpc cost 0.010469913482666016
+solve mpc cost 0.021905183792114258
+solve mpc cost 0.009070158004760742
+solve mpc cost 0.019581079483032227
+solve mpc cost 0.010529279708862305
+http://localhost:8888/navigator_reset
+solve mpc cost 0.021453857421875
+solve mpc cost 0.020983457565307617
+solve mpc cost 0.00931239128112793
+solve mpc cost 0.021981000900268555
+solve mpc cost 0.02143073081970215
+solve mpc cost 0.012610197067260742
+solve mpc cost 0.020366907119750977
+solve mpc cost 0.019252777099609375
+solve mpc cost 0.01397848129272461
+solve mpc cost 0.020046234130859375
+solve mpc cost 0.02021646499633789
+solve mpc cost 0.02247905731201172
+solve mpc cost 0.011195659637451172
+solve mpc cost 0.022328615188598633
+solve mpc cost 0.021304845809936523
+solve mpc cost 0.009265422821044922
+solve mpc cost 0.025073766708374023
+solve mpc cost 0.022966384887695312
+solve mpc cost 0.013888835906982422
+solve mpc cost 0.021100282669067383
+solve mpc cost 0.021292924880981445
+solve mpc cost 0.0207061767578125
+solve mpc cost 0.009566545486450195
+solve mpc cost 0.023120641708374023
+solve mpc cost 0.025043249130249023
+solve mpc cost 0.013703107833862305
+solve mpc cost 0.023270368576049805
+solve mpc cost 0.021303653717041016
+solve mpc cost 0.02050924301147461
+solve mpc cost 0.010385274887084961
+solve mpc cost 0.025655031204223633
+solve mpc cost 0.02155756950378418
+solve mpc cost 0.011891365051269531
+solve mpc cost 0.021841049194335938
+solve mpc cost 0.021416664123535156
+solve mpc cost 0.022765398025512695
+solve mpc cost 0.016830921173095703
+solve mpc cost 0.023421049118041992
+solve mpc cost 0.02437114715576172
+solve mpc cost 0.02291274070739746
+solve mpc cost 0.008833885192871094
+solve mpc cost 0.023299455642700195
+solve mpc cost 0.0224306583404541
+solve mpc cost 0.015699148178100586
+solve mpc cost 0.02166461944580078
+solve mpc cost 0.026126623153686523
+solve mpc cost 0.02385258674621582
+solve mpc cost 0.010239839553833008
+solve mpc cost 0.023662567138671875
+solve mpc cost 0.020316600799560547
+solve mpc cost 0.01022791862487793
+solve mpc cost 0.0212860107421875
+solve mpc cost 0.022469282150268555
+solve mpc cost 0.01042938232421875
+solve mpc cost 0.023544788360595703
+solve mpc cost 0.02234339714050293
+solve mpc cost 0.013917207717895508
+solve mpc cost 0.02259230613708496
+solve mpc cost 0.02121758460998535
+solve mpc cost 0.022191286087036133
+solve mpc cost 0.009479045867919922
+solve mpc cost 0.024514198303222656
+solve mpc cost 0.01654672622680664
+solve mpc cost 0.02052450180053711
+http://localhost:8888/navigator_reset
+solve mpc cost 0.0212554931640625
+solve mpc cost 0.023311376571655273
+solve mpc cost 0.010746002197265625
+solve mpc cost 0.022301197052001953
+solve mpc cost 0.021112918853759766
+solve mpc cost 0.010943889617919922
+solve mpc cost 0.02315807342529297
+solve mpc cost 0.020869731903076172
+solve mpc cost 0.015001773834228516
+solve mpc cost 0.02157282829284668
+solve mpc cost 0.02002859115600586
+solve mpc cost 0.022648096084594727
+solve mpc cost 0.008626937866210938
+solve mpc cost 0.021594524383544922
+solve mpc cost 0.02216172218322754
+solve mpc cost 0.009321928024291992
+solve mpc cost 0.02086639404296875
+solve mpc cost 0.019977092742919922
+solve mpc cost 0.008553028106689453
+solve mpc cost 0.02148270606994629
+solve mpc cost 0.024633169174194336
+solve mpc cost 0.011286735534667969
+solve mpc cost 0.02005624771118164
+solve mpc cost 0.021367549896240234
+solve mpc cost 0.011060714721679688
+solve mpc cost 0.01915884017944336
+solve mpc cost 0.019711732864379883
+solve mpc cost 0.0210115909576416
+solve mpc cost 0.008875608444213867
+solve mpc cost 0.02271723747253418
+solve mpc cost 0.022734880447387695
+solve mpc cost 0.010953426361083984
+solve mpc cost 0.01963043212890625
+solve mpc cost 0.02152395248413086
+solve mpc cost 0.022490501403808594
+solve mpc cost 0.008455276489257812
+solve mpc cost 0.02209162712097168
+solve mpc cost 0.02027106285095215
+solve mpc cost 0.009060859680175781
+solve mpc cost 0.021038532257080078
+solve mpc cost 0.022153377532958984
+solve mpc cost 0.016003847122192383
+solve mpc cost 0.021050214767456055
+solve mpc cost 0.019824504852294922
+solve mpc cost 0.019801855087280273
+solve mpc cost 0.010277509689331055
+solve mpc cost 0.02104473114013672
+solve mpc cost 0.02363443374633789
+solve mpc cost 0.00896453857421875
+http://localhost:8888/navigator_reset
+solve mpc cost 0.021666526794433594
+solve mpc cost 0.024483919143676758
+solve mpc cost 0.022588014602661133
+solve mpc cost 0.021604537963867188
+solve mpc cost 0.009517908096313477
+solve mpc cost 0.022197484970092773
+solve mpc cost 0.00943303108215332
+solve mpc cost 0.021522998809814453
+solve mpc cost 0.010216474533081055
+solve mpc cost 0.02000570297241211
+solve mpc cost 0.00896763801574707
+solve mpc cost 0.023941993713378906
+solve mpc cost 0.009067535400390625
+solve mpc cost 0.02135634422302246
+solve mpc cost 0.012326240539550781
+solve mpc cost 0.020932674407958984
+solve mpc cost 0.021601438522338867
+solve mpc cost 0.010275840759277344
+solve mpc cost 0.020820140838623047
+solve mpc cost 0.009763002395629883
+solve mpc cost 0.02189922332763672
+solve mpc cost 0.009353160858154297
+2025-12-29 11:20:25 [139,097ms] [Warning] [imageio_ffmpeg] IMAGEIO FFMPEG_WRITER WARNING: input image is not divisible by macro_block_size=16, resizing from (1000, 1000) to (1008, 1008) to ensure video compatibility with most codecs and players. To prevent resizing, make your input image divisible by the macro_block_size or set the macro_block_size to 1 (risking incompatibility).
+solve mpc cost 0.019922733306884766
+solve mpc cost 0.011062860488891602
+solve mpc cost 0.02244281768798828
+solve mpc cost 0.01023411750793457
+solve mpc cost 0.021603822708129883
+solve mpc cost 0.010339975357055664
+solve mpc cost 0.022250652313232422
+solve mpc cost 0.010507583618164062
+http://localhost:8888/navigator_reset
+solve mpc cost 0.021603822708129883
+solve mpc cost 0.024394750595092773
+solve mpc cost 0.009669780731201172
+solve mpc cost 0.019927978515625
+solve mpc cost 0.023265838623046875
+solve mpc cost 0.009086370468139648
+solve mpc cost 0.020171165466308594
+solve mpc cost 0.021024465560913086
+solve mpc cost 0.009111881256103516
+solve mpc cost 0.023801088333129883
+solve mpc cost 0.02275538444519043
+solve mpc cost 0.014085531234741211
+solve mpc cost 0.021944522857666016
+solve mpc cost 0.021079301834106445
+solve mpc cost 0.020117759704589844
+solve mpc cost 0.009293317794799805
+solve mpc cost 0.019788503646850586
+solve mpc cost 0.021083593368530273
+solve mpc cost 0.009122848510742188
+solve mpc cost 0.024059534072875977
+solve mpc cost 0.022931814193725586
+solve mpc cost 0.009631156921386719
+solve mpc cost 0.021602869033813477
+solve mpc cost 0.021543502807617188
+solve mpc cost 0.02303290367126465
+solve mpc cost 0.011573076248168945
+solve mpc cost 0.023046255111694336
+solve mpc cost 0.02211284637451172
+solve mpc cost 0.01271510124206543
+solve mpc cost 0.022304534912109375
+solve mpc cost 0.022420167922973633
+solve mpc cost 0.02406001091003418
+solve mpc cost 0.008614540100097656
+solve mpc cost 0.02327752113342285
+solve mpc cost 0.022954225540161133
+solve mpc cost 0.009083032608032227
+solve mpc cost 0.020623207092285156
+solve mpc cost 0.026103496551513672
+solve mpc cost 0.009351491928100586
+solve mpc cost 0.021296024322509766
+solve mpc cost 0.02226400375366211
+solve mpc cost 0.014802694320678711
+solve mpc cost 0.020514249801635742
+solve mpc cost 0.022686481475830078
+solve mpc cost 0.0251004695892334
+solve mpc cost 0.00816488265991211
+solve mpc cost 0.023170948028564453
+solve mpc cost 0.0237429141998291
+solve mpc cost 0.012996912002563477
+solve mpc cost 0.022836923599243164
+solve mpc cost 0.020616769790649414
+solve mpc cost 0.012713909149169922
+solve mpc cost 0.02238154411315918
+solve mpc cost 0.022338151931762695
+solve mpc cost 0.02304673194885254
+solve mpc cost 0.008713722229003906
+solve mpc cost 0.022426605224609375
+solve mpc cost 0.022702693939208984
+solve mpc cost 0.013969659805297852
+solve mpc cost 0.024028778076171875
+solve mpc cost 0.022829055786132812
+solve mpc cost 0.023666858673095703
+solve mpc cost 0.011400938034057617
+solve mpc cost 0.02314925193786621
+solve mpc cost 0.009366989135742188
+solve mpc cost 0.020695209503173828
+http://localhost:8888/navigator_reset
+2025-12-29 11:20:37 [151,591ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-12-29 11:20:37 [151,591ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-12-29 11:20:37 [151,591ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-12-29 11:20:37 [151,591ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-12-29 11:20:37 [151,591ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-12-29 11:20:37 [151,591ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-12-29 11:20:37 [151,591ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-12-29 11:20:37 [151,591ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-12-29 11:20:37 [151,591ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-12-29 11:20:37 [151,591ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-12-29 11:20:37 [151,591ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-12-29 11:20:37 [151,591ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2025-12-29 11:20:37 [151,591ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Core' for removal
+2025-12-29 11:20:37 [151,737ms] [Warning] [carb] Recursive unloadAllPlugins() detected!

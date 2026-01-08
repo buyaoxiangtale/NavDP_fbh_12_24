@@ -1,0 +1,68 @@
+goal_pairs:
+- start:
+  - 6.0
+  - 6.849
+  - 0.0
+  end:
+  - 3.5
+  - 2.533
+  - 0.0
+- start:
+  - 3.5
+  - 2.533
+  - 0.0
+  end:
+  - 2.5
+  - 5.96
+  - 0.0
+- start:
+  - 2.5
+  - 5.96
+  - 0.0
+  end:
+  - 6.185
+  - 4.5
+  - 4.71238898038469
+- start:
+  - 6.185
+  - 4.5
+  - 4.71238898038469
+  end:
+  - 2.5
+  - 5.96
+  - 0.0
+- start:
+  - 2.5
+  - 5.96
+  - 0.0
+  end:
+  - 6.185
+  - 4.5
+  - 4.71238898038469
+- start:
+  - 6.185
+  - 4.5
+  - 4.71238898038469
+  end:
+  - 5.785
+  - 1.762
+  - 4.71238898038469
+- start:
+  - 5.785
+  - 1.762
+  - 4.71238898038469
+  end:
+  - 2.5
+  - 5.96
+  - 0.0
+metadata:
+  scene_name: Deprotection_of_a_Pyrrolidone_Derivative_20251229_003726
+  num_targets: 11
+  num_goal_pairs: 7
+  config:
+    scene_name: Deprotection_of_a_Pyrrolidone_Derivative_20251229_003726
+    scene_dir: /home/pjlab/fbh/LabUtopia/roomlayout/layout_new/Deprotection_of_a_Pyrrolidone_Derivative_20251229_003726
+    room_assets_file: Deprotection_of_a_Pyrrolidone_Derivative_room_isaacsim.json
+    protocol_file: protocol_Deprotection_of_a_Pyrrolidone__20251215_101953.json
+    asset_lib_file: /home/pjlab/fbh/LabUtopia/roomlayout/layout_new/assets_annotated.json
+    offset_radius: 0.6

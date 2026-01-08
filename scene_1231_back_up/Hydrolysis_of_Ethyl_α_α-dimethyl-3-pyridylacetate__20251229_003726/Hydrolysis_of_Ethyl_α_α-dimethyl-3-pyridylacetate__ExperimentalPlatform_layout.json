@@ -1,0 +1,127 @@
+{
+  "reasoning": {
+    "safety_analysis": "Critical safety constraints addressed: (C1) Ethanol is not in the assets list, so no flammable-heat source constraint applies to desktop items. The RotaryEvaporator is a large heat source (2.300m × 0.911m) positioned at the back-right corner. (C4) RoundBottomFlask positioned at x=0.800m, y=0.600m, keeping it >0.10m from all edges (front edge: 0.600-0.074=0.526m, left edge: 0.800-0.074=0.726m). (C4) Both Beakers positioned >0.10m from edges: Beaker1 at y=0.300m (0.300-0.0375=0.2625m from front), Beaker2 at y=0.400m. All glass containers maintain safe distances from edges.",
+    "workflow_strategy": "Layout follows experimental workflow left-to-right: (1) Left zone (x=0.2-0.5m): ElectronicScale with Beaker1 for weighing LithiumHydroxide (Step 2). (2) Center-left (x=0.8m): RoundBottomFlask as main reaction vessel (Step 4-5). (3) Center (x=1.0-1.2m): Beaker2, GraduatedCylinder, and GlassRod for solution preparation (Step 3). (4) Center-right (x=1.4m): Pipette for liquid transfer. (5) Right zone (x=2.0-2.7m): RotaryEvaporator for solvent removal positioned at back to maximize workspace. Items used together in same steps are within 0.20-0.40m for efficient workflow.",
+    "key_spatial_relationships": "ElectronicScale-Beaker1 pair (0.15m apart) for weighing operations. RoundBottomFlask centrally located for easy access during reaction setup. Solution preparation cluster (Beaker2, GraduatedCylinder, GlassRod) within 0.20m radius at x=1.0-1.2m. Pipette positioned 0.30m from preparation cluster for liquid transfers. RotaryEvaporator isolated at back-right corner due to large footprint (occupies x=1.545-2.445m, y=1.066-1.522m when rotated 90°). All frequently accessed items in optimal reach zone (y=0.30-0.70m)."
+  },
+  "desktop_layout": [
+    {
+      "name": "ElectronicScale",
+      "position": {
+        "x": 0.3,
+        "y": 0.5,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Positioned at left side for weighing operations (Step 2). At 0° rotation, occupies x=0.1175-0.4825m, y=0.3885-0.6115m. Clearance from front edge: 0.3885m > 0.05m. Adjacent to Beaker1 for efficient weighing workflow."
+    },
+    {
+      "name": "Beaker",
+      "position": {
+        "x": 0.45,
+        "y": 0.3,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Beaker1 for weighing LithiumHydroxide (Step 2). At 0° rotation, occupies x=0.4095-0.4905m, y=0.2625-0.3375m. Glass container >0.10m from front edge (0.2625m). Distance to ElectronicScale center: 0.224m for convenient weighing. Clearance from left edge: 0.4095m > 0.05m."
+    },
+    {
+      "name": "RoundBottomFlask",
+      "position": {
+        "x": 0.8,
+        "y": 0.6,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Main reaction vessel (Steps 4-5). At 0° rotation, occupies x=0.726-0.874m, y=0.5415-0.6585m. Glass container constraint C4: distances from edges are front=0.5415m, left=0.726m, right=1.861m, back=0.8635m, all >0.10m. Centrally positioned for easy access during reaction setup and monitoring."
+    },
+    {
+      "name": "Beaker",
+      "position": {
+        "x": 1.0,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Beaker2 for dissolving LithiumHydroxide in water (Step 3). At 0° rotation, occupies x=0.9595-1.0405m, y=0.3625-0.4375m. Glass container >0.10m from front edge (0.3625m). Part of solution preparation cluster with GraduatedCylinder and GlassRod."
+    },
+    {
+      "name": "GraduatedCylinder",
+      "position": {
+        "x": 1.15,
+        "y": 0.35,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "For measuring solvent volumes (Step 3). At 0° rotation, occupies x=1.1375-1.1625m, y=0.3445-0.3555m. Glass container >0.10m from front edge (0.3445m). Distance to Beaker2: 0.158m for efficient solution preparation workflow. Compact footprint allows tight clustering."
+    },
+    {
+      "name": "GlassRod",
+      "position": {
+        "x": 1.2,
+        "y": 0.5,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "For stirring solutions (Steps 3-4). At 0° rotation, occupies x=1.1595-1.2405m, y=0.4625-0.5375m. Glass container >0.10m from front edge (0.4625m). Distance to Beaker2: 0.224m, to RoundBottomFlask: 0.424m, enabling stirring in both vessels."
+    },
+    {
+      "name": "Pipette",
+      "position": {
+        "x": 1.4,
+        "y": 0.6,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "reasoning": "For transferring liquids (Step 3). Rotated 90° to align long axis with Y-axis, occupies x=1.324-1.476m, y=0.3805-1.0195m. This orientation minimizes X-space usage. Distance to preparation cluster (Beaker2): 0.447m for liquid transfer operations. Clearance from all edges >0.05m."
+    },
+    {
+      "name": "RotaryEvaporator",
+      "position": {
+        "x": 1.995,
+        "y": 1.294,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "reasoning": "Large instrument for solvent removal. Rotated 90° to fit: long axis (2.300m) along Y-axis, short axis (0.911m) along X-axis. Occupies x=1.5395-2.4505m, y=0.144-2.444m (extends beyond table depth but positioned to maximize usable Y-range on table: y=0.144-1.522m). Positioned at back-right corner to maximize front workspace. Heat source isolated from other items (no flammable reagents in desktop assets)."
+    }
+  ],
+  "surface_type": "ExperimentalPlatform",
+  "surface_dimensions": {
+    "width": 2.7348869195972734,
+    "depth": 1.5220382895305355,
+    "height": 0.7999990173557717
+  }
+}

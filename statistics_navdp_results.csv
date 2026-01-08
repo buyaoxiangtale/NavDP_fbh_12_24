@@ -1,0 +1,13 @@
+场景名称,SR,平均SPL,平均路径长度(m),平均欧氏距离(m),Episode数,成功次数
+Alkylation_of_Ethyl_Acetoacetate_with_Bis_4-fluoro_20251229_003726,1.000000,0.999719,2.564606,2.563646,11,11
+Basic_Methanolysis_of_Acetate_Ester_20251229_003725,0.545455,0.526746,3.413767,3.166846,11,6
+Boc_Deprotection_of_Benzyl-methyl-piperidin-4-yl-a_20251229_003725,0.454545,0.454028,0.936666,1.404154,11,5
+Boc_Deprotection_of_Hydrazine_Derivative_20251230_151033,0.727273,0.631833,4.343093,3.234558,11,8
+Boc_Deprotection_of_Piperazine_Derivative__Model___20251229_003725,0.181818,0.173494,3.744911,3.754908,11,2
+Chlorination_of_Triazolyl-Benzyl_Alcohol_using_Thi_20251229_003726,0.636364,0.632864,2.956706,2.762567,11,7
+Deprotection_and_Cyclization_of_Indole_Derivative_20251229_003726,0.545455,0.494994,2.875228,2.951187,11,6
+Deprotection_of_a_Pyrrolidone_Derivative_20251229_003726,0.454545,0.328900,6.126407,4.000284,11,5
+Fmoc_Deprotection_of_Peptide_Intermediate_20251229_003725,0.545455,0.272727,0.344710,2.164413,11,6
+Hydrolysis_of_Ethyl_α_α-dimethyl-3-pyridylacetate__20251229_003726,0.454545,0.367605,3.642897,2.938604,11,5
+Hydrolysis_of_Nitrile_to_Amide_20251229_003725,0.454545,0.441566,4.474812,4.860951,11,5
+Knoevenagel_Condensation_Protocol_20251230_151033,0.454545,0.453538,2.421825,2.222389,11,5

@@ -1,0 +1,29 @@
+{
+  "reasoning": {
+    "safety_analysis": "Only one instrument (LiquidChromatograph) needs to be placed on this surface. No chemical reagents or heating sources are included in the assets to arrange for this surface, so no chemical safety constraints (flammable-heat source, acid-base, incompatible chemicals) apply. The instrument will be positioned with adequate clearance from all edges (≥0.05m minimum).",
+    "workflow_strategy": "The LiquidChromatograph is used for product analysis in the Knoevenagel condensation protocol. It is positioned centrally on the ValidationPlatform to allow easy access from the front (Y=0 side where the operator stands). The instrument is placed with its front facing the operator (standard 0° orientation) for optimal operational access to controls and sample injection ports.",
+    "key_spatial_relationships": "The LiquidChromatograph is the only item on this surface. Its large footprint (1.257m × 1.369m) requires careful positioning to ensure it fits within the surface boundaries (1.522m × 2.735m) with required edge clearances. The instrument is centered along the X-axis and positioned in the front-middle region of the Y-axis for accessibility."
+  },
+  "desktop_layout": [
+    {
+      "name": "LiquidChromatograph",
+      "position": {
+        "x": 0.761,
+        "y": 0.885,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Positioned centrally on ValidationPlatform. At 0° rotation (front_direction = (0,1,0)), the short dimension (1.257m) aligns with Y-axis and long dimension (1.369m) aligns with X-axis. X-position: centered at 1.522/2 = 0.761m, occupies X-range [0.761 - 1.369/2, 0.761 + 1.369/2] = [0.076m, 1.446m], providing 0.076m clearance from left edge and 0.076m from right edge (both >0.05m required). Y-position: 0.885m, occupies Y-range [0.885 - 1.257/2, 0.885 + 1.257/2] = [0.256m, 1.514m], providing 0.256m clearance from front edge (>0.10m required for instruments) and 1.221m from back edge. This central front-accessible position optimizes operator access for sample injection and analysis while maintaining all safety clearances."
+    }
+  ],
+  "surface_type": "ValidationPlatform",
+  "surface_dimensions": {
+    "width": 1.5220382895305355,
+    "depth": 2.7348869195972734,
+    "height": 0.7999990173557717
+  }
+}

@@ -248,3 +248,6 @@ def navdp_step_ip_mixgoal():
 
 if __name__ == "__main__":
     app.run(host='127.0.0.1',port=args.port)
+
+
+#  python navdp_server.py    --port 8888     --checkpoint ./checkpoints/navdp_checkpoint.ckpt     --device cuda:0

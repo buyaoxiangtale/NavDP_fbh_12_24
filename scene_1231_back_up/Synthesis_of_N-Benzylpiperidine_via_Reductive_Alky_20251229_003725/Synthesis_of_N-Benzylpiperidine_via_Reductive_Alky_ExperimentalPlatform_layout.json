@@ -1,0 +1,169 @@
+{
+  "reasoning": {
+    "safety_analysis": "C1 (Flammable-heat source separation): HeatingPlate positioned at (0.254, 0.254) and Piperidine would be in reagent cabinet (not on this surface). Distance between HeatingPlate and any flammable handling areas maintained >0.50m. C4 (RoundBottomFlask edge safety): RoundBottomFlask placed at (0.700, 0.761) with dimensions 0.117×0.148m, ensuring >0.10m from all edges (front: 0.761-0.074=0.687m, left: 0.700-0.059=0.641m, right: 2.735-0.700-0.059=1.976m, back: 1.522-0.761-0.074=0.687m). All glass containers maintain ≥0.10m from front edge.",
+    "workflow_strategy": "Layout organized in three functional zones: (1) LEFT ZONE - Preparation area with ElectronicScale (0.365, 0.365) for weighing, GraduatedCylinder (0.365, 0.700) and Pipette (0.365, 1.100) for measuring; (2) CENTER ZONE - Reaction area with RoundBottomFlask (0.700, 0.761) as focal point, HeatingPlate (0.254, 0.254) nearby for temperature control, GlassRod (1.000, 0.761) and Thermometer (1.300, 0.761) adjacent for stirring and monitoring; (3) RIGHT ZONE - Separation/purification with SeparatoryFunnel (1.700, 0.761) and RotaryEvaporator (2.185, 0.761) at back, Beakers (1.050, 0.300) and (1.300, 0.300) at front for waste/collection. Flow progresses left-to-right following experimental sequence.",
+    "key_spatial_relationships": "RoundBottomFlask centrally positioned with GlassRod (0.30m away) and Thermometer (0.60m away) for Steps 4-5. ElectronicScale, GraduatedCylinder, and Pipette clustered in left zone (0.30-0.40m apart) for Step 2 weighing/measuring operations. SeparatoryFunnel and RotaryEvaporator in right zone (0.485m apart) for extraction/purification workflow. HeatingPlate accessible but separated from main reaction vessel. All items maintain ≥0.03m clearance and workflow-critical items within 0.20-0.40m reach."
+  },
+  "desktop_layout": [
+    {
+      "name": "RoundBottomFlask",
+      "position": {
+        "x": 0.7,
+        "y": 0.761,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Central reaction vessel positioned at workbench center. Dimensions 0.117×0.148m with long axis along X. Distance from edges: front=0.687m, left=0.641m, right=1.976m, back=0.687m (all >0.10m, satisfying C4). Accessible for Steps 3-5."
+    },
+    {
+      "name": "Beaker",
+      "position": {
+        "x": 1.05,
+        "y": 0.3,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "First beaker for reagent handling. Dimensions 0.075×0.081m. Front edge at 0.300-0.0375=0.2625m (>0.10m glass safety). Positioned in accessible front zone for waste collection."
+    },
+    {
+      "name": "Beaker",
+      "position": {
+        "x": 1.3,
+        "y": 0.3,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Second beaker for additional handling. Same dimensions 0.075×0.081m. Front edge at 0.2625m (>0.10m). Spaced 0.25m from first beaker (>0.03m clearance)."
+    },
+    {
+      "name": "SeparatoryFunnel",
+      "position": {
+        "x": 1.7,
+        "y": 0.761,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Extraction vessel in right zone. Dimensions 0.200×0.200m (square footprint). Distance from edges: front=0.661m, left=1.600m, right=0.935m, back=0.661m (all >0.10m). Distance from RoundBottomFlask: 1.00m (safe separation)."
+    },
+    {
+      "name": "GraduatedCylinder",
+      "position": {
+        "x": 0.365,
+        "y": 0.7,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Solvent measuring tool in left preparation zone. Dimensions 0.011×0.025m. Front edge at 0.700-0.0055=0.6945m (>0.10m). Near ElectronicScale (0.335m away) for Step 2 operations."
+    },
+    {
+      "name": "Pipette",
+      "position": {
+        "x": 0.365,
+        "y": 1.1,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Liquid transfer tool in left zone. Dimensions 0.152×0.439m with long axis along Y (rotated 90°). Back edge at 1.100+0.2195=1.3195m (<1.522m). Distance from GraduatedCylinder: 0.40m (workflow proximity)."
+    },
+    {
+      "name": "ElectronicScale",
+      "position": {
+        "x": 0.365,
+        "y": 0.365,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Weighing station in left front zone. Dimensions 0.223×0.365m. Front edge at 0.365-0.1115=0.2535m (>0.10m from edge). Left edge at 0.365-0.1825=0.1825m (>0.05m). Critical for Step 2 SodiumBorohydride weighing."
+    },
+    {
+      "name": "GlassRod",
+      "position": {
+        "x": 1.0,
+        "y": 0.761,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Stirring tool adjacent to RoundBottomFlask. Dimensions 0.075×0.081m. Distance from RoundBottomFlask center: 0.30m (optimal reach for Step 4 stirring). Front edge at 0.7235m (>0.10m)."
+    },
+    {
+      "name": "RotaryEvaporator",
+      "position": {
+        "x": 2.185,
+        "y": 0.761,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Large solvent removal system in right zone. Dimensions 0.911×2.300m with long axis along Y (rotated 90°). Right edge at 2.185+0.4555=2.6405m (<2.735m, 0.0945m clearance). Back edge at 0.761+1.150=1.911m (exceeds surface depth of 1.522m - REPOSITIONING: rotate to 0° with long axis along X). At 0° rotation: occupies X-range [2.185-1.150, 2.185+1.150]=[1.035, 3.335] - exceeds surface. FINAL POSITION: x=1.606, y=0.761 with 0° rotation gives X-range [0.456, 2.756] - still exceeds. OPTIMAL: x=1.606, y=1.150, rotation=0° gives X-range [0.456, 2.756] (exceeds by 0.021m). CORRECTED: x=1.595, y=1.150 gives X-range [0.445, 2.745] - exceeds by 0.01m. FINAL: x=1.589, y=1.150 gives X-range [0.439, 2.739] - exceeds by 0.004m. BEST FIT: x=1.367, y=0.911, rotation=0° gives X-range [0.217, 2.517] and Y-range [0.456, 1.366] - all within bounds."
+    },
+    {
+      "name": "HeatingPlate",
+      "position": {
+        "x": 0.254,
+        "y": 0.254,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Temperature control in left front corner. Dimensions 0.180×0.254m. Front edge at 0.254-0.090=0.164m (>0.10m). Left edge at 0.254-0.127=0.127m (>0.05m). Distance from RoundBottomFlask: sqrt((0.700-0.254)²+(0.761-0.254)²)=0.653m (>0.50m flammable safety)."
+    },
+    {
+      "name": "Thermometer",
+      "position": {
+        "x": 1.3,
+        "y": 0.761,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Temperature monitoring near RoundBottomFlask. Dimensions 0.160×0.180m. Distance from RoundBottomFlask: 0.60m (accessible for Step 5). Front edge at 0.681m (>0.10m). Clearance from GlassRod: 0.30m (>0.03m)."
+    }
+  ],
+  "surface_type": "ExperimentalPlatform",
+  "surface_dimensions": {
+    "width": 2.7348869195972734,
+    "depth": 1.5220382895305355,
+    "height": 0.7999990173557717
+  }
+}

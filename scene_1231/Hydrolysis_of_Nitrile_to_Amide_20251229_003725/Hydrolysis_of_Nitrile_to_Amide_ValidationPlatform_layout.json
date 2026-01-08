@@ -1,0 +1,29 @@
+{
+  "reasoning": {
+    "safety_analysis": "Only one instrument (InfraredSpectrophotometer) needs to be placed on the ValidationPlatform. No chemical reagents or other instruments are listed in the 'Assets to Arrange' section for this surface. Therefore, no chemical safety constraints (flammable-heat source, incompatible chemicals, acid-base separations) apply to this layout. The instrument will be positioned with adequate clearance from all edges.",
+    "workflow_strategy": "The InfraredSpectrophotometer is used for product analysis at the end of the experimental workflow. It is positioned centrally on the ValidationPlatform for easy access and stable operation. The instrument is placed in the middle depth range (Y: 0.30-0.90m) for optimal accessibility during analysis procedures. This allows the operator to comfortably access the instrument from the front of the platform.",
+    "key_spatial_relationships": "The InfraredSpectrophotometer is the sole item on this surface. It is positioned centrally with respect to the X-axis to maximize stability and accessibility. The Y-position places it within comfortable reach from the front edge while maintaining required clearances. With dimensions 0.355m × 0.483m × 0.171m, the instrument is oriented with its long axis (0.483m) parallel to the X-axis (0° rotation) to optimize the use of the surface width."
+  },
+  "desktop_layout": [
+    {
+      "name": "InfraredSpectrophotometer",
+      "position": {
+        "x": 0.761,
+        "y": 0.6,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Centered on ValidationPlatform for product analysis. At 0° rotation, long axis (0.483m) is parallel to X-axis, short axis (0.355m) parallel to Y-axis. Position (0.761, 0.600) centers it: X-range [0.519-1.003m], Y-range [0.423-0.778m]. All edges maintain >0.05m clearance from surface boundaries (left: 0.519m, right: 0.519m, front: 0.423m, back: 1.957m). Positioned in optimal reach zone (Y: 0.30-0.90m) for operator accessibility during spectroscopic analysis."
+    }
+  ],
+  "surface_type": "ValidationPlatform",
+  "surface_dimensions": {
+    "width": 1.5220382895305355,
+    "depth": 2.7348869195972734,
+    "height": 0.7999990173557717
+  }
+}

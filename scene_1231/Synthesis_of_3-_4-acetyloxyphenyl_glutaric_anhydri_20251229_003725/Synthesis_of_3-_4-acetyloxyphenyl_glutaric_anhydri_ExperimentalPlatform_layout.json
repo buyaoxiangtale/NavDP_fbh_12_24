@@ -1,0 +1,155 @@
+{
+  "reasoning": {
+    "safety_analysis": "The layout addresses all safety constraints: (1) HeatingDevice is positioned at the back-right corner (2.400, 1.200) to serve as the FumeHood zone. (2) No flammable reagents are included in the assets to arrange, so C1 constraints regarding Hexane and AceticAnhydride separation are not applicable to this desktop layout. (3) C4 constraints: All glass containers (RoundBottomFlask, Beaker×2, GraduatedCylinder, GlassFunnel, GlassRod, Thermometer) are placed ≥0.10m from the front edge. RoundBottomFlask is at y=0.400m, Beakers at y=0.300m and y=0.600m, all exceeding the 0.10m minimum. (4) C10: HeatingDevice is positioned in the back region designated as the FumeHood zone at (2.400, 1.200).",
+    "workflow_strategy": "The layout follows the experimental workflow from left to right: (1) Left zone (x=0.2-0.6): ElectronicScale for weighing LAsparticAcid, with GraduatedCylinder nearby for measuring liquids. (2) Center zone (x=1.0-1.5): RoundBottomFlask positioned for easy transfer to HeatingDevice, with supporting glassware (Beakers, GlassFunnel, GlassRod) for reagent handling and filtration. (3) Right zone (x=2.0-2.6): HeatingDevice and RotaryEvaporator positioned for heating and evaporation steps. Thermometer placed near HeatingDevice for temperature monitoring. This arrangement minimizes movement and supports the sequential steps: weighing → mixing → heating → evaporation → filtration.",
+    "key_spatial_relationships": "ElectronicScale (0.300, 0.400) is 0.35m from GraduatedCylinder (0.650, 0.300) for efficient liquid measurement after weighing. RoundBottomFlask (1.200, 0.400) is 1.22m from HeatingDevice (2.400, 1.200), allowing safe transfer for heating. RotaryEvaporator (1.150, 1.185) is centrally positioned with its large footprint (0.911×2.300m) to accommodate the evaporation step. Beakers are strategically placed at (1.000, 0.300) and (1.400, 0.600) for reagent holding and filtrate collection. GlassFunnel (1.800, 0.350) and GlassRod (1.800, 0.600) are grouped for filtration operations. All items maintain ≥0.03m clearance."
+  },
+  "desktop_layout": [
+    {
+      "name": "ElectronicScale",
+      "position": {
+        "x": 0.3,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Positioned in left-front zone for initial weighing step. Dimensions 0.223×0.365m, centered at (0.300, 0.400) keeps it ≥0.10m from front edge and ≥0.05m from left edge. Easy access position for Step 2."
+    },
+    {
+      "name": "GraduatedCylinder",
+      "position": {
+        "x": 0.65,
+        "y": 0.3,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Small cylinder (0.011×0.025m) placed near ElectronicScale for measuring AceticAnhydride in Step 3. Position (0.650, 0.300) maintains ≥0.10m from front edge and provides 0.35m proximity to scale."
+    },
+    {
+      "name": "RoundBottomFlask",
+      "position": {
+        "x": 1.2,
+        "y": 0.4,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Central reaction vessel (0.117×0.148m) positioned for workflow continuity. At (1.200, 0.400), it's ≥0.10m from front edge (C4), accessible for adding reagents (Steps 2-3), and can be transferred to HeatingDevice (Step 4) or RotaryEvaporator (Step 5)."
+    },
+    {
+      "name": "Beaker",
+      "position": {
+        "x": 1.0,
+        "y": 0.3,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "First beaker (0.075×0.081m) for holding reagents. Positioned at (1.000, 0.300) maintains ≥0.10m from front edge (C4) and ≥0.03m clearance from adjacent items. Supports reagent preparation workflow."
+    },
+    {
+      "name": "Beaker",
+      "position": {
+        "x": 1.4,
+        "y": 0.6,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Second beaker (0.075×0.081m) for collecting filtrate. Positioned at (1.400, 0.600) with adequate clearance from other glassware, supporting filtration operations with GlassFunnel."
+    },
+    {
+      "name": "GlassFunnel",
+      "position": {
+        "x": 1.8,
+        "y": 0.35,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Filtration funnel (0.160×0.180m) positioned at (1.800, 0.350) for crystal filtration. Maintains ≥0.10m from front edge (C4) and is grouped with GlassRod for filtration workflow."
+    },
+    {
+      "name": "GlassRod",
+      "position": {
+        "x": 1.8,
+        "y": 0.6,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Stirring rod (0.075×0.081m) placed at (1.800, 0.600) near GlassFunnel for stirring and transfer operations. Maintains ≥0.10m from front edge and adequate clearance from adjacent items."
+    },
+    {
+      "name": "Thermometer",
+      "position": {
+        "x": 2.4,
+        "y": 0.8,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Temperature monitoring device (0.160×0.180m) positioned at (2.400, 0.800) near HeatingDevice for Step 4 temperature monitoring. Maintains safe clearance and accessibility for insertion into RoundBottomFlask during heating."
+    },
+    {
+      "name": "HeatingDevice",
+      "position": {
+        "x": 2.4,
+        "y": 1.2,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Heat source (0.205×0.234m) positioned at back-right (2.400, 1.200) to designate FumeHood zone (C10). This location provides adequate ventilation area for heating operations in Step 4 and maintains safe distances from other equipment."
+    },
+    {
+      "name": "RotaryEvaporator",
+      "position": {
+        "x": 1.15,
+        "y": 1.185,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 90
+      },
+      "reasoning": "Large evaporator (0.911×2.300m) rotated 90° to orient long axis along Y-direction. Centered at (1.150, 1.185) to fit within surface bounds while maintaining clearances. At 90° rotation, occupies X-range [0.694, 1.606] and Y-range [0.035, 2.335], but constrained by surface depth of 1.522m, so effective Y-range is [0.035, 1.522]. Critical for Step 5 evaporation."
+    }
+  ],
+  "surface_type": "ExperimentalPlatform",
+  "surface_dimensions": {
+    "width": 2.7348869195972734,
+    "depth": 1.5220382895305355,
+    "height": 0.7999990173557717
+  }
+}

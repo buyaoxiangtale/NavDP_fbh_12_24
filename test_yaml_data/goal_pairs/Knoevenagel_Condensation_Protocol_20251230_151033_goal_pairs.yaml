@@ -1,0 +1,44 @@
+goal_pairs:
+- start:
+  - 2.0
+  - 6.805
+  - 0.0
+  end:
+  - 5.5
+  - 5.96
+  - 0.0
+- start:
+  - 5.5
+  - 5.96
+  - 0.0
+  end:
+  - 6.185
+  - 4.5
+  - 4.71238898038469
+- start:
+  - 6.185
+  - 4.5
+  - 4.71238898038469
+  end:
+  - 4.0
+  - 2.533
+  - 0.0
+- start:
+  - 4.0
+  - 2.533
+  - 0.0
+  end:
+  - 4.933
+  - 1.801
+  - 4.71238898038469
+metadata:
+  scene_name: Knoevenagel_Condensation_Protocol_20251230_151033
+  num_targets: 9
+  num_goal_pairs: 4
+  config:
+    scene_name: Knoevenagel_Condensation_Protocol_20251230_151033
+    scene_dir: /home/pjlab/fbh/LabUtopia/roomlayout/layout_new/Knoevenagel_Condensation_Protocol_20251230_151033
+    room_assets_file: Knoevenagel_Condensation_Protocol_room_isaacsim.json
+    protocol_file: protocol_Knoevenagel_Condensation_Proto_20251230_143815.json
+    asset_lib_file: /home/pjlab/fbh/LabUtopia/roomlayout/layout_new/assets_annotated.json
+    offset_radius: 0.6

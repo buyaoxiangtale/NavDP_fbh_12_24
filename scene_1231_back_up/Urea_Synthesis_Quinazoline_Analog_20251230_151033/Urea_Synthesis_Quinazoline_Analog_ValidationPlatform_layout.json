@@ -1,0 +1,29 @@
+{
+  "reasoning": {
+    "safety_analysis": "Only one instrument (LiquidChromatograph) is to be placed on this surface. No chemical reagents or heating elements are included in the assets to arrange, so no chemical safety constraints (flammable-heat source, incompatible chemicals, acid-base separations) apply. The LiquidChromatograph is analytical equipment with no inherent chemical hazards. Standard safety practices of maintaining edge clearances (≥0.05m from edges) will be observed.",
+    "workflow_strategy": "The LiquidChromatograph is positioned for optimal accessibility and workflow. As the final analysis instrument in the synthesis procedure, it should be easily accessible. Given its large dimensions (1.257m × 1.369m × 2.316m height), it requires careful placement to fit within the surface boundaries while maintaining proper clearances. The instrument is positioned centrally with adequate space around it for operation and maintenance access.",
+    "key_spatial_relationships": "The LiquidChromatograph is the only item on this surface, serving as the analytical endpoint for the urea synthesis experiment. Its position allows for easy sample introduction and data collection. The instrument is oriented with its long axis (1.369m) parallel to the X-axis to optimize the use of the surface width (2.735m) and ensure it fits within the depth constraint (1.522m)."
+  },
+  "desktop_layout": [
+    {
+      "name": "LiquidChromatograph",
+      "position": {
+        "x": 1.368,
+        "y": 0.761,
+        "z": 0.8
+      },
+      "rotation_deg": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      },
+      "reasoning": "Centered on the ValidationPlatform surface. At 0° rotation (front_direction = (0,1,0)), the instrument's long axis (1.369m) is parallel to X-axis and short axis (1.257m) parallel to Y-axis. Position calculated as: X = 2.735/2 = 1.368m (centered width-wise), Y = 1.522/2 = 0.761m (centered depth-wise). Boundary verification: X-range [1.368 - 1.369/2, 1.368 + 1.369/2] = [0.684, 2.052] ✓ within [0.05, 2.685]; Y-range [0.761 - 1.257/2, 0.761 + 1.257/2] = [0.133, 1.389] ✓ within [0.05, 1.472]. All clearances satisfied with >0.05m from all edges."
+    }
+  ],
+  "surface_type": "ValidationPlatform",
+  "surface_dimensions": {
+    "width": 2.7348869195972734,
+    "depth": 1.5220382895305355,
+    "height": 0.7999990173557717
+  }
+}
